@@ -1,0 +1,459 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* User Select For Highlighting */
+
+body {
+    width: 100%;
+    font-family: sans-serif;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+/* New Scrollbar */
+
+body::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: rgb(3, 3, 3);
+    opacity: 0;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    border: solid 1px black;
+  }
+
+/* Intro Section */
+
+.bgImg {
+    position: relative;
+    background-image: url(./images/pexels-s-migaj-747964.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 0;
+    text-transform: uppercase;
+    height: 80px;
+    font-weight:900;
+    z-index: 1;
+    color: #ffffff;
+    font-size: large;
+    background: linear-gradient(to bottom, rgba(3, 62, 99, 0.548), transparent);
+    font-size: 1.3rem;
+}
+
+.last {
+    color: rgb(3, 63, 99);
+}
+
+/* Hamburger */
+
+.hamburger {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    right: 20px;
+    width: 40px;
+    height: 18px;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease-in-out;
+    z-index: 5;
+}
+
+.hamburger:hover {
+    cursor: pointer;
+    transform: scale(1.1)
+}
+
+.hamburger:hover .line{
+    background-color:rgb(5, 88, 121);
+}
+
+.line {
+    background-color: white;
+    margin: 1.5px;
+    padding: 1px;
+    height: 6px;
+    width: 50%;
+    border-radius: 10%;
+    transition: all .3s ease-in-out;
+}
+
+.menu {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.712);
+    top: 0;
+    right: 0;
+    height: 200px;
+    width: 200px;
+    border-bottom-left-radius: 95%;
+    transition: all .7s ease-in-out;
+    transform: translateX(100%) translateY(-100%);
+}
+
+.active {
+    transition: all .7s ease-in-out;
+    transform: translateX(0%) translateX(0%);
+    z-index: 2;
+}
+
+.linksWrapper {
+    position: fixed;
+    right: 5%;
+    top: 20%;
+    width: 80%;
+    display: flex;
+    list-style-type: none;
+    flex-direction: column;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.link1 {
+    text-align: start;
+}
+
+.link2 {
+    text-align: center;
+}
+
+.link3 {
+    text-align: end;
+}
+
+.links {
+    padding: 0px 10px;
+    margin: 10px;
+    opacity: 0;
+    text-decoration: none;
+    color: white;
+    z-index: 40;
+}
+
+.links a {
+    text-decoration: none;
+    color: white;
+    z-index: 40;
+}
+
+.links a:hover {
+    color:rgb(5, 88, 121);
+    cursor: pointer;
+    z-index: 40;
+}
+
+.homeLink {
+    color: white;
+    text-decoration: none;
+}
+
+/* Main Quote */
+
+.title {
+    position: absolute;
+    z-index: 3;
+    line-height: 4rem;
+    top: calc(50% - 2rem);
+    width: 100%;
+    text-align:left;
+    padding-left: 40px;
+    font-size: 2.5rem;
+    font-weight: 600;
+    transition: .3s linear;
+    font-family: lobster; 
+    color: white;
+    text-shadow: 2px 2px rgb(3, 62, 99);
+}
+
+.about {
+    position: absolute;
+    z-index: 3;
+    margin-top: 10px;
+    width: 200px;
+    top: calc(65% - 2rem);
+    text-align: left;
+    padding-left: 40px;
+    font-size: .5rem;
+    color: #fff;
+    transition: .3s linear;
+}
+
+/* Intro Page Shadow Animation */
+
+.shadow {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    background: linear-gradient(to top, black, rgba(0, 0, 0, 0.712), transparent);
+    transition: .1s linear;
+    height: 100px;
+}
+
+/* Projects Section */
+
+.shadow2 {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    background: linear-gradient(to bottom,black, transparent);
+    transition: .1s linear;
+    height: 100px;
+}
+
+#projects {
+    position: relative;
+    padding: 100px 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    background-image: url('/images/foggyMountains.jpeg');
+    background-position:center;
+    background-size:cover;
+    background-repeat: no-repeat;
+  }
+
+.projectContainer {
+    width: 250px;
+    padding: 10px;
+    margin: 10px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: .4px .4px 5px .4px rgb(255, 255, 255);
+    border-radius: 2px;
+    transition: all .5s ease-in-out;
+    background-color: rgba(103, 120, 146, 0.432);
+}
+
+.projectContainer:hover {
+    transform: translateY(-2%);
+    background-color: rgba(3, 62, 99, 0.527);
+}
+
+.content {
+    font-size: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.projName {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.titleAccent {
+    background-color: rgb(0, 0, 0);
+    height: 2px;
+    margin-bottom: 10px;
+    width: 0px;
+    max-width: 100%;
+}
+
+.projImg {
+    filter: brightness(100%);
+    padding-top: 10px;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+
+
+.projects {
+    position: relative;
+}
+
+.projects button {
+    position: absolute;
+    text-transform: uppercase;
+    width: 50px;
+    font-size: .5rem;
+    font-weight: bold;
+    padding: 5px;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+    background-color: rgb(5, 88, 121);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.projects:hover img {
+    filter: brightness(20%);
+}
+
+/* Project Buttons */
+
+.projects:hover button {
+    opacity: 1;
+}
+
+button:hover {
+    color: rgb(5, 88, 121);
+    background-color: white;
+}
+
+.demo {
+    top: 50%;
+    left: 20%;
+    transform: translate(-20%, -50%);
+}
+
+.source {
+    top: 50%;
+    right: 10%;
+    transform: translate(-20%, -50%);
+}
+
+#contact {
+    background: linear-gradient(to top, black, rgb(3, 62, 99),black);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.contact-container {
+    position: relative;
+    border-radius: 5px;
+    background-color: #070606bd;
+    padding: 10px;
+    width: 40%;
+    height: 100%;
+    margin: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.527);
+    display: flex;
+    text-align: left;
+}
+
+input[type=text], textarea {
+    width: 100%;
+    padding: 4px;
+    border: none;
+    border-radius: 4px;
+    box-sizing:border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    font-size: .5rem;
+    background-color: rgb(212, 212, 212);
+}
+
+.submit {
+    margin-left: 50%;
+    transform: translate(-50%);
+    padding: 2px;
+    border-radius: 2px;
+    border: none;
+    transition: all .5s ease-in-out;
+    background-color: rgb(5, 88, 121);
+    color: white;
+    cursor: pointer;
+}
+
+.submit:hover {
+    color: rgb(5, 88, 121);
+    background-color: white;
+}
+
+.footer {
+    position: relative;
+    background: black;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+i {
+    margin: 0 10px;
+    color: white;
+    cursor: pointer;
+}
+
+i:hover {
+    color: rgb(5, 88, 121);
+}
+
+
+
+
+@media (max-width: 500px) {
+    .nav {
+        font-size: 1rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+        padding-left: 20px;
+    }
+
+    .about {
+        padding-left: 20px;
+        top: calc(55% - 2rem);
+        margin-top: 20px;
+        width: 150px;
+        font-size: .6rem;
+    }
+
+    .contact-container {
+        width: 80%;
+    }
+}
+
+@media (max-height: 600px) {
+    .nav {
+        font-size: 1rem;
+    }
+    .logo {
+        font-size: 1rem;
+    }
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes projFade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
