@@ -173,7 +173,8 @@ body::-webkit-scrollbar {
     position: absolute;
     z-index: 3;
     /* line-height: 4rem; */
-    top: calc(50% - 2rem);
+    top: 50%;
+    transform: translate(-50%);
     width: 100%;
     text-align:left;
     padding-left: 40px;
