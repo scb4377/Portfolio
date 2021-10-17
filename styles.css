@@ -403,7 +403,7 @@ i:hover {
     }
 
     .bgImg {
-        height: 100vmax;
+        height: calc(100vh - 10px);
     }
 
     .contact-container {
