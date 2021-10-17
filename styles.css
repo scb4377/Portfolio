@@ -177,7 +177,7 @@ body::-webkit-scrollbar {
     width: 100%;
     text-align:left;
     padding-left: 40px;
-    font-size: 3rem;
+    font-size: 5.5rem;
     font-weight: 600;
     transition: .3s linear;
     font-family: lobster; 
@@ -188,12 +188,12 @@ body::-webkit-scrollbar {
 .about {
     position: absolute;
     z-index: 3;
-    margin-top: 10px;
+    margin-top: 5px;
     width: 200px;
     top: calc(65% - 2rem);
     text-align: left;
     padding-left: 40px;
-    font-size: .5rem;
+    font-size: 1rem;
     color: #fff;
     transition: .3s linear;
 }
