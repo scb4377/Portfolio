@@ -9,7 +9,6 @@ const navLinks = document.querySelectorAll('.links');
 const hamLines = document.querySelectorAll('.line');
 const projects = document.querySelectorAll('.projectContainer');
 const projectPage = document.querySelector('#projects');
-const about = document.querySelector('.about');
 const github = document.querySelector('.fa-github');
 const linkedIn = document.querySelector('.fa-linkedin');
 
@@ -27,8 +26,6 @@ window.addEventListener('scroll', () => {
     title.style.transform = `translateY(${scroll * titleSpeed}px)`;
     title.style.opacity = - scroll / (headerHeight / 2) + 1;
 
-    about.style.transform = `translateY(${scroll * titleSpeed}px)`;
-    about.style.opacity = - scroll / (headerHeight / 2) + 1;
 
     shadow.style.height = `${scroll * shadowSpeed + 100}px`;
     
