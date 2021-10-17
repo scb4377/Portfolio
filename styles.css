@@ -402,12 +402,8 @@ i:hover {
         padding-left: 20px;
     }
 
-    .about {
-        padding-left: 20px;
-        top: calc(55% - 2rem);
-        margin-top: 20px;
-        width: 150px;
-        font-size: .6rem;
+    .bgImg {
+        height: 100vmax;
     }
 
     .contact-container {
