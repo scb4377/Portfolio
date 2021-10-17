@@ -185,18 +185,6 @@ body::-webkit-scrollbar {
     text-shadow: 2px 2px rgb(3, 62, 99);
 }
 
-.about {
-    position: absolute;
-    z-index: 3;
-    margin-top: 20px;
-    width: 300px;
-    top: calc(60% - 2rem);
-    text-align: left;
-    padding-left: 40px;
-    font-size: 1rem;
-    color: #fff;
-    transition: .3s linear;
-}
 
 /* Intro Page Shadow Animation */
 
@@ -235,7 +223,7 @@ body::-webkit-scrollbar {
   }
 
 .projectContainer {
-    width: 250px;
+    width: 320px;
     padding: 10px;
     margin: 10px;
     color: rgb(255, 255, 255);
