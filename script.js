@@ -13,6 +13,8 @@ const github = document.querySelector('.fa-github');
 const linkedIn = document.querySelector('.fa-linkedin');
 const vh = window.innerHeight * 0.01;
 
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
 let headerHeight = header.offsetHeight;
 
 window.addEventListener('scroll', () => {
