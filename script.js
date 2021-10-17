@@ -11,6 +11,7 @@ const projects = document.querySelectorAll('.projectContainer');
 const projectPage = document.querySelector('#projects');
 const github = document.querySelector('.fa-github');
 const linkedIn = document.querySelector('.fa-linkedin');
+const vh = window.innerHeight * 0.01;
 
 let headerHeight = header.offsetHeight;
 
