@@ -223,19 +223,21 @@ body::-webkit-scrollbar {
   }
 
 .projectContainer {
-    width: 320px;
+    width: 200px;
+    height: 300px;
     padding: 10px;
     margin: 10px;
     color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     text-align: center;
     box-shadow: .4px .4px 5px .4px rgb(255, 255, 255);
     border-radius: 2px;
     transition: all .5s ease-in-out;
     background-color: rgba(103, 120, 146, 0.432);
+    overflow: hidden;
 }
 
 .projectContainer:hover {
@@ -244,29 +246,33 @@ body::-webkit-scrollbar {
 }
 
 .content {
-    font-size: 22px;
+    font-size: .8rem;
     width: 100%;
+    height: 50%;
     text-align: center;
 }
 
 .projName {
-    font-size: 40px;
-    text-transform: uppercase;
+    font-size: 1rem;
+    text-transform:uppercase;
 }
 
 .titleAccent {
-    background-color: rgb(0, 0, 0);
-    height: 2px;
+    background-color: white;
+    height: 1px;
     margin-bottom: 10px;
-    width: 0px;
-    max-width: 100%;
+    width: 100%;
+    left: 50%;
 }
 
 .projImg {
     filter: brightness(100%);
+    width: 100%;
+    height: auto;
     padding-top: 10px;
     transition: all .5s ease-in-out;
     cursor: pointer;
+    overflow: hidden;
 }
 
 
@@ -409,6 +415,10 @@ i:hover {
 
     .contact-container {
         width: 80%;
+    }
+
+    .projectContainer {
+        margin: 10px 0;
     }
 }
 
