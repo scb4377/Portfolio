@@ -11,6 +11,8 @@ const projects = document.querySelectorAll('.projectContainer');
 const projectPage = document.querySelector('#projects');
 const github = document.querySelector('.fa-github');
 const linkedIn = document.querySelector('.fa-linkedin');
+const mvDemo = document.querySelector('.music-visualiser-demo');
+const mvSource = document.querySelector('.music-visualiser-source');
 const vh = window.innerHeight * 0.01;
 
 document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -69,5 +71,13 @@ github.addEventListener('click', () => {
 
 linkedIn.addEventListener('click', () => {
     window.open('https://www.linkedin.com/in/sblevinskw', '_blank');
+})
+
+mvDemo.addEventListener('click', () => {
+    window.open('https://scb4377.github.io/MusicVisualizer/', '_blank');
+})
+
+mvSource.addEventListener('click', () => {
+    window.open('https://github.com/scb4377/MusicVisualizer', '_blank');
 })
 
