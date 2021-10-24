@@ -412,6 +412,15 @@ i:hover {
         width: 80%;
     }
 
+    #projects {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .projImg {
+        height: auto;
+    }
+
     .projects button {
         width: 70px;
         font-size: .8rem;
