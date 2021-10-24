@@ -13,6 +13,7 @@ const github = document.querySelector('.fa-github');
 const linkedIn = document.querySelector('.fa-linkedin');
 const mvDemo = document.querySelector('.music-visualiser-demo');
 const mvSource = document.querySelector('.music-visualiser-source');
+const contactForm = document.querySelector('.contact-form');
 const vh = window.innerHeight * 0.01;
 
 document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -23,20 +24,12 @@ window.addEventListener('scroll', () => {
     let scroll = window.pageYOffset;
     let titleSpeed = title.dataset.speed;
     let shadowSpeed = shadow.dataset.speed;
-    let titleAccent = document.querySelectorAll('.titleAccent');
-    let scrollProject = projectPage.pageYOffset;
-    // let titleAccentSpeed = titleAccent.dataset.speed;
-
 
     title.style.transform = `translateY(${scroll * titleSpeed}px)`;
     title.style.opacity = - scroll / (headerHeight / 2) + 1;
 
 
     shadow.style.height = `${scroll * shadowSpeed + 100}px`;
-    
-    // titleAccent.forEach(accent => {
-    //     accent.style.width = `${(scroll -218)} * ${index / 7 + .5}px`
-    // })
 
 })
 
@@ -80,4 +73,37 @@ mvDemo.addEventListener('click', () => {
 mvSource.addEventListener('click', () => {
     window.open('https://github.com/scb4377/MusicVisualizer', '_blank');
 })
+
+window.addEventListener('submit', submitForm);
+
+//Submit form
+
+function submitForm() {
+
+    let fname = document.querySelector('#fname').value;
+    let lname = document.querySelector('#lname').value;
+    let email = document.querySelector('#email').value;
+    let message = document.querySelector('#message').value;
+
+    let messageObject = {
+        name: fname + " " + lname,
+        email: email,
+        message: message
+    }
+
+    sendEmail(messageObject);
+    contactForm.reset();
+}
+
+function sendEmail(templateParams) {
+    emailjs.send('service_kxar6ow', 'template_m2vhmlq', templateParams)
+    .then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+    }, function(error) {
+       console.log('FAILED...', error);
+    });
+}
+
+
+
 
