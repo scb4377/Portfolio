@@ -14,6 +14,8 @@ const linkedIn = document.querySelector('.fa-linkedin');
 const mvDemo = document.querySelector('.music-visualiser-demo');
 const mvSource = document.querySelector('.music-visualiser-source');
 const contactForm = document.querySelector('.contact-form');
+const reDemo = document.querySelector('.real-estate-demo');
+const reSource = document.querySelector('.real-estate-source');
 const vh = window.innerHeight * 0.01;
 
 //variable for window height for mobile including toolbar
@@ -82,6 +84,16 @@ mvDemo.addEventListener('click', () => {
 //musicVisualizer github source link
 mvSource.addEventListener('click', () => {
     window.open('https://github.com/scb4377/MusicVisualizer', '_blank');
+})
+
+//Real estate mockup demo link
+reDemo.addEventListener('click', () => {
+    window.open('https://scb4377.github.io/Real-Estate-Mockup/', '_blank');
+})
+
+//Real estate mockup source link
+reSource.addEventListener('click', () => {
+    window.open('https://github.com/scb4377/Real-Estate-Mockup/tree/master', '_blank');
 })
 
 //Add submitform listener

@@ -224,8 +224,8 @@ body::-webkit-scrollbar {
   }
 
 .projectContainer {
-    width: 300px;
-    height: 400px;
+    width: 400px;
+    height: 500px;
     padding: 10px;
     margin: 10px;
     color: rgb(255, 255, 255);
@@ -246,23 +246,12 @@ body::-webkit-scrollbar {
     background-color: rgba(3, 62, 99, 0.527);
 }
 
-.content {
-    font-size: 1rem;
-    width: 100%;
-    text-align: center;
-}
 
 .projName {
-    font-size: 1rem;
-    text-transform:uppercase;
-}
-
-.titleAccent {
-    background-color: white;
-    height: 1px;
-    margin-bottom: 10px;
+    font-size: 2rem;
+    height: 50px;
+    text-transform: uppercase;
     width: 100%;
-    left: 50%;
 }
 
 .description {
@@ -274,7 +263,6 @@ body::-webkit-scrollbar {
     position: relative;
     filter: brightness(100%);
     width: 100%;
-    height: auto;
     transition: all .5s ease-in-out;
     cursor: pointer;
     overflow: hidden;
@@ -283,6 +271,7 @@ body::-webkit-scrollbar {
 
 .projects {
     position: relative;
+    height: 200px;
 }
 
 .projects button {
@@ -423,10 +412,6 @@ i:hover {
         width: 80%;
     }
 
-    .projectContainer {
-        margin: 10px 0;
-    }
-
     .projects button {
         width: 70px;
         font-size: .8rem;
@@ -434,19 +419,6 @@ i:hover {
     }
 }
 
-@media (min-width: 1300px) {
-    .projectContainer {
-        width: 500px;
-        height: 700px;
-        font-size: 2rem;
-    }
-    .projName {
-        font-size: 2rem;
-    }
-    .content {
-        font-size: 1.5rem;
-    }
-}
 
 @media (max-height: 600px) {
     .nav {
