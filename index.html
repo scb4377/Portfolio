@@ -4,17 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--My style sheet-->
     <link rel="stylesheet" href="./styles.css">
 
+    <!--Google fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>SCB-Development</title>
+
+    <!-- emailJS include script-->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script type="text/javascript">
 (function() {
 emailjs.init("user_PYN9wVCB5BDEBhkE1e46u");
 })();
 </script>
+
 </head>
 <body>
     <header class="bgImg">
@@ -88,6 +94,7 @@ emailjs.init("user_PYN9wVCB5BDEBhkE1e46u");
     </section>
     <div id="contact">
         <div class="contact-container">
+            <!--Onsubmit prevents refresh-->
             <form class="contact-form" action="" method="post" onsubmit="return false">
                 <label for="fname" class="fname">First Name</label>
                 <input type="text" id="fname" name="firstname" placeholder="Your name..">
@@ -111,8 +118,10 @@ emailjs.init("user_PYN9wVCB5BDEBhkE1e46u");
             <i class="fa fa-linkedin fa-lg" aria-hidden="true"></i>
     </footer>
 
-
+    <!--Font awesome script-->
     <script src="https://use.fontawesome.com/0015671ad7.js"></script>
+
+    <!--My script file-->
     <script src="./script.js"></script>
 </body>
 </html>
