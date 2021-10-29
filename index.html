@@ -94,17 +94,21 @@ emailjs.init("user_PYN9wVCB5BDEBhkE1e46u");
             <!--Onsubmit prevents refresh-->
             <form class="contact-form" action="" method="post" onsubmit="return false">
                 <label for="fname" class="fname">First Name</label>
+                <span class="error verify-fname"></span>
                 <input type="text" id="fname" name="firstname" placeholder="Your name..">
-    
+
                 <label for="lname" class="lname">Last Name</label>
+                <span class="error verify-lname"></span>
                 <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-    
+
                 <label for="email" class="email">Email Address</label>
+                <span class="error verify-email"></span>
                 <input type="text" id="email" name="email" placeholder="Your email..">
-    
+
                 <label for="message" class="message">Message</label>
+                <span class="error verify-message"></span>
                 <textarea name="message" id="message" height="200px" class="textarea" placeholder="Write something.."></textarea>
-    
+
                 <button class="submit">Submit</button>
             </form>
         </div>

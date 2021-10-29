@@ -99,6 +99,40 @@ reSource.addEventListener('click', () => {
 //Add submitform listener
 window.addEventListener('submit', submitForm);
 
+function formValidation(fname, lname, email, message) {
+
+    //test email
+    let verifyEmail = /^\w+[\+\.\w-]*@([\w-]+\.)*\w+[\w-]*\.([a-z]{2,4}|\d+)$/i;
+    
+    if (fname == "") {
+        document.querySelector('.verify-fname').textContent = '* Sorry, this field can not be left blank';
+        return false;
+    } else {
+        document.querySelector('.verify-fname').textContent = "";
+    }
+    if (lname == "") {
+        document.querySelector('.verify-lname').textContent = '* Sorry, this field can not be left blank';
+        return false;
+    } else {
+        document.querySelector('.verify-lname').textContent = "";
+    }
+    if (!verifyEmail.test(email) || email === "") {
+        document.querySelector('.verify-email').textContent = '* Sorry, please enter a valid email';
+        return false;
+    } else {
+        document.querySelector('.verify-email').textContent = "";
+    }
+    if (message == "") {
+        document.querySelector('.verify-message').textContent = '* Sorry, this field can not be left blank';
+        return false
+    } else {
+        document.querySelector('.verify-message').textContent = "";
+    }
+
+    //if verified return true for validated form
+    return true;
+}
+
 //Submit form
 function submitForm() {
 
@@ -108,14 +142,20 @@ function submitForm() {
     let email = document.querySelector('#email').value;
     let message = document.querySelector('#message').value;
 
-    //create object to pass emailJS
-    let messageObject = {
-        name: fname + " " + lname,
-        email: email,
-        message: message
-    }
+    //Validate inputs
+    if (formValidation(fname, lname, email, message)) {
 
-    sendEmail(messageObject);
+    // create object to pass emailJS
+        let messageObject = {
+            name: fname + " " + lname,
+            email: email,
+            message: message
+        }
+
+        //send email if verified
+        sendEmail(messageObject);
+        document.querySelector('.error').textContent = "";
+    };
 
     //Clear form on submit
     contactForm.reset();

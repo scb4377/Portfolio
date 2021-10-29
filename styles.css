@@ -380,6 +380,14 @@ input[type=text], textarea {
     border: none;
 }
 
+/*Error on validating form*/
+.error {
+    color: red;
+    font-size: .5rem;
+}
+
+/*Social links at bottom of page */
+
 i {
     margin: 0 10px;
     color: white;
@@ -389,6 +397,7 @@ i {
 i:hover {
     color: rgb(5, 88, 121);
 }
+
 
 
 
