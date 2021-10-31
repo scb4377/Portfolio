@@ -1,122 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!--My style sheet-->
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles.css" />
 
     <!--Google fonts-->
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <title>SCB-Development</title>
 
     <!-- emailJS include script-->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script type="text/javascript">
-(function() {
-emailjs.init("user_PYN9wVCB5BDEBhkE1e46u");
-})();
-</script>
-
-</head>
-<body>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("user_PYN9wVCB5BDEBhkE1e46u");
+      })();
+    </script>
+  </head>
+  <body>
     <header class="bgImg">
-        <nav id="homeLink" class="nav">
-            <div class="logo">
-                <span class="first">SB</span>
-                <span class="last">Dev</span>
-            </div>
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-            <div class="menu">
-                <ul class="linksWrapper">
-                    <li class="link1 links"><a href="#homeLink">Home</a></li>
-                    <li class="link2 links"><a href="#projectsLink">Projects</a></li>
-                    <li class="link3 links"><a href="#contact">contact</a></li>
-                </ul>
-            </div>
-
-            
-        </nav>
+      <nav id="homeLink" class="nav">
+        <div class="logo">
+          <span class="first">SB</span>
+          <span class="last">Dev</span>
+        </div>
+        <div class="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <div class="menu">
+          <ul class="linksWrapper">
+            <li class="link1 links"><a href="#homeLink">Home</a></li>
+            <li class="link2 links"><a href="#projectsLink">Projects</a></li>
+            <li class="link3 links"><a href="#contact">contact</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
     <h1 class="title translate" data-speed="0.1">Be Inspired</h1>
     <div class="shadow translate" data-speed="0.7"></div>
-    <section id="projects">
+    <div class="content">
+      <section id="projects">
         <div class="shadow2"><a id="projectsLink"></a></div>
         <div class="projectContainer" data-speed="0.1">
-            <div class="projName">
-                Music Visualiser
-            </div>
-            <div class="description">
-                Using the browsers Web Audio API, HTML, CSS, and vanilla Javascript to make an audio visualiser
-            </div>
-            <div class="projects">
-                <img class="proj1 projImg" src="./images/musicVisualiser.png" height="200" alt="">
-                <button class="demo music-visualiser-demo">Demo</button>
-                <button class="source music-visualiser-source">Source</button>
-            </div>
+          <div class="projName">Music Visualiser</div>
+          <div class="description">
+            Using the browsers Web Audio API, HTML, CSS, and vanilla Javascript
+            to make an audio visualiser
+          </div>
+          <div class="projects">
+            <img
+              class="proj1 projImg"
+              src="./images/musicVisualiser.png"
+              height="200"
+              alt=""
+            />
+            <button class="demo music-visualiser-demo">Demo</button>
+            <button class="source music-visualiser-source">Source</button>
+          </div>
         </div>
         <div class="projectContainer" data-speed="0.1">
-            <div class="projName">
-                Real Estate Website Mockup
-            </div>
-            <div class="description">
-                Using HTML, CSS, and vanilla Javascript, I created a mockup of the most well known real estate website.
-            </div>
-            <div class="projects">
-                <img class="proj2 projImg" src="./images/realestate.png" height="200" alt="">
-                <button class="demo real-estate-demo">Demo</button>
-                <button class="source real-estate-source">Source</button>
-            </div>
+          <div class="projName">Real Estate Website Mockup</div>
+          <div class="description">
+            Using HTML, CSS, and vanilla Javascript, I created a mockup of the
+            most well known real estate website.
+          </div>
+          <div class="projects">
+            <img
+              class="proj2 projImg"
+              src="./images/realestate.png"
+              height="200"
+              alt=""
+            />
+            <button class="demo real-estate-demo">Demo</button>
+            <button class="source real-estate-source">Source</button>
+          </div>
         </div>
-        <!-- <div class="projectContainer" data-speed="0.1">
-            <div class="content">
-                <div class="projName">Test</div>
-            </div>
-            <div class="description">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta facere nisi ducimus, perspiciatis dicta quae!            
-            </div>
-            <div class="projects">
-                <img class="proj1 projImg" src="./images/musicVisualiser.png" height="200" alt="">
-                <button class="demo music-visualiser-demo">Demo</button>
-                <button class="source music-visualiser-source">Source</button>
-            </div>
-        </div> -->
-    </section>
-    <div id="contact">
+      </section>
+      <div id="contact">
         <div class="contact-container">
-            <!--Onsubmit prevents refresh-->
-            <form class="contact-form" action="" method="post" onsubmit="return false">
-                <label for="fname" class="fname">First Name</label>
-                <span class="error verify-fname"></span>
-                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          <!--Onsubmit prevents refresh-->
+          <form
+            class="contact-form"
+            action=""
+            method="post"
+            onsubmit="return false"
+          >
+            <label for="fname" class="fname">First Name</label>
+            <span class="error verify-fname"></span>
+            <input
+              type="text"
+              id="fname"
+              name="firstname"
+              placeholder="Your name.."
+            />
 
-                <label for="lname" class="lname">Last Name</label>
-                <span class="error verify-lname"></span>
-                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            <label for="lname" class="lname">Last Name</label>
+            <span class="error verify-lname"></span>
+            <input
+              type="text"
+              id="lname"
+              name="lastname"
+              placeholder="Your last name.."
+            />
 
-                <label for="email" class="email">Email Address</label>
-                <span class="error verify-email"></span>
-                <input type="text" id="email" name="email" placeholder="Your email..">
+            <label for="email" class="email">Email Address</label>
+            <span class="error verify-email"></span>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Your email.."
+            />
 
-                <label for="message" class="message">Message</label>
-                <span class="error verify-message"></span>
-                <textarea name="message" id="message" height="200px" class="textarea" placeholder="Write something.."></textarea>
+            <label for="message" class="message">Message</label>
+            <span class="error verify-message"></span>
+            <textarea
+              name="message"
+              id="message"
+              height="200px"
+              class="textarea"
+              placeholder="Write something.."
+            ></textarea>
 
-                <button class="submit">Submit</button>
-            </form>
+            <button class="submit">Submit</button>
+          </form>
         </div>
-        
+      </div>
     </div>
+    <!-- <div class="skills-container">
+        <h2>Skills</h2>
+        <div class="skill">
+            Skill1
+        </div>
+        <div class="skill">
+            Skill2
+        </div>
+        <div class="skill">
+            Skill3
+        </div>
+    </div> -->
     <footer class="footer">
-            <i class="fa fa-github fa-lg" aria-hidden="true"></i>
-            <i class="fa fa-linkedin fa-lg" aria-hidden="true"></i>
+      <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+      <i class="fa fa-linkedin fa-lg" aria-hidden="true"></i>
     </footer>
 
     <!--Font awesome script-->
@@ -124,5 +164,5 @@ emailjs.init("user_PYN9wVCB5BDEBhkE1e46u");
 
     <!--My script file-->
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>

@@ -209,6 +209,14 @@ body::-webkit-scrollbar {
     height: 100px;
 }
 
+.content {
+    background-image: url('./images/foggyMountains.jpeg');
+    background-position:center;
+    background-attachment: fixed;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
 #projects {
     position: relative;
     padding: 100px 40px;
@@ -217,10 +225,6 @@ body::-webkit-scrollbar {
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
-    background-image: url('./images/foggyMountains.jpeg');
-    background-position:center;
-    background-size:cover;
-    background-repeat: no-repeat;
   }
 
 .projectContainer {
@@ -317,7 +321,7 @@ button:hover {
 }
 
 #contact {
-    background: linear-gradient(to top, black, rgb(3, 62, 99),black);
+    
     color: white;
     display: flex;
     justify-content: center;
