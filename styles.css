@@ -36,7 +36,7 @@ body::-webkit-scrollbar {
 
 .bgImg {
     position: relative;
-    background-image: url(./images/pexels-s-migaj-747964.jpg);
+    background-image: url(./images/bgImg.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
