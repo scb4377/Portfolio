@@ -387,7 +387,7 @@ input[type=text], textarea {
 /*Error on validating form*/
 .error {
     color: red;
-    font-size: .5rem;
+    font-size: .8rem;
 }
 
 /*Social links at bottom of page */

@@ -99,42 +99,108 @@ reSource.addEventListener('click', () => {
 //Add submitform listener
 window.addEventListener('submit', submitForm);
 
-function formValidation(fname, lname, email, message) {
+// function formValidation(fname, lname, email, message) {
 
-    //test email
-    let verifyEmail = /^\w+[\+\.\w-]*@([\w-]+\.)*\w+[\w-]*\.([a-z]{2,4}|\d+)$/i;
+//     //test email
+//     let verifyEmail = /^\w+[\+\.\w-]*@([\w-]+\.)*\w+[\w-]*\.([a-z]{2,4}|\d+)$/i;
     
-    if (fname == "") {
-        document.querySelector('.verify-fname').textContent = '* Sorry, this field can not be left blank';
-        return false;
-    } else {
-        document.querySelector('.verify-fname').textContent = "";
-    }
-    if (lname == "") {
-        document.querySelector('.verify-lname').textContent = '* Sorry, this field can not be left blank';
-        return false;
-    } else {
-        document.querySelector('.verify-lname').textContent = "";
-    }
-    if (!verifyEmail.test(email) || email === "") {
-        document.querySelector('.verify-email').textContent = '* Sorry, please enter a valid email';
-        return false;
-    } else {
-        document.querySelector('.verify-email').textContent = "";
-    }
-    if (message == "") {
-        document.querySelector('.verify-message').textContent = '* Sorry, this field can not be left blank';
-        return false
-    } else {
-        document.querySelector('.verify-message').textContent = "";
-    }
+//     if (fname == "") {
+//         document.querySelector('.verify-fname').textContent = '* Sorry, this field can not be left blank';
+//         return false;
+//     } else {
+//         document.querySelector('.verify-fname').textContent = "";
+//     }
+//     if (lname == "") {
+//         document.querySelector('.verify-lname').textContent = '* Sorry, this field can not be left blank';
+//         return false;
+//     } else {
+//         document.querySelector('.verify-lname').textContent = "";
+//     }
+//     if (!verifyEmail.test(email) || email === "") {
+//         document.querySelector('.verify-email').textContent = '* Sorry, please enter a valid email';
+//         return false;
+//     } else {
+//         document.querySelector('.verify-email').textContent = "";
+//     }
+//     if (message == "") {
+//         document.querySelector('.verify-message').textContent = '* Sorry, this field can not be left blank';
+//         return false
+//     } else {
+//         document.querySelector('.verify-message').textContent = "";
+//     }
 
-    //if verified return true for validated form
-    return true;
+//     //if verified return true for validated form
+//     return true;
+// }
+
+// function formValidation(fname, lname, email, message) {
+
+//     let verifyEmail = /^\w+[\+\.\w-]*@([\w-]+\.)*\w+[\w-]*\.([a-z]{2,4}|\d+)$/i;
+
+//     // if (fname == "")
+//     //     document.querySelector('.verify-fname').textContent = "*Sorry, this field cannot be blank";
+//     // else if (lname == "")
+//     //     document.querySelector('.verify-lname').textContent = "*Sorry, this field cannot be blank";
+//     // else if (!verifyEmail.test(email) || email == "")
+//     //     document.querySelector('.verify-email').textContent = "*Sorry, please enter a valid email";
+//     // else if (lname == "")
+//     //     document.querySelector('.verify-message').textContent = "*Sorry, this field cannot be blank";
+//     // else {
+//     //     return true;
+//     // }
+
+//     function check(box) {
+//         let errClass =  (classes) => document.getElementsByClassName('error');
+//         console.log(errClass);
+//         if (box === "") {
+//             let err = document.querySelector(`${errClass}`).textContent = "* Sorry, this field cannot be blank";
+//         }
+//         else
+//             return true;
+//         }
+
+//         if (check(fname) && check(lname) && check(message))
+//             return true;
+
+//     // check(fname);
+//     // check(lname);
+//     // check(message);
+// }
+
+function formValidation(box, index) {
+    let classes = (classes) => document.getElementsByClassName(classes);
+    let errMsg = classes('error');
+    let testBool = false;
+
+    if (box == "") {
+        errMsg[index].textContent = "* Sorry, this cannot be left blank";
+    }
+    else {
+        errMsg[index].textContent = "";
+        testBool = true
+    }
+    return testBool;
+
+}
+
+function verifyEmail(email, index) {
+    let verifyEmail = /^\w+[\+\.\w-]*@([\w-]+\.)*\w+[\w-]*\.([a-z]{2,4}|\d+)$/i;
+    let emailErrMsg = document.querySelector('.verify-email');
+
+    if (!verifyEmail.test(email) || email == "") {
+        emailErrMsg.textContent = "* Sorry, please enter a valid email";
+        return false;
+    }
+    else {
+        emailErrMsg.textContent = "";
+        return true;
+    }
 }
 
 //Submit form
 function submitForm() {
+
+    
 
     //Grab form values
     let fname = document.querySelector('#fname').value;
@@ -142,8 +208,23 @@ function submitForm() {
     let email = document.querySelector('#email').value;
     let message = document.querySelector('#message').value;
 
+    let check1 = formValidation(fname, 0);
+    let check2 = formValidation(lname, 1);
+    let check3 = verifyEmail(email, 2)
+    let check4 = formValidation(message, 3);
+
+    function check() {
+        if (check1 && check2 && check3 && check4) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+
     //Validate inputs
-    if (formValidation(fname, lname, email, message)) {
+    if (check()) {
 
     // create object to pass emailJS
         let messageObject = {
