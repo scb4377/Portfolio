@@ -16,6 +16,8 @@ const mvSource = document.querySelector('.music-visualiser-source');
 const contactForm = document.querySelector('.contact-form');
 const reDemo = document.querySelector('.real-estate-demo');
 const reSource = document.querySelector('.real-estate-source');
+const lcSource = document.querySelector('.loan-calculator-source');
+const lcDemo = document.querySelector('.loan-calculator-demo');
 const vh = window.innerHeight * 0.01;
 
 //variable for window height for mobile including toolbar
@@ -96,77 +98,18 @@ reSource.addEventListener('click', () => {
     window.open('https://github.com/scb4377/Real-Estate-Mockup/tree/master', '_blank');
 })
 
+lcDemo.addEventListener('click', () => {
+    window.open('https://scb4377.github.io/Loan-Calculator/', '_blank');
+})
+
+lcSource.addEventListener('click', () => {
+    window.open('https://github.com/scb4377/Loan-Calculator', '_blank');
+})
+
 //Add submitform listener
 window.addEventListener('submit', submitForm);
 
-// function formValidation(fname, lname, email, message) {
-
-//     //test email
-//     let verifyEmail = /^\w+[\+\.\w-]*@([\w-]+\.)*\w+[\w-]*\.([a-z]{2,4}|\d+)$/i;
-    
-//     if (fname == "") {
-//         document.querySelector('.verify-fname').textContent = '* Sorry, this field can not be left blank';
-//         return false;
-//     } else {
-//         document.querySelector('.verify-fname').textContent = "";
-//     }
-//     if (lname == "") {
-//         document.querySelector('.verify-lname').textContent = '* Sorry, this field can not be left blank';
-//         return false;
-//     } else {
-//         document.querySelector('.verify-lname').textContent = "";
-//     }
-//     if (!verifyEmail.test(email) || email === "") {
-//         document.querySelector('.verify-email').textContent = '* Sorry, please enter a valid email';
-//         return false;
-//     } else {
-//         document.querySelector('.verify-email').textContent = "";
-//     }
-//     if (message == "") {
-//         document.querySelector('.verify-message').textContent = '* Sorry, this field can not be left blank';
-//         return false
-//     } else {
-//         document.querySelector('.verify-message').textContent = "";
-//     }
-
-//     //if verified return true for validated form
-//     return true;
-// }
-
-// function formValidation(fname, lname, email, message) {
-
-//     let verifyEmail = /^\w+[\+\.\w-]*@([\w-]+\.)*\w+[\w-]*\.([a-z]{2,4}|\d+)$/i;
-
-//     // if (fname == "")
-//     //     document.querySelector('.verify-fname').textContent = "*Sorry, this field cannot be blank";
-//     // else if (lname == "")
-//     //     document.querySelector('.verify-lname').textContent = "*Sorry, this field cannot be blank";
-//     // else if (!verifyEmail.test(email) || email == "")
-//     //     document.querySelector('.verify-email').textContent = "*Sorry, please enter a valid email";
-//     // else if (lname == "")
-//     //     document.querySelector('.verify-message').textContent = "*Sorry, this field cannot be blank";
-//     // else {
-//     //     return true;
-//     // }
-
-//     function check(box) {
-//         let errClass =  (classes) => document.getElementsByClassName('error');
-//         console.log(errClass);
-//         if (box === "") {
-//             let err = document.querySelector(`${errClass}`).textContent = "* Sorry, this field cannot be blank";
-//         }
-//         else
-//             return true;
-//         }
-
-//         if (check(fname) && check(lname) && check(message))
-//             return true;
-
-//     // check(fname);
-//     // check(lname);
-//     // check(message);
-// }
-
+// Verify form
 function formValidation(box, index) {
     let classes = (classes) => document.getElementsByClassName(classes);
     let errMsg = classes('error');

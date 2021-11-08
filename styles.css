@@ -258,6 +258,10 @@ body::-webkit-scrollbar {
     width: 100%;
 }
 
+.desc-container {
+    height: 50px;
+}
+
 .description {
     font-family: 'Open-Sans';
     padding: 10px;
