@@ -74,9 +74,6 @@ hamburger.addEventListener('click', () => {
     })
 })
 
-cta.addEventListener('click', () => {
-
-})
 
 //github link
 github.addEventListener('click', () => {
