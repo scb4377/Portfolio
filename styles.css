@@ -242,7 +242,7 @@ body::-webkit-scrollbar-thumb {
   height: 100px;
 }
 
-.content {
+.fixed-img {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url("./images/foggyMountains.jpeg");
   background-position: bottom center;
@@ -250,6 +250,8 @@ body::-webkit-scrollbar-thumb {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+
 
 #projects {
   position: relative;
