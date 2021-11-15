@@ -13,6 +13,7 @@ body {
     -khtml-user-select: none; /* Konqueror HTML */
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
+    font-family: sans-serif;
 }
 
 /* New Scrollbar */
@@ -186,6 +187,35 @@ body::-webkit-scrollbar {
     text-shadow: 5px 5px 1px rgb(2, 90, 144);
 }
 
+/* Call to action */
+.contact-me {
+    position: absolute;
+    top: 60%;
+    margin-left: 40px;
+    margin-top: 20px;
+    padding: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: linear-gradient(to right, rgb(0, 183, 255,0.7), rgba(3, 165, 3, 0.7));
+    border: none;
+    font-size: 1rem;
+    border-radius: 40px;
+    cursor: pointer;
+    z-index: 3;
+    transition: .3s linear;
+}
+
+.contact-me a {
+    text-decoration: none;
+    color: white;
+}
+
+.contact-me:hover {
+    color: white;
+    mix-blend-mode: hard-light;
+    transform: scale(1.1);
+}
+
 
 /* Intro Page Shadow Animation */
 
@@ -210,16 +240,18 @@ body::-webkit-scrollbar {
 }
 
 .content {
-    background-image: url('./images/foggyMountains.jpeg');
+    background: linear-gradient(0deg,rgba(0, 0, 0, 0.3), rgba(0,0,0,0.3)), url('./images/foggyMountains.jpeg');
     background-position:center;
     background-attachment: fixed;
     background-size:cover;
     background-repeat: no-repeat;
 }
 
+
 #projects {
     position: relative;
-    padding: 100px 40px;
+    height: 1000%;
+    padding: 200px 40px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -259,7 +291,7 @@ body::-webkit-scrollbar {
 }
 
 .desc-container {
-    height: 50px;
+    height: 100px;
 }
 
 .description {
@@ -324,6 +356,61 @@ button:hover {
     transform: translate(-20%, -50%);
 }
 
+/* Skills section */
+
+.skills-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: black;
+    overflow: visible;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    flex-wrap: wrap;
+    mix-blend-mode: hard-light;
+}
+
+.skills-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    transform: skewY(2deg);
+    background: inherit;
+    width: 100%;
+    height: 100%;
+    transform-origin: right top;
+    z-index: -1;
+    opacity: 0.9;
+}
+
+.skills-container div {
+    text-align: center;
+    padding: 50px;
+}
+
+.skills-container i {
+    z-index: 2;
+}
+
+.fa-html5 {
+    color: rgb(255, 146, 0.7);
+}
+
+.fa-css3-alt {
+    color: rgba(0, 162, 255, 0.7);
+}
+
+.fa-js-square {
+    color: rgba(255, 255, 0, 0.7);
+}
+
+.fa-react {
+    color: rgba(0, 204, 255, 0.7);
+}
+
 #contact {
     
     color: white;
@@ -341,7 +428,7 @@ button:hover {
     padding: 10px;
     width: 500px;
     height: 100%;
-    margin: 5px;
+    margin: 100px 10px;
     border: 1px solid rgba(255, 255, 255, 0.527);
     display: flex;
     justify-content: center;
@@ -357,7 +444,7 @@ input[type=text], textarea {
     margin-top: 6px;
     margin-bottom: 16px;
     resize: vertical;
-    font-size: .5rem;
+    font-size: 1rem;
     background-color: rgb(212, 212, 212);
 }
 
@@ -396,13 +483,13 @@ input[type=text], textarea {
 
 /*Social links at bottom of page */
 
-i {
+footer i {
     margin: 0 10px;
     color: white;
     cursor: pointer;
 }
 
-i:hover {
+footer i:hover {
     color: rgb(5, 88, 121);
 }
 
@@ -420,13 +507,20 @@ i:hover {
         padding-left: 20px;
     }
 
+    .contact-me {
+        font-size: .5rem;
+        margin-left: 20px;
+        top: 52%;
+        padding: 10px;
+    }
+
     .bgImg {
         height: 100vh;
         height: calc(var(--vh, 1vh) * 100);
     }
 
     .contact-container {
-        width: 80%;
+        width: 90%;
     }
 
     #projects {
@@ -446,12 +540,24 @@ i:hover {
 }
 
 
-@media (max-height: 600px) {
+@media (max-height: 400px) {
     .nav {
         font-size: 1rem;
     }
     .logo {
         font-size: 1rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+        padding-left: 20px;
+    }
+
+    .contact-me {
+        font-size: .5rem;
+        margin-left: 20px;
+        top: 55%;
+        padding: 10px;
     }
 }
 

@@ -19,6 +19,7 @@ const reSource = document.querySelector('.real-estate-source');
 const lcSource = document.querySelector('.loan-calculator-source');
 const lcDemo = document.querySelector('.loan-calculator-demo');
 const vh = window.innerHeight * 0.01;
+const cta = document.querySelector('.contact-me');
 
 //variable for window height for mobile including toolbar
 document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -28,11 +29,16 @@ let headerHeight = header.offsetHeight;
 window.addEventListener('scroll', () => {
     let scroll = window.pageYOffset;
     let titleSpeed = title.dataset.speed;
+    let ctaSpeed = cta.dataset.speed;
     let shadowSpeed = shadow.dataset.speed;
 
     //title fade and lower on scroll
     title.style.transform = `translateY(${scroll * titleSpeed}px)`;
     title.style.opacity = - scroll / (headerHeight / 2) + 1;
+
+    //cta on scroll
+    cta.style.transform = `translateY(${scroll * titleSpeed}px)`;
+    cta.style.opacity = - scroll / (headerHeight / 2) + 1;
 
     //shadow increase height on scroll
     shadow.style.height = `${scroll * shadowSpeed + 100}px`;
@@ -66,6 +72,10 @@ hamburger.addEventListener('click', () => {
             hamLines[2].style.transform = '';
         }
     })
+})
+
+cta.addEventListener('click', () => {
+
 })
 
 //github link
