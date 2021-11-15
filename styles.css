@@ -245,7 +245,7 @@ body::-webkit-scrollbar-thumb {
 .fixed-img {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url("./images/foggyMountains.jpeg");
-  background-position: bottom center;
+  background-position: center;
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -512,11 +512,6 @@ footer i:hover {
   }
 
   .bgImg {
-    height: 100vh;
-    height: calc(var(--vh, 1vh) * 100);
-  }
-
-  .fixed-img {
     height: 100vh;
     height: calc(var(--vh, 1vh) * 100);
   }
