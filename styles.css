@@ -467,13 +467,16 @@ textarea {
 }
 
 .footer {
-  position: relative;
+  position: fixed;
   background: black;
   height: 50px;
+  bottom: 0;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   border: none;
+  z-index: 5;
 }
 
 /*Error on validating form*/
