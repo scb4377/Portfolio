@@ -245,7 +245,7 @@ body::-webkit-scrollbar-thumb {
 .content {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url("./images/foggyMountains.jpeg");
-  background-position: center;
+  background-position: bottom center;
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -512,10 +512,6 @@ footer i:hover {
   .bgImg {
     height: 100vh;
     height: calc(var(--vh, 1vh) * 100);
-  }
-
-  .content {
-    background-attachment: fixed;
   }
 
   .contact-container {
