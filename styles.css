@@ -516,6 +516,11 @@ footer i:hover {
     height: calc(var(--vh, 1vh) * 100);
   }
 
+  .fixed-img {
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+  }
+
   .contact-container {
     width: 90%;
   }
