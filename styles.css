@@ -514,6 +514,10 @@ footer i:hover {
     height: calc(var(--vh, 1vh) * 100);
   }
 
+  .content {
+    background-attachment: fixed;
+  }
+
   .contact-container {
     width: 90%;
   }
