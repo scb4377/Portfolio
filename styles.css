@@ -446,7 +446,7 @@ textarea {
   margin-bottom: 16px;
   resize: vertical;
   font-size: 1rem;
-  background-color: rgb(212, 212, 212);
+  background-color: rgb(231, 231, 231);
 }
 
 .submit {
@@ -562,10 +562,41 @@ footer i:hover {
 
 @media only screen and (max-device-width: 1366px) {
   .fixed-img {
-    background: linear-gradient(0deg, black, black, url("./images/mobileBgImg.jpg"));
+    background-color: black;
+    background: linear-gradient(45deg, rgb(0, 11, 31), rgba(0, 25, 68, 0.849),rgb(183, 184, 192));
     background-attachment: scroll;
     background-size: cover;
     background-position: center;
+  }
+
+  .projectContainer {
+    border: 1px solid rgb(95, 95, 95);
+    box-shadow: 1px 1px 10px rgb(255, 255, 255);
+    border-radius: 5px;
+  }
+
+  .projects {
+    box-shadow: 1px 1px 10px 1px rgb(255, 255, 255);
+  }
+
+  .skills-container {
+    mix-blend-mode:inherit;
+  }
+
+  .fa-html5 {
+    color: rgb(255, 145, 0);
+  }
+  
+  .fa-css3-alt {
+    color: rgb(0, 162, 255);
+  }
+  
+  .fa-js-square {
+    color: rgb(255, 255, 0);
+  }
+  
+  .fa-react {
+    color: rgb(0, 204, 255);
   }
 }
 
