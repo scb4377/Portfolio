@@ -562,7 +562,7 @@ footer i:hover {
 
 @media only screen and (max-device-width: 1366px) {
   .fixed-img {
-    background: linear-gradient(0deg, black, black, url(./images/mobileBgImg.jpg));
+    background: linear-gradient(0deg, black, black, url("./images/mobileBgImg.jpg"));
     background-attachment: scroll;
     background-size: cover;
     background-position: center;
