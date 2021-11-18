@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+
 /* User Select For Highlighting */
 
 body {
@@ -250,7 +251,6 @@ body::-webkit-scrollbar-thumb {
   background-size: cover;
   background-repeat: no-repeat;
 }
-
 
 
 #projects {
@@ -557,6 +557,15 @@ footer i:hover {
     margin-left: 20px;
     top: 55%;
     padding: 10px;
+  }
+}
+
+@media only screen and (max-device-width: 1366px) {
+  .fixed-img {
+    background: linear-gradient(0deg, black, black, url(./images/mobileBgImg.jpg));
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center;
   }
 }
 
