@@ -18,6 +18,8 @@ const reDemo = document.querySelector('.real-estate-demo');
 const reSource = document.querySelector('.real-estate-source');
 const lcSource = document.querySelector('.loan-calculator-source');
 const lcDemo = document.querySelector('.loan-calculator-demo');
+const ctSource = document.querySelector('.crypto-tracker-source');
+const ctDemo = document.querySelector('.crypto-tracker-demo');
 const vh = window.innerHeight * 0.01;
 const cta = document.querySelector('.contact-me');
 
@@ -93,6 +95,16 @@ mvDemo.addEventListener('click', () => {
 //musicVisualizer github source link
 mvSource.addEventListener('click', () => {
     window.open('https://github.com/scb4377/MusicVisualizer', '_blank');
+})
+
+//cryptoTracker github source link
+ctSource.addEventListener('click', () => {
+    window.open('https://github.com/scb4377/CryptoTracker/tree/gh-pages', '_blank');
+})
+
+//cryptoTracker demo link
+ctDemo.addEventListener('click', () => {
+    window.open('https://scb4377.github.io/CryptoTracker/', '_blank');
 })
 
 //Real estate mockup demo link
