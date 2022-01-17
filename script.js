@@ -20,6 +20,8 @@ const lcSource = document.querySelector('.loan-calculator-source');
 const lcDemo = document.querySelector('.loan-calculator-demo');
 const ctSource = document.querySelector('.crypto-tracker-source');
 const ctDemo = document.querySelector('.crypto-tracker-demo');
+const marvelDemo = document.querySelector('.marvel-demo');
+const marvelSource = document.querySelector('.marvel-source');
 const vh = window.innerHeight * 0.01;
 const cta = document.querySelector('.contact-me');
 
@@ -95,6 +97,16 @@ mvDemo.addEventListener('click', () => {
 //musicVisualizer github source link
 mvSource.addEventListener('click', () => {
     window.open('https://github.com/scb4377/MusicVisualizer', '_blank');
+})
+
+//marvel demo link
+marvelDemo.addEventListener('click', () => {
+    window.open('https://scb4377.github.io/marvel/', '_blank');
+})
+
+//marvel github source link
+marvelSource.addEventListener('click', () => {
+    window.open('https://github.com/scb4377/marvel/tree/master/client', '_blank');
 })
 
 //cryptoTracker github source link
