@@ -22,12 +22,10 @@ const ctSource = document.querySelector('.crypto-tracker-source');
 const ctDemo = document.querySelector('.crypto-tracker-demo');
 const marvelDemo = document.querySelector('.marvel-demo');
 const marvelSource = document.querySelector('.marvel-source');
+const snowDemo = document.querySelector('.snowboard-demo');
+const snowSource = document.querySelector('.snowboard-source')
 const vh = window.innerHeight * 0.01;
 const cta = document.querySelector('.contact-me');
-
-const myFunction = () => {
-    return false
-}
 
 //variable for window height for mobile including toolbar
 document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -101,6 +99,14 @@ mvDemo.addEventListener('click', () => {
 //musicVisualizer github source link
 mvSource.addEventListener('click', () => {
     window.open('https://github.com/scb4377/MusicVisualizer', '_blank');
+})
+
+snowDemo.addEventListener('click', () => {
+    window.open('https://snowboards-sk.herokuapp.com/', '_blank');
+})
+
+snowSource.addEventListener('click', () => {
+    window.open('https://github.com/scb4377/snowboard-app/tree/master', '_blank');
 })
 
 //marvel demo link
