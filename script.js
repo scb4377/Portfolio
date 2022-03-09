@@ -25,6 +25,10 @@ const marvelSource = document.querySelector('.marvel-source');
 const vh = window.innerHeight * 0.01;
 const cta = document.querySelector('.contact-me');
 
+const myFunction = () => {
+    return false
+}
+
 //variable for window height for mobile including toolbar
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 

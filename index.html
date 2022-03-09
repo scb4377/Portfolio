@@ -209,7 +209,7 @@
               class="contact-form"
               action=""
               method="post"
-              onsubmit="return false"
+              onsubmit="myFunction()"
             >
               <label for="fname" class="fname">First Name</label>
               <span class="error verify-fname"></span>
@@ -276,6 +276,12 @@
       src="https://kit.fontawesome.com/8cbf183917.js"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      const myFunction = function () {
+        return false;
+      }
+    </script>
 
     <!--My script file-->
     <script src="./script.js"></script>
