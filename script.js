@@ -24,6 +24,8 @@ const marvelDemo = document.querySelector('.marvel-demo');
 const marvelSource = document.querySelector('.marvel-source');
 const snowDemo = document.querySelector('.snowboard-demo');
 const snowSource = document.querySelector('.snowboard-source')
+const bugSource = document.querySelector('.bug-source')
+const bugDemo = document.querySelector('.bug-demo')
 const vh = window.innerHeight * 0.01;
 const cta = document.querySelector('.contact-me');
 
@@ -89,6 +91,16 @@ github.addEventListener('click', () => {
 //linkedin link
 linkedIn.addEventListener('click', () => {
     window.open('https://www.linkedin.com/in/sblevinskw', '_blank');
+})
+
+//bug tracker demo link
+bugDemo.addEventListener('click', () => {
+    window.open('https://bug-tracker-react-node.herokuapp.com/', '_blank');
+})
+
+//bug tracker github source link
+bugSource.addEventListener('click', () => {
+    window.open('https://github.com/scb4377/bugTracker/tree/master', '_blank');
 })
 
 //musicVisualizer demo link

@@ -328,8 +328,9 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   justify-content: space-evenly;
   text-align: center;
-  box-shadow: 0.4px 0.4px 5px 0.4px rgb(255, 255, 255);
-  border-radius: 2px;
+  /* box-shadow: 0.4px 0.4px 5px 0.4px rgb(255, 255, 255); */
+  backdrop-filter: blur(2px) saturate(200%);
+  border-radius: 10px;
   transition: all 0.5s ease-in-out;
   background-color: rgba(103, 120, 146, 0.432);
   overflow: hidden;
@@ -427,6 +428,7 @@ button:hover {
   color: white;
   flex-wrap: wrap;
   mix-blend-mode: hard-light;
+  z-index: 0;
 }
 
 .skills-container::after {
@@ -478,13 +480,13 @@ button:hover {
 
 .contact-container {
   position: relative;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: #070606bd;
-  padding: 10px;
+  backdrop-filter: blur(2px);
+  padding: 20px;
   width: 500px;
   height: 100%;
   margin: 100px 10px;
-  border: 1px solid rgba(255, 255, 255, 0.527);
   display: flex;
   justify-content: center;
   text-align: left;
@@ -556,6 +558,7 @@ footer i:hover {
   .nav {
     font-size: 1rem;
   }
+  
 
   .main-menu {
     visibility: hidden;
@@ -643,13 +646,14 @@ footer i:hover {
   }
 
   .projectContainer {
-    border: 1px solid rgb(95, 95, 95);
-    box-shadow: 1px 1px 10px rgb(255, 255, 255);
-    border-radius: 5px;
+    /* border: 1px solid rgb(95, 95, 95);
+    box-shadow: 1px 1px 10px rgb(255, 255, 255); */
+    /* border-radius: 5px; */
+    backdrop-filter: blur(10px);
   }
 
   .projects {
-    box-shadow: 1px 1px 10px 1px rgb(255, 255, 255);
+    /* box-shadow: 1px 1px 10px 1px rgb(255, 255, 255); */
   }
 
   .skills-container {
