@@ -652,10 +652,6 @@ footer i:hover {
     backdrop-filter: blur(10px);
   }
 
-  .projects {
-    /* box-shadow: 1px 1px 10px 1px rgb(255, 255, 255); */
-  }
-
   .skills-container {
     mix-blend-mode:inherit;
   }
