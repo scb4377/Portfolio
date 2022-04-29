@@ -37,7 +37,7 @@ let headerHeight = header.offsetHeight;
 window.addEventListener('scroll', () => {
     let scroll = window.pageYOffset;
     let titleSpeed = title.dataset.speed;
-    let ctaSpeed = cta.dataset.speed;
+    // let ctaSpeed = cta.dataset.speed;
     let shadowSpeed = shadow.dataset.speed;
 
     //title fade and lower on scroll
@@ -45,8 +45,8 @@ window.addEventListener('scroll', () => {
     title.style.opacity = - scroll / (headerHeight / 2) + 1;
 
     //cta on scroll
-    cta.style.transform = `translateY(${scroll * titleSpeed}px)`;
-    cta.style.opacity = - scroll / (headerHeight / 2) + 1;
+    // cta.style.transform = `translateY(${scroll * titleSpeed}px)`;
+    // cta.style.opacity = - scroll / (headerHeight / 2) + 1;
 
     //shadow increase height on scroll
     shadow.style.height = `${scroll * shadowSpeed + 100}px`;

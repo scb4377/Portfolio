@@ -222,13 +222,19 @@ body::-webkit-scrollbar-thumb {
   z-index: 3;
   /* line-height: 4rem; */
   top: 50%;
-  width: 100%;
   text-align: left;
   padding-left: 40px;  
   transition: 0.3s linear;
-  
+  background-color: rgba(0, 0, 0, 0.622);
+  height: 200px;
+  width: 500px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 50px;
   color: rgb(255, 255, 255);
-  
+  backdrop-filter: blur(2px);
+  display: flex;
+  flex-direction: column;
+  transform: translate(-50%);
 }
 
 .title h1 {
@@ -245,11 +251,7 @@ body::-webkit-scrollbar-thumb {
 
 /* Call to action */
 .contact-me {
-  position: absolute;
-  top: 62%;
-  margin-left: 40px;
-  margin-top: 20px;
-  padding: 15px;
+  padding: 10px;
   text-transform: uppercase;
   font-weight: bold;
   background: linear-gradient(
@@ -262,7 +264,6 @@ body::-webkit-scrollbar-thumb {
   border-radius: 40px;
   cursor: pointer;
   z-index: 3;
-  transition: 0.3s linear;
 }
 
 .contact-me {
@@ -272,7 +273,7 @@ body::-webkit-scrollbar-thumb {
 
 .contact-me:hover {
   color: white;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 /* Intro Page Shadow Animation */
@@ -349,12 +350,28 @@ body::-webkit-scrollbar-thumb {
 }
 
 .desc-container {
-  height: 100px;
+  height: 150px;
 }
 
 .description {
+  height: 100%;
   font-family: "Open-Sans";
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.technologies {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.tech {
+  background-color: rgba(182, 182, 182, 0.517);
+  backdrop-filter: blur(1px) saturate(200%);
+  padding: 5px;
+  border-radius: 5px;
 }
 
 .projVid {
@@ -570,8 +587,16 @@ footer i:hover {
   }
 
   .title {
+    top: 60%;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    width: 100%;
     font-size: 1.5rem;
     padding-left: 20px;
+    height: 150px;
+  }
+  .title h1 {
+    font-size: 3rem;
   }
 
   .title p {
@@ -580,10 +605,8 @@ footer i:hover {
   }
 
   .contact-me {
-    font-size: 0.5rem;
-    margin-left: 20px;
-    top: 80%;
-    padding: 10px;
+    font-size: 0.7rem;
+    padding: 7px;
   }
 
   .bgImg {
@@ -620,19 +643,24 @@ footer i:hover {
   }
 
   .title {
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding-left: 20px;
-    top: 30%;
+    top: 50%;
+    height: 120px;
+    width: 250px;
+  }
+
+  .title h1 {
+    font-size: 2rem;
   }
 
   .title p {
     margin: 10px 0;
+    font-size: 1rem;
   }
 
   .contact-me {
-    font-size: 0.5rem;
-    margin-left: 20px;
-    top: 65%;
+    font-size: .7rem;
     padding: 10px;
   }
 }
