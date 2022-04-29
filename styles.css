@@ -234,12 +234,12 @@ body::-webkit-scrollbar-thumb {
   backdrop-filter: blur(2px);
   display: flex;
   flex-direction: column;
-  transform: translate(-50%);
 }
 
 .title h1 {
-  font-size: 4rem;
-  font-family: "Lobster";
+  padding-top: 20px;
+  font-size: 3rem;
+  font-family: sans-serif;
   font-weight: 600;
   text-shadow: 2px 5px 1px rgb(3, 46, 126);
 }
@@ -596,7 +596,7 @@ footer i:hover {
     height: 150px;
   }
   .title h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .title p {
@@ -634,7 +634,7 @@ footer i:hover {
   }
 }
 
-@media (max-height: 400px) {
+@media (max-height: 500px) {
   .nav {
     font-size: 1rem;
   }
@@ -644,13 +644,15 @@ footer i:hover {
 
   .title {
     font-size: 1rem;
+    padding-top: 0px;
     padding-left: 20px;
     top: 50%;
     height: 120px;
-    width: 250px;
+    width: 300px;
   }
 
   .title h1 {
+    padding-top: 5px;
     font-size: 2rem;
   }
 
