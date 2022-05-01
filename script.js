@@ -194,8 +194,8 @@ function verifyEmail(email, index) {
 }
 
 //Submit form
-function submitForm() {
-
+function submitForm(e) {
+    e.preventDefault()
     
 
     //Grab form values

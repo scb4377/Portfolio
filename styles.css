@@ -252,6 +252,7 @@ body::-webkit-scrollbar-thumb {
 /* Call to action */
 .contact-me {
   padding: 10px;
+  color: white;
   text-transform: uppercase;
   font-weight: bold;
   background: linear-gradient(
@@ -264,15 +265,10 @@ body::-webkit-scrollbar-thumb {
   border-radius: 40px;
   cursor: pointer;
   z-index: 3;
-}
-
-.contact-me {
-  text-decoration: none;
-  color: white;
+  transition: all .2s ease-in-out;
 }
 
 .contact-me:hover {
-  color: white;
   transform: scale(1.1);
 }
 
@@ -285,6 +281,7 @@ body::-webkit-scrollbar-thumb {
   background: linear-gradient(to top, black, rgba(0, 0, 0, 0.712), transparent);
   transition: 0.1s linear;
   height: 100px;
+  z-index: 1;
 }
 
 /* Projects Section */

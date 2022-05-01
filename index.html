@@ -40,7 +40,7 @@
   </head>
   <body id="homeLink">
     <!-- Navigation with BG Img-->
-    <header class="bgImg">
+    <header>
       <div class="code"></div>
       <nav class="nav">
         <div class="logo">
@@ -71,12 +71,12 @@
     </header>
 
     <!-- Name with shadow translate -->
-    <div class="translate title" data-speed="0.1">
+    <div class="firt-section bgImg">
+      <div class="translate title" data-speed="0.1">
       <h1>Stephen Blevins</h1>
       <p>Front-End Developer</p>
-      <a href="#contact"
-      ><button class="contact-me">Contact Me</button></a
-    >
+      <a href="#contact"><button class="contact-me">Contact Me</button></a>
+    </div>
     </div>
     
 
@@ -304,12 +304,7 @@
         <div id="contact">
           <div class="contact-container">
             <!--Onsubmit prevents refresh-->
-            <form
-              class="contact-form"
-              action=""
-              method="post"
-              onsubmit="return false"
-            >
+            <form class="contact-form" action="" method="post">
               <label for="fname" class="fname">First Name</label>
               <span class="error verify-fname"></span>
               <input
