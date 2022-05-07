@@ -28,6 +28,16 @@ const bugSource = document.querySelector('.bug-source')
 const bugDemo = document.querySelector('.bug-demo')
 const vh = window.innerHeight * 0.01;
 const cta = document.querySelector('.contact-me');
+const videoBg = document.getElementById('abstract');
+
+function myVideo() {
+    videoBg.playbackRate = .9;
+
+    setTimeout(() => {
+        videoBg.pause();
+    }, 2000)
+}
+setTimeout(myVideo, 7000)
 
 //variable for window height for mobile including toolbar
 document.documentElement.style.setProperty('--vh', `${vh}px`);
