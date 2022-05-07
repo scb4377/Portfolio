@@ -30,6 +30,7 @@ const vh = window.innerHeight * 0.01;
 const cta = document.querySelector('.contact-me');
 const videoBg = document.getElementById('abstract');
 
+// pause video
 function myVideo() {
     videoBg.playbackRate = .9;
 
