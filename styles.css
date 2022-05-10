@@ -104,7 +104,10 @@ body::-webkit-scrollbar-thumb {
 
 .logo {
   z-index: 5;
-  width: 200px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .last {
