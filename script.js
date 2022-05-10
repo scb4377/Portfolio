@@ -30,15 +30,18 @@ const vh = window.innerHeight * 0.01;
 const cta = document.querySelector('.contact-me');
 const videoBg = document.getElementById('abstract');
 
+window.addEventListener('load', () => {
+    videoBg.play()
+})
 // pause video
-function myVideo() {
-    videoBg.playbackRate = .9;
+// function myVideo() {
+//     videoBg.playbackRate = .9;
 
-    setTimeout(() => {
-        videoBg.pause();
-    }, 2000)
-}
-setTimeout(myVideo, 7000)
+//     setTimeout(() => {
+//         videoBg.pause();
+//     }, 2000)
+// }
+// setTimeout(myVideo, 7000)
 
 //variable for window height for mobile including toolbar
 document.documentElement.style.setProperty('--vh', `${vh}px`);
