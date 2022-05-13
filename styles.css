@@ -340,7 +340,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .fixed-img {
-  background: url("./images/mountains.jpg");
+  background: url("./images/mountains1.jpg");
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
