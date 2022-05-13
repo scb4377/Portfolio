@@ -29,6 +29,7 @@ const bugDemo = document.querySelector('.bug-demo')
 const vh = window.innerHeight * 0.01;
 const cta = document.querySelector('.contact-me');
 const videoBg = document.getElementById('abstract');
+const musicVideo = document.querySelector('.musicVideo');
 
 window.addEventListener('load', () => {
     videoBg.play()
@@ -64,6 +65,13 @@ window.addEventListener('scroll', () => {
 
     //shadow increase height on scroll
     shadow.style.height = `${scroll * shadowSpeed + 100}px`;
+    let height = window.innerHeight
+
+    if (height < scroll) {
+        videoBg.pause()
+    } else {
+        videoBg.play()
+    }
 
 })
 
