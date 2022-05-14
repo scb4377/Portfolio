@@ -63,6 +63,7 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  background-color: white;
 }
 
 .nav {
@@ -86,11 +87,14 @@ body::-webkit-scrollbar-thumb {
 }
 
 .logo {
-  z-index: 5;
   width: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.logo-img {
+  padding-right: 5px;
 }
 
 .last {
@@ -342,9 +346,14 @@ body::-webkit-scrollbar-thumb {
 .fixed-img {
   background: url("./images/mountains1.jpg");
   background-position: center;
-  background-attachment: fixed;
+  position: fixed;
+  /* background-attachment: fixed; */
   background-size: cover;
   background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 
 #projects {
@@ -527,6 +536,7 @@ button:hover {
 }
 
 .skills-header {
+  position: relative;
   font-weight: bold;
   color: var(--third-color);
   text-transform: uppercase;
@@ -577,6 +587,7 @@ button:hover {
 }
 
 #contact {
+  position: relative;
   color: var(--third-color);
   display: flex;
   justify-content: center;
