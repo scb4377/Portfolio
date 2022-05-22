@@ -823,6 +823,12 @@ footer i:hover {
     opacity: 1;
   }
 
+  .first-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
   .title {
     top: 10%;
     max-height: 100vh;
@@ -831,7 +837,7 @@ footer i:hover {
     font-size: 1.1rem;
     padding-left: 10px;
     justify-content: flex-start;
-    padding-top: 150px;
+    padding-top: 80px;
     /* justify-content: flex-start;
     padding-top: 80px; */
   }
@@ -954,6 +960,8 @@ footer i:hover {
 
   .about-wrapper {
     top: 30%;
+    font-size: .8rem;
+    width: 300px;
   }
   .footer {
     position: relative;
