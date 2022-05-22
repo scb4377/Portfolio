@@ -6,10 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta property="og:title" content="Stephen Blevins" />
     <meta property="og:type" content="website" />
-    <meta
-      property="og:image"
-      content="favicon.ico"
-    />
+    <meta property="og:image" content="favicon.ico" />
     <meta property="og:description" content="Stephen Blevins' Portfolio" />
     <meta property="og:url" content="https://stephen-blevins.dev" />
 
@@ -52,7 +49,7 @@
         <div class="logo">
           <image src="favicon-32x32.png" alt="favicon" class="logo-img"></image>
           <!-- <span class="first">SB</span> -->
-          <span class="last">Dev</span>
+          <!-- <span class="last">Dev</span> -->
         </div>
         <div class="main-menu">
           <ul class="main-menu-list">
@@ -82,11 +79,21 @@
       <div class="translate title" data-speed="0.1">
         <h1>Stephen Blevins</h1>
         <p>Front-End Developer</p>
-        <a href="#contact"><button class="contact-me">Contact Me</button></a>
+
+        <a href="#contact"><button class="contact-me">Contact</button></a>
       </div>
-      <video muted playsinline id="abstract" loop>
+      <div class="about-wrapper">
+        <h2>About</h2>
+        <p>
+          Self-taught developer pursuing a degree in Computer Science. Favorite
+          language I like so far is JavaScript. Exposure to many others through coursework and have many
+          tools on my belt. Open to new languages and
+          technologies. 
+        </p>
+      </div>
+      <!-- <video muted playsinline id="abstract" loop>
         <source src="./video/AbstractCopy.mp4" type="video/mp4">
-      </video>
+      </video> -->
       <!-- if phone sideways-->
       <div class="footer-sidebar">
         <i class="fa fa-github fa-lg" aria-hidden="true"></i>
@@ -96,10 +103,8 @@
     </div>
     <!--Comment added-->
 
-    
-
     <!-- Second section -->
-    <div >
+    <div>
       <div class="content">
         <section id="projects">
           <div class="fixed-img"></div>
@@ -322,6 +327,7 @@
         </div>
         <div id="contact">
           <div class="contact-container">
+            <h1>Contact</h1>
             <!--Onsubmit prevents refresh-->
             <form class="contact-form" action="" method="post">
               <label for="fname" class="fname">First Name</label>

@@ -28,18 +28,14 @@ const bugSource = document.querySelector(".bug-source");
 const bugDemo = document.querySelector(".bug-demo");
 const vh = window.innerHeight * 0.01;
 const cta = document.querySelector(".contact-me");
-const videoBg = document.getElementById("abstract");
 const musicVideo = document.querySelector(".musicVideo");
 const mVid = document.querySelector(".mVid");
 const height = window.innerHeight;
 const width = window.innerWidth;
+const about = document.querySelector('.about-wrapper')
 
 // Set boundries of music visualizer video
 var bounding = musicVideo.getBoundingClientRect();
-
-window.addEventListener("load", () => {
-  videoBg.play();
-});
 
 //variable for window height for mobile including toolbar
 document.documentElement.style.setProperty("--vh", `${vh}px`);
@@ -56,6 +52,9 @@ window.addEventListener("scroll", () => {
   title.style.transform = `translateY(${scroll * titleSpeed}px)`;
   title.style.opacity = -scroll / (headerHeight / 2) + 1;
 
+  about.style.transform = `translateY(${scroll * titleSpeed * 2.8}px)`;
+  about.style.opacity = -scroll / (headerHeight / 2) + 1;
+
   //cta on scroll
   // cta.style.transform = `translateY(${scroll * titleSpeed}px)`;
   // cta.style.opacity = - scroll / (headerHeight / 2) + 1;
@@ -63,11 +62,11 @@ window.addEventListener("scroll", () => {
   //shadow increase height on scroll
   shadow.style.height = `${scroll * shadowSpeed + 100}px`;
 
-  if (height < scroll && !videoBg.paused) {
-    videoBg.pause();
-  } else if (height > scroll && videoBg.paused) {
-    videoBg.play();
-  }
+  // if (height < scroll && !videoBg.paused) {
+  //   videoBg.pause();
+  // } else if (height > scroll && videoBg.paused) {
+  //   videoBg.play();
+  // }
 
   if (
     bounding.bottom >= scroll &&
