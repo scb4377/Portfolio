@@ -9,8 +9,8 @@ const navLinks = document.querySelectorAll(".links");
 const hamLines = document.querySelectorAll(".line");
 const projects = document.querySelectorAll(".projectContainer");
 const projectPage = document.querySelector("#projects");
-const github = document.querySelector(".fa-github");
-const linkedIn = document.querySelector(".fa-linkedin");
+const github = document.querySelectorAll(".fa-github");
+const linkedIn = document.querySelectorAll(".fa-linkedin");
 const mvDemo = document.querySelector(".music-visualiser-demo");
 const mvSource = document.querySelector(".music-visualiser-source");
 const contactForm = document.querySelector(".contact-form");
@@ -115,14 +115,14 @@ hamburger.addEventListener("click", () => {
 });
 
 //github link
-github.addEventListener("click", () => {
+github.forEach(git => git.addEventListener("click", () => {
   window.open("https://github.com/scb4377", "_blank");
-});
+}))
 
 //linkedin link
-linkedIn.addEventListener("click", () => {
-  window.open("https://www.linkedin.com/in/sblevinskw", "_blank");
-});
+linkedIn.forEach(link => link.addEventListener("click", () => {
+  window.open("https://www.linkedin.com/in/sblevins-dev/", "_blank");
+}))
 
 //bug tracker demo link
 bugDemo.addEventListener("click", () => {
