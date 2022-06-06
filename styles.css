@@ -28,16 +28,6 @@ body {
   position: relative;
 }
 
-/* Animation */
-
-#abstract {
-  position: absolute;
-  top: 0;
-  min-width: 100vw;
-  min-height: 100vh;
-  object-fit: contain;
-}
-
 /* New Scrollbar */
 
 body::-webkit-scrollbar {
@@ -832,11 +822,6 @@ footer i:hover {
 }
 
 @media (max-width: 500px) {
-  #abstract {
-    top: 80px;
-    left: -40px;
-    height: calc(100vh - 80px);
-  }
 
   .fixed-img {
     height: calc(var(--vh, 1vh) * 100);
@@ -844,6 +829,11 @@ footer i:hover {
 
   .nav {
     font-size: 1rem;
+  }
+
+  .logo {
+    width: 100px;
+    padding-left: 10px;
   }
 
   .main-menu {
@@ -854,21 +844,22 @@ footer i:hover {
     opacity: 1;
   }
 
-  .first-section {
+  .bgImg {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
   }
 
   .title {
-    top: 10%;
+    top: 5%;
     max-height: 100vh;
     width: 100%;
     text-align: center;
     font-size: 1.1rem;
     padding-left: 10px;
     justify-content: flex-start;
-    padding-top: 80px;
+    padding-top: 60px;
     /* justify-content: flex-start;
     padding-top: 80px; */
   }
@@ -893,11 +884,11 @@ footer i:hover {
     left: 0;
     width: 100%;
     text-align: center;
+    padding: 10px;
   }
 
-  .bgImg {
-    height: 100vh;
-    height: calc(var(--vh, 1vh) * 100);
+  .about-wrapper h2 {
+    padding-bottom: 5px;
   }
 
   #contact {
@@ -947,12 +938,7 @@ footer i:hover {
   }
 }
 
-@media (max-height: 600px) {
-  #abstract {
-    left: 100px;
-    height: calc(100vh + 300px);
-  }
-
+@media (max-height: 500px) {
   .fixed-img {
     height: calc(var(--vh, 1vh) * 100);
   }
@@ -973,6 +959,12 @@ footer i:hover {
 
   .menu {
     height: calc(100vh - 50px);
+  }
+
+  .first-section {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
   }
 
   .title {
@@ -1002,9 +994,10 @@ footer i:hover {
   }
 
   .about-wrapper {
-    top: 30%;
+    top: 17%;
     font-size: .8rem;
-    width: 300px;
+    width: 230px;
+    margin-right: 50px;
   }
 
   #projects {
@@ -1030,12 +1023,13 @@ footer i:hover {
     float: left;
     object-fit: cover;
     object-position: center;
+    visibility: hidden;
   }
 
-  .buttons {
+  /* .buttons {
     right: 0%;
     width: 50%;
-  }
+  } */
 
   .buttons button {
     opacity: 1;
@@ -1052,12 +1046,5 @@ footer i:hover {
 
   .footer-sidebar {
     visibility: visible;
-  }
-}
-
-@media (min-width: 1500px) {
-  #abstract {
-    right: -600px;
-    height: calc(100vh + 700px);
   }
 }
