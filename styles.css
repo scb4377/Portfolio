@@ -422,6 +422,8 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   height: 100%;
   width: 100%;
+  top: 0;
+  left: 0;
   background-color: rgba(0, 0, 0, 0.785);
   /* mix-blend-mode: soft-light; */
 }
@@ -483,7 +485,7 @@ body::-webkit-scrollbar-thumb {
 
 .projectContainer {
   width: 400px;
-  height: 600px;
+  height: 540px;
   padding: 10px;
   margin: 0px;
   color: var(--fourth-color);
@@ -514,7 +516,7 @@ body::-webkit-scrollbar-thumb {
 
 .projName {
   font-size: 1.5rem;
-  height: 50px;
+  height: 30px;
   text-transform: uppercase;
   width: 100%;
   transition: all 0.5s ease-in-out;
@@ -523,18 +525,25 @@ body::-webkit-scrollbar-thumb {
 }
 
 .desc-container {
-  height: 150px;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .description {
-  height: 200px;
-  font-family: "Open-Sans";
+  height: 230px;
+  font-family: "Sans-serif";
   padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   font-weight: 500;
   letter-spacing: 2px;
+}
+
+.description .content {
+  padding: 5px;
+  margin: auto;
 }
 
 .technologies {
@@ -667,6 +676,7 @@ button:hover {
   font-weight: 500;
   font-size: 1.5rem;
   letter-spacing: 2px;
+  padding-bottom: 5px;
 }
 
 .skills-container i {
@@ -687,6 +697,28 @@ button:hover {
 
 .fa-react {
   color: rgba(0, 204, 255, 0.7);
+}
+
+.fa-node-js {
+  color: rgb(4, 164, 4);
+}
+
+.skills-container div .mongo-container {
+  padding: 0px;
+}
+
+.mongo-container {
+  height: 144px;
+  position: relative;
+  object-position: center;
+  overflow: hidden;
+}
+
+.mongo {
+  position: absolute;
+  top: -40%;
+  left: -30%;
+  height: 180%;
 }
 
 #contact {
@@ -915,7 +947,7 @@ footer i:hover {
   }
 }
 
-@media (max-height: 500px) {
+@media (max-height: 600px) {
   #abstract {
     left: 100px;
     height: calc(100vh + 300px);
@@ -990,12 +1022,14 @@ footer i:hover {
   }
 
   .description {
-    height: 120px;
+    height: 150px;
   }
 
   .projVid {
     width: 280px;
     float: left;
+    object-fit: cover;
+    object-position: center;
   }
 
   .buttons {
