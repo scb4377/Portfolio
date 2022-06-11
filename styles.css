@@ -96,22 +96,6 @@ body::-webkit-scrollbar-thumb {
   padding-top: 10px;
 }
 
-.logo-img {
-  padding-right: 5px;
-}
-
-.last {
-  background: linear-gradient(
-    to right,
-    rgba(0, 60, 255, 0.7),
-    rgb(255, 123, 0)
-  );
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  font-weight: bolder;
-}
-
 .main-menu {
   z-index: 40;
   font-size: 0.9rem;
@@ -212,16 +196,9 @@ body::-webkit-scrollbar-thumb {
   z-index: 1;
   margin-top: 50px;
   margin-bottom: 50px;
+  background-color: rgba(21, 21, 21, 0.841);
 }
-.menu::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.834);
-}
+
 .active {
   transition: all 0.7s ease-in-out;
   transform: translateX(0%);
@@ -266,6 +243,7 @@ body::-webkit-scrollbar-thumb {
   text-decoration: none;
   color: #ffffff;
   z-index: 40;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .links a:active {
@@ -297,10 +275,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .title h1 {
-  /* padding-top: 20px; */
   font-size: 1.8rem;
   padding: 10px 10px 15px;
-  /* font-family: Lobster; */
   font-weight: 500;
   letter-spacing: 2px;
   color: #ffffff;
