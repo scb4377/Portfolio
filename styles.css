@@ -59,7 +59,6 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   background-color: #16161696;
   backdrop-filter: blur(5px) saturate(100%);
-  
 }
 
 .nav {
@@ -91,7 +90,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .logo span {
-  font-family:  'Herr Von Muellerhoff', cursive;
+  font-family: "Herr Von Muellerhoff", cursive;
   font-weight: 500;
   letter-spacing: 2px;
   font-size: 1.5rem;
@@ -132,8 +131,8 @@ body::-webkit-scrollbar-thumb {
 .main-menu-list li a {
   text-decoration: none;
   color: white;
-  transition: all .3s ease-in-out;
-  font-weight:500;
+  transition: all 0.3s ease-in-out;
+  font-weight: 500;
   font-size: 1rem;
   border-bottom: none;
   letter-spacing: 2px;
@@ -250,7 +249,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .links a:active {
-  color:#1a1a1a;
+  color: #1a1a1a;
   z-index: 40;
 }
 
@@ -311,7 +310,7 @@ body::-webkit-scrollbar-thumb {
   font-weight: 500;
   background-color: #272727;
   border: none;
-  font-size: .8rem;
+  font-size: 0.8rem;
   border-radius: 2px;
   letter-spacing: 2px;
   cursor: pointer;
@@ -361,7 +360,12 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   bottom: 0%;
   width: 100%;
-  background: linear-gradient(to top, rgb(23, 23, 23), rgba(17, 17, 17, 0.712), transparent);
+  background: linear-gradient(
+    to top,
+    rgb(23, 23, 23),
+    rgba(17, 17, 17, 0.712),
+    transparent
+  );
   transition: 0.2s linear;
   height: 50px;
   z-index: 5;
@@ -369,7 +373,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* Projects Section */
-
 
 .fixed-img {
   background: url("./images/mountains1.jpg");
@@ -472,7 +475,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .projectContainer:hover {
-  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
   /* transform: translateY(-2%); */
   backdrop-filter: blur(10px) saturate(200%);
   transform: translateY(-5%);
@@ -490,7 +494,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .desc-container {
-  /* height: 200px; */ 
+  /* height: 200px; */
   max-height: 200px;
   display: flex;
   justify-content: space-between;
@@ -584,7 +588,7 @@ body::-webkit-scrollbar-thumb {
 
 button:hover {
   color: #272727;
-  background-color:#ffffff;
+  background-color: #ffffff;
 }
 
 /* Skills section */
@@ -735,7 +739,7 @@ button:hover {
 }
 
 .success-wrapper p {
-  font-family: 'Sans-serif';
+  font-family: "Sans-serif";
 }
 
 .error-wrapper {
@@ -757,7 +761,7 @@ button:hover {
 }
 
 .error-wrapper p {
-  font-family: 'Sans-serif';
+  font-family: "Sans-serif";
 }
 
 .contact-container h1 {
@@ -837,7 +841,7 @@ footer i {
   margin: 0 10px;
   color: white;
   cursor: pointer;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 footer i:hover {
@@ -845,7 +849,6 @@ footer i:hover {
 }
 
 @media only screen and (max-width: 500px) {
-
   .fixed-img {
     height: calc(var(--vh, 1vh) * 100);
   }
@@ -1020,7 +1023,7 @@ footer i:hover {
 
   .title p {
     margin: 10px 0;
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 
   .contact-me {
@@ -1096,5 +1099,30 @@ footer i:hover {
 
   .footer-sidebar {
     visibility: visible;
+  }
+}
+
+/* Iphone media queries */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+  .fixed-img {
+    min-height: 100vh;
+  }
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) {
+  .fixed-img {
+    min-height: 100vh;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+  .fixed-img {
+    min-height: 100vh;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .fixed-img {
+    min-height: 100vh;
   }
 }
