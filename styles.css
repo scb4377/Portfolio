@@ -733,6 +733,10 @@ button:hover {
   padding-bottom: 15px;
 }
 
+.success-wrapper p {
+  font-family: 'Sans-serif';
+}
+
 .error-wrapper {
   position: absolute;
   background-color: #6f3f3faa;
@@ -749,6 +753,10 @@ button:hover {
   font-weight: 500;
   text-transform: uppercase;
   padding-bottom: 15px;
+}
+
+.error-wrapper p {
+  font-family: 'Sans-serif';
 }
 
 .contact-container h1 {
