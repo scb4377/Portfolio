@@ -896,6 +896,10 @@ footer i:hover {
     text-align: center;
   }
 
+  .title a {
+    padding-left: 0;
+  }
+
   .contact-me {
     font-size: 1rem;
     padding: 7px;
