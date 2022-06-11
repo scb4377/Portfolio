@@ -2,7 +2,6 @@ const title = document.querySelector(".title");
 const translate = document.querySelector(".translate");
 const header = document.querySelector("header");
 const shadow = document.querySelector(".shadow");
-const shadow2 = document.querySelector(".shadow2");
 const hamburger = document.querySelector(".hamburger");
 const menu = document.querySelector(".menu");
 const navLinks = document.querySelectorAll(".links");
@@ -10,8 +9,8 @@ const hamLines = document.querySelectorAll(".line");
 const projects = document.querySelectorAll(".projectContainer");
 const projectPage = document.querySelector("#projects");
 
-const demoBtns = document.querySelectorAll('.demo');
-const sourceBtns = document.querySelectorAll('.source');
+const demoBtns = document.querySelectorAll(".demo");
+const sourceBtns = document.querySelectorAll(".source");
 
 const github = document.querySelectorAll(".fa-github");
 const linkedIn = document.querySelectorAll(".fa-linkedin");
@@ -22,7 +21,7 @@ const musicVideo = document.querySelector(".musicVideo");
 const mVid = document.querySelector(".mVid");
 const height = window.innerHeight;
 const width = window.innerWidth;
-const about = document.querySelector('.about-wrapper')
+const about = document.querySelector(".about-wrapper");
 
 // Set boundries of music visualizer video
 var bounding = musicVideo.getBoundingClientRect();
@@ -36,18 +35,20 @@ let headerHeight = header.offsetHeight;
 window.addEventListener("scroll", () => {
   let scroll = window.pageYOffset;
   let titleSpeed = title.dataset.speed;
-  // let ctaSpeed = cta.dataset.speed;
   let shadowSpeed = shadow.dataset.speed;
 
-  //title fade and lower on scroll
-  title.style.transform = `translateY(${scroll * titleSpeed}px)`;
-  title.style.opacity = -scroll / (headerHeight / 2) + 1;
+  if (!navigator.userAgent.toLowerCase().match(/mobile/i)) {
+    //title fade and lower on scroll
+    title.style.transform = `translateY(${scroll * titleSpeed}px)`;
+    title.style.opacity = -scroll / (headerHeight / 2) + 1;
 
-  about.style.transform = `translateY(${scroll * titleSpeed * 2.8}px)`;
-  about.style.opacity = -scroll / (headerHeight / 2) + 1;
+    // about fade and lower
+    about.style.transform = `translateY(${scroll * titleSpeed}px)`;
+    about.style.opacity = -scroll / (headerHeight / 2) + 1;
 
-  //shadow increase height on scroll
-  shadow.style.height = `${scroll * shadowSpeed + 100}px`;
+    //shadow increase height on scroll
+    shadow.style.height = `${scroll * shadowSpeed + 100}px`;
+  }
 
   if (
     bounding.bottom >= scroll &&
@@ -100,86 +101,88 @@ hamburger.addEventListener("click", () => {
 const demoFunc = (() => {
   let url;
 
-  demoBtns.forEach(demo => {
+  demoBtns.forEach((demo) => {
+    let clName = demo.className.split(" ")[1];
 
-    let clName = demo.className.split(' ')[1];
-
-    demo.addEventListener('click', () => {
+    demo.addEventListener("click", () => {
       switch (clName) {
-      case 'bug-demo':
-        url = "https://bug-tracker-react-node.herokuapp.com/"
-        break;
-      case 'snowboard-demo':
-        url = "https://snowboards-sk.herokuapp.com/"
-        break;
-      case 'crypto-tracker-demo':
-        url = "https://scb4377.github.io/CryptoTracker/"
-        break;
-      case 'marvel-demo':
-        url = "https://scb4377.github.io/marvel/"
-        break;
-      case 'music-visualiser-demo':
-        url = "https://scb4377.github.io/MusicVisualizer/"
-        break;
-      case 'loan-calculator-demo':
-        url = "https://scb4377.github.io/Loan-Calculator/"
-        break;
-      case 'real-estate-demo':
-        url = "https://scb4377.github.io/Real-Estate-Mockup/"
-        break;
-    }
+        case "bug-demo":
+          url = "https://bug-tracker-react-node.herokuapp.com/";
+          break;
+        case "snowboard-demo":
+          url = "https://snowboards-sk.herokuapp.com/";
+          break;
+        case "crypto-tracker-demo":
+          url = "https://scb4377.github.io/CryptoTracker/";
+          break;
+        case "marvel-demo":
+          url = "https://scb4377.github.io/marvel/";
+          break;
+        case "music-visualiser-demo":
+          url = "https://scb4377.github.io/MusicVisualizer/";
+          break;
+        case "loan-calculator-demo":
+          url = "https://scb4377.github.io/Loan-Calculator/";
+          break;
+        case "real-estate-demo":
+          url = "https://scb4377.github.io/Real-Estate-Mockup/";
+          break;
+      }
 
-    window.open(url, "_blank")
-    })
-  })
-})()
+      window.open(url, "_blank");
+    });
+  });
+})();
 
 // function for source buttons
 const sourceFunc = (() => {
   let url;
 
-  sourceBtns.forEach(source => {
+  sourceBtns.forEach((source) => {
+    let clName = source.className.split(" ")[1];
 
-    let clName = source.className.split(' ')[1];
-
-    source.addEventListener('click', () => {
+    source.addEventListener("click", () => {
       switch (clName) {
-      case 'bug-source':
-        url = "https://github.com/scb4377/bugTracker/tree/master"
-        break;
-      case 'snowboard-source':
-        url = "https://github.com/scb4377/snowboard-app/tree/master"
-        break;
-      case 'crypto-tracker-source':
-        url = "https://github.com/scb4377/CryptoTracker/tree/gh-pages"
-        break;
-      case 'marvel-source':
-        url = "https://github.com/scb4377/marvel/tree/master/client"
-        break;
-      case 'music-visualiser-source':
-        url = "https://github.com/scb4377/MusicVisualizer"
-        break;
-      case 'loan-calculator-source':
-        url = "https://github.com/scb4377/Loan-Calculator"
-        break;
-      case 'real-estate-source':
-        url = "https://github.com/scb4377/Real-Estate-Mockup/tree/master"
-        break;
-    }
-    window.open(url, "_blank")
-    })
-  })
-})()
+        case "bug-source":
+          url = "https://github.com/scb4377/bugTracker/tree/master";
+          break;
+        case "snowboard-source":
+          url = "https://github.com/scb4377/snowboard-app/tree/master";
+          break;
+        case "crypto-tracker-source":
+          url = "https://github.com/scb4377/CryptoTracker/tree/gh-pages";
+          break;
+        case "marvel-source":
+          url = "https://github.com/scb4377/marvel/tree/master/client";
+          break;
+        case "music-visualiser-source":
+          url = "https://github.com/scb4377/MusicVisualizer";
+          break;
+        case "loan-calculator-source":
+          url = "https://github.com/scb4377/Loan-Calculator";
+          break;
+        case "real-estate-source":
+          url = "https://github.com/scb4377/Real-Estate-Mockup/tree/master";
+          break;
+      }
+      window.open(url, "_blank");
+    });
+  });
+})();
 
 //github link
-github.forEach(git => git.addEventListener("click", () => {
-  window.open("https://github.com/scb4377", "_blank");
-}))
+github.forEach((git) =>
+  git.addEventListener("click", () => {
+    window.open("https://github.com/scb4377", "_blank");
+  })
+);
 
 //linkedin link
-linkedIn.forEach(link => link.addEventListener("click", () => {
-  window.open("https://www.linkedin.com/in/sblevins-dev/", "_blank");
-}))
+linkedIn.forEach((link) =>
+  link.addEventListener("click", () => {
+    window.open("https://www.linkedin.com/in/sblevins-dev/", "_blank");
+  })
+);
 
 //Add submitform listener
 window.addEventListener("submit", submitForm);
