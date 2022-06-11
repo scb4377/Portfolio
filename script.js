@@ -251,18 +251,26 @@ function submitForm(e) {
     sendEmail(messageObject);
     document.querySelector(".error").textContent = "";
   }
-
-  //Clear form on submit
-  contactForm.reset();
 }
 
 function sendEmail(templateParams) {
+  let contact = document.querySelector(".contact-container");
+  let successMess = document.querySelector(".success-wrapper");
+  let errorMess = document.querySelector(".error-wrapper")
+
   //emailJS
   emailjs.send("service_kxar6ow", "template_m2vhmlq", templateParams).then(
     function (response) {
+      contact.style.visibility = "hidden";
+      successMess.style.visibility = "visible";
       console.log("SUCCESS!", response.status, response.text);
+
+      //Clear form on submit
+      contactForm.reset();
     },
     function (error) {
+      contact.style.visibility = "hidden"
+      errorMess.style.visibility = "visible"
       console.log("FAILED...", error);
     }
   );

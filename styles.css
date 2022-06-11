@@ -704,7 +704,6 @@ button:hover {
 .contact-container {
   position: relative;
   border-radius: 10px;
-  /* backdrop-filter: blur(2px); */
   padding: 20px;
   width: 500px;
   height: 100%;
@@ -714,6 +713,42 @@ button:hover {
   justify-content: space-between;
   text-align: left;
   font-weight: bold;
+}
+
+.success-wrapper {
+  position: absolute;
+  background-color: #3f546faa;
+  width: 90%;
+  padding: 20px 10px;
+  border-radius: 2px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  backdrop-filter: blur(2px);
+  visibility: hidden;
+}
+
+.success-wrapper h1 {
+  font-weight: 500;
+  text-transform: uppercase;
+  padding-bottom: 15px;
+}
+
+.error-wrapper {
+  position: absolute;
+  background-color: #6f3f3faa;
+  width: 90%;
+  padding: 20px 10px;
+  border-radius: 2px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  backdrop-filter: blur(2px);
+  visibility: hidden;
+}
+
+.success-wrapper h1 {
+  font-weight: 500;
+  text-transform: uppercase;
+  padding-bottom: 15px;
 }
 
 .contact-container h1 {
