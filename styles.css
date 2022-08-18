@@ -495,7 +495,6 @@ body::-webkit-scrollbar-thumb {
 
 .desc-container {
   /* height: 200px; */
-  max-height: 200px;
   display: flex;
   justify-content: space-between;
 }
@@ -679,16 +678,17 @@ button:hover {
 }
 
 .mongo-container {
-  height: 144px;
+  height: 85px;
   position: relative;
   object-position: center;
   overflow: hidden;
+  margin: auto;
 }
 
 .mongo {
   position: absolute;
   top: -40%;
-  left: -30%;
+  left: 0;
   height: 180%;
 }
 

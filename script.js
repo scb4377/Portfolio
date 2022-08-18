@@ -50,20 +50,20 @@ window.addEventListener("scroll", () => {
     shadow.style.height = `${scroll * shadowSpeed + 100}px`;
   }
 
-  if (
-    bounding.bottom >= scroll &&
-    bounding.top - scroll <= height &&
-    musicVideo.paused
-  ) {
-    musicVideo.play();
-  } else if (
-    (bounding.bottom <= scroll &&
-      bounding.bottom - scroll <= height &&
-      !musicVideo.paused) ||
-    (bounding.top >= scroll + height && !musicVideo.paused)
-  ) {
-    musicVideo.pause();
-  }
+  // if (
+  //   bounding.bottom >= scroll &&
+  //   bounding.top - scroll <= height &&
+  //   musicVideo.paused
+  // ) {
+  //   musicVideo.play();
+  // } else if (
+  //   (bounding.bottom <= scroll &&
+  //     bounding.bottom - scroll <= height &&
+  //     !musicVideo.paused) ||
+  //   (bounding.top >= scroll + height && !musicVideo.paused)
+  // ) {
+  //   musicVideo.pause();
+  // }
 });
 
 // for mobile navigation
