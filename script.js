@@ -18,18 +18,22 @@ const contactForm = document.querySelector(".contact-form");
 const vh = window.innerHeight * 0.01;
 const cta = document.querySelector(".contact-me");
 const musicVideo = document.querySelector(".musicVideo");
-const mVid = document.querySelector(".mVid");
+// const mVid = document.querySelector(".mVid");
 const height = window.innerHeight;
 const width = window.innerWidth;
-const about = document.querySelector(".about-wrapper");
+// const about = document.querySelector(".about-wrapper");
 
 // Set boundries of music visualizer video
-var bounding = musicVideo.getBoundingClientRect();
+// var bounding = musicVideo.getBoundingClientRect();
 
 //variable for window height for mobile including toolbar
 document.documentElement.style.setProperty("--vh", `${vh}px`);
 
 let headerHeight = header.offsetHeight;
+
+window.addEventListener('click', () => {
+  console.log('click')
+})
 
 // Scroll effects
 window.addEventListener("scroll", () => {
@@ -43,8 +47,8 @@ window.addEventListener("scroll", () => {
     title.style.opacity = -scroll / (headerHeight / 2) + 1;
 
     // about fade and lower
-    about.style.transform = `translateY(${scroll * titleSpeed}px)`;
-    about.style.opacity = -scroll / (headerHeight / 2) + 1;
+    // about.style.transform = `translateY(${scroll * titleSpeed}px)`;
+    // about.style.opacity = -scroll / (headerHeight / 2) + 1;
 
     //shadow increase height on scroll
     shadow.style.height = `${scroll * shadowSpeed + 100}px`;
@@ -115,18 +119,18 @@ const demoFunc = (() => {
         case "crypto-tracker-demo":
           url = "https://scb4377.github.io/CryptoTracker/";
           break;
-        case "marvel-demo":
-          url = "https://scb4377.github.io/marvel/";
-          break;
-        case "music-visualiser-demo":
-          url = "https://scb4377.github.io/MusicVisualizer/";
-          break;
-        case "loan-calculator-demo":
-          url = "https://scb4377.github.io/Loan-Calculator/";
-          break;
-        case "real-estate-demo":
-          url = "https://scb4377.github.io/Real-Estate-Mockup/";
-          break;
+        // case "marvel-demo":
+        //   url = "https://scb4377.github.io/marvel/";
+        //   break;
+        // case "music-visualiser-demo":
+        //   url = "https://scb4377.github.io/MusicVisualizer/";
+        //   break;
+        // case "loan-calculator-demo":
+        //   url = "https://scb4377.github.io/Loan-Calculator/";
+        //   break;
+        // case "real-estate-demo":
+        //   url = "https://scb4377.github.io/Real-Estate-Mockup/";
+        //   break;
       }
 
       window.open(url, "_blank");
@@ -137,6 +141,7 @@ const demoFunc = (() => {
 // function for source buttons
 const sourceFunc = (() => {
   let url;
+  console.log('click')
 
   sourceBtns.forEach((source) => {
     let clName = source.className.split(" ")[1];
@@ -152,18 +157,18 @@ const sourceFunc = (() => {
         case "crypto-tracker-source":
           url = "https://github.com/scb4377/CryptoTracker/tree/gh-pages";
           break;
-        case "marvel-source":
-          url = "https://github.com/scb4377/marvel/tree/master/client";
-          break;
-        case "music-visualiser-source":
-          url = "https://github.com/scb4377/MusicVisualizer";
-          break;
-        case "loan-calculator-source":
-          url = "https://github.com/scb4377/Loan-Calculator";
-          break;
-        case "real-estate-source":
-          url = "https://github.com/scb4377/Real-Estate-Mockup/tree/master";
-          break;
+        // case "marvel-source":
+        //   url = "https://github.com/scb4377/marvel/tree/master/client";
+        //   break;
+        // case "music-visualiser-source":
+        //   url = "https://github.com/scb4377/MusicVisualizer";
+        //   break;
+        // case "loan-calculator-source":
+        //   url = "https://github.com/scb4377/Loan-Calculator";
+        //   break;
+        // case "real-estate-source":
+        //   url = "https://github.com/scb4377/Real-Estate-Mockup/tree/master";
+        //   break;
       }
       window.open(url, "_blank");
     });
