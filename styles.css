@@ -438,12 +438,12 @@ body::-webkit-scrollbar-thumb {
 }
 
 .projects-header {
-  position: absolute;
-  top: 20px;
+  /* position: absolute;
+  top: 20px; */
   text-align: center;
-  width: 200px;
+  width: 100%;
   text-transform: uppercase;
-  padding: 35px 10px 10px;
+  padding: 35px 10px 50px 10px;
   color: white;
   z-index: 1;
   font-weight: 500;

@@ -111,7 +111,7 @@ const demoFunc = (() => {
     demo.addEventListener("click", () => {
       switch (clName) {
         case "bug-demo":
-          url = "https://bug-tracker-react-node.herokuapp.com/";
+          url = "https://project-manager-bug-tracker.herokuapp.com/";
           break;
         case "snowboard-demo":
           url = "https://snowboards-sk.herokuapp.com/";
@@ -149,7 +149,7 @@ const sourceFunc = (() => {
     source.addEventListener("click", () => {
       switch (clName) {
         case "bug-source":
-          url = "https://github.com/scb4377/bugTracker/tree/master";
+          url = "https://github.com/scb4377/project-manager/tree/master";
           break;
         case "snowboard-source":
           url = "https://github.com/scb4377/snowboard-app/tree/master";
