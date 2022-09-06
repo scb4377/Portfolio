@@ -58,7 +58,20 @@ body::-webkit-scrollbar-thumb {
   justify-content: flex-start;
   align-items: center;
   background-color: #16161696;
-  backdrop-filter: blur(5px) saturate(100%);
+  border-bottom: 10px solid rgba(21, 21, 21);
+  background: url(./images/firstImg.jpg) fixed center;
+  object-fit:scale-down;
+}
+
+.test {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #161616bc;
+  /* backdrop-filter: blur(0px) saturate(100%); */
+  z-index: 500;
 }
 
 .nav {
@@ -261,7 +274,7 @@ body::-webkit-scrollbar-thumb {
 /* Main Quote */
 
 .title {
-  z-index: 3;
+  z-index: 1000;
   text-align: left;
   transition: 0.3s linear;
   height: 200px;
@@ -363,10 +376,11 @@ body::-webkit-scrollbar-thumb {
   background: linear-gradient(
     to top,
     rgb(23, 23, 23),
-    rgba(17, 17, 17, 0.712),
     transparent
   );
-  transition: 0.2s linear;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 0.3s linear;
   height: 50px;
   z-index: 5;
   border-bottom: 5px solid #1a1a1a;
@@ -1045,6 +1059,7 @@ footer i:hover {
   }
 
   .footer-sidebar {
+    z-index: 1000;
     visibility: visible;
   }
 }
