@@ -37,6 +37,8 @@
       rel="stylesheet"
     />
 
+    <link rel="stylesheet" href="path/to/fontawesome.min.css" />
+
     <title>SB Dev</title>
 
     <!-- emailJS include script-->
@@ -49,6 +51,10 @@
         emailjs.init("user_PYN9wVCB5BDEBhkE1e46u");
       })();
     </script>
+    <script
+      src="https://kit.fontawesome.com/8cbf183917.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body id="homeLink">
     <!-- Navigation with BG Img-->
@@ -118,33 +124,39 @@
             <!-- <div class="projName">Bug Tracker</div> -->
             <div class="desc-container">
               <div class="description">
+                <!-- <i class="fas fa-external-link-alt fa-lg"></i> -->
                 <p class="content">
                   Application that allows a team to create, read, update, and
-                  delete bug reports. A user must be authenticated to view
-                  and report issues within the application.
+                  delete bug reports. A user must be authenticated to view and
+                  report issues within the application.
                 </p>
                 <div class="technologies">
-                  <div class="tech">MERN</div>
+                  <div class="tech">MongoDB</div>
+                  <div class="tech">Express</div>
+                  <div class="tech">React</div>
+                  <div class="tech">Node</div>
                 </div>
+                <span class="project-links">
+                  <i class="fas fa-external-link-alt fa-lg demo bug-demo"></i>
+                  <i class="fa fa-github fa-lg source bug-source"></i>
+                </span>
               </div>
             </div>
+
             <div class="projects">
               <img
                 class="proj2 projVid"
-                src="./images/test.png"
+                src="./images/bug.png"
                 height="200"
                 alt=""
               />
-              <div class="buttons">
-                <button class="demo bug-demo">Demo</button>
-                <button class="source bug-source">Source</button>
-              </div>
             </div>
           </div>
 
           <!-- Snowbard App -->
           <div class="projectContainer" data-speed="0.1">
             <!-- <div class="projName">Snowboard Shop</div> -->
+
             <div class="desc-container">
               <div class="description">
                 <p class="content">
@@ -152,8 +164,15 @@
                   and login to their profile to view previous orders.
                 </p>
                 <div class="technologies">
-                  <div class="tech">MERN</div>
+                  <div class="tech">MongoDB</div>
+                  <div class="tech">Express</div>
+                  <div class="tech">React</div>
+                  <div class="tech">Node</div>
                 </div>
+                <span class="project-links">
+                  <i class="fas fa-external-link-alt fa-lg demo snowboard-demo"></i>
+                  <i class="fa fa-github fa-lg source snowboard-source"></i>
+                </span>
               </div>
             </div>
             <div class="projects">
@@ -163,10 +182,6 @@
                 height="200"
                 alt=""
               />
-              <div class="buttons">
-                <button class="demo snowboard-demo">Demo</button>
-                <button class="source snowboard-source">Source</button>
-              </div>
             </div>
           </div>
 
@@ -177,11 +192,18 @@
               <div class="description">
                 <p class="content">
                   Crypto-currency tracker using React and Coin-Gecko API. Coins
-                  that you are interested in can be added to your watchlist.
+                  that you are interested in can be added to your session
+                  watchlist.
                 </p>
                 <div class="technologies">
+                  <div class="tech">Express</div>
                   <div class="tech">React</div>
+                  <div class="tech">Node</div>
                 </div>
+                <span class="project-links">
+                  <i class="fas fa-external-link-alt fa-lg demo crypto-tracker-demo"></i>
+                  <i class="fa fa-github fa-lg source crypto-tracker-source"></i>
+                </span>
               </div>
             </div>
             <div class="projects">
@@ -191,10 +213,6 @@
                 height="200"
                 alt=""
               />
-              <div class="buttons">
-                <button class="demo crypto-tracker-demo">Demo</button>
-                <button class="source crypto-tracker-source">Source</button>
-              </div>
             </div>
           </div>
 
