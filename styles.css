@@ -60,12 +60,12 @@ body::-webkit-scrollbar-thumb {
   background-color: #16161696;
   border-bottom: 10px solid rgba(21, 21, 21);
   background: url(./images/firstImg.jpg) fixed center;
-  object-fit:scale-down;
+  object-fit: cover;
 }
 
 .test {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   height: 100%;
   width: 100%;
@@ -369,7 +369,7 @@ body::-webkit-scrollbar-thumb {
 
 /* Intro Page Shadow Animation */
 
-.shadow {
+/* .shadow {
   position: absolute;
   bottom: 0%;
   width: 100%;
@@ -384,7 +384,7 @@ body::-webkit-scrollbar-thumb {
   height: 50px;
   z-index: 5;
   border-bottom: 5px solid #1a1a1a;
-}
+} */
 
 /* Projects Section */
 
