@@ -39,7 +39,7 @@ window.addEventListener('click', () => {
 window.addEventListener("scroll", () => {
   let scroll = window.pageYOffset;
   let titleSpeed = title.dataset.speed;
-  let shadowSpeed = shadow.dataset.speed;
+  // let shadowSpeed = shadow.dataset.speed;
 
   if (!navigator.userAgent.toLowerCase().match(/mobile/i)) {
     //title fade and lower on scroll
@@ -51,7 +51,7 @@ window.addEventListener("scroll", () => {
     // about.style.opacity = -scroll / (headerHeight / 2) + 1;
 
     //shadow increase height on scroll
-    shadow.style.height = `${scroll * shadowSpeed + 100}px`;
+    // shadow.style.height = `${scroll * shadowSpeed + 100}px`;
   }
 
   // if (
