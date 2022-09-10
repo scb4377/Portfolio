@@ -59,8 +59,18 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   background-color: #16161696;
   border-bottom: 10px solid rgba(21, 21, 21);
+}
+
+.bgImg-test {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
   background: url(./images/firstImg.jpg) fixed center;
   object-fit: cover;
+  overflow: hidden;
+  z-index: -5;
 }
 
 .test {
@@ -313,6 +323,7 @@ body::-webkit-scrollbar-thumb {
 
 .title a {
   padding-left: 10px;
+  width: max-content;
 }
 
 /* Call to action */
@@ -437,7 +448,7 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
-  padding: 100px 10px 200px 10px;
+  padding: 100px 10px 100px 10px;
   width: 100%;
   gap: 100px;
 }
@@ -534,6 +545,7 @@ body::-webkit-scrollbar-thumb {
   padding: 5px;
   border-radius: 2px;
   color: #1a1a1a;
+  min-width: 90px;
 }
 
 .proj2 {
@@ -551,20 +563,35 @@ body::-webkit-scrollbar-thumb {
 }
 
 .project-links {
+  padding-top: 10px;
   margin: auto;
-  width: 150px;
+  width: 250px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  cursor: pointer;
 }
 
 i {
   color: white;
-  cursor: pointer;
-  transition: 0.3s all ease-in-out;
+  padding-bottom: 10px;
+  transition: all 0.3s ease-in-out;
 }
 
-i:hover {
+.project-links p {
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  font-family: "Roboto";
+}
+
+.project-links p:hover > i {
+  color: #7e94ad;
+}
+
+.project-links p:hover {
   color: #7e94ad;
 }
 
@@ -850,9 +877,6 @@ footer i:hover {
   .projects-header {
     padding: 0 20px;
   }
-  #projects {
-    padding-bottom: 300px;
-  }
   .projectContainer {
     width: 100%;
     flex-direction: column-reverse;
@@ -908,6 +932,7 @@ footer i:hover {
     padding-left: 10px;
     justify-content: flex-start;
     padding-top: 60px;
+    align-items: center;
   }
   .title h1 {
     font-size: 3rem;
@@ -1050,8 +1075,16 @@ footer i:hover {
     padding-bottom: 50px;
   }
 
+  .projectContainer {
+    min-height: max-content;
+  }
+
   .description {
-    height: 150px;
+    height: max-content;
+  }
+
+  .technologies {
+    margin-top: 10px;
   }
 
   .footer {

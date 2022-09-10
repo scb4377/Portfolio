@@ -106,7 +106,7 @@ const demoFunc = (() => {
   let url;
 
   demoBtns.forEach((demo) => {
-    let clName = demo.className.split(" ")[4];
+    let clName = demo.className.split(" ")[1];
 
     demo.addEventListener("click", () => {
       switch (clName) {
@@ -143,7 +143,8 @@ const sourceFunc = (() => {
   let url;
 
   sourceBtns.forEach((source) => {
-    let clName = source.className.split(" ")[4];
+    let clName = source.className.split(" ")[1];
+    console.log(clName)
 
     source.addEventListener("click", () => {
       switch (clName) {
