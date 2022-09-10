@@ -517,7 +517,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .description {
-  height: 230px;
+  height: max-content;
   font-family: "Sans-serif";
   padding: 10px;
   display: flex;
@@ -535,7 +535,9 @@ body::-webkit-scrollbar-thumb {
 .technologies {
   display: flex;
   justify-content: space-evenly;
-  padding-bottom: 10px;
+  padding: 10px;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .tech {
