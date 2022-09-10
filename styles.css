@@ -535,7 +535,7 @@ body::-webkit-scrollbar-thumb {
 .technologies {
   display: flex;
   justify-content: space-evenly;
-  padding: 10px;
+  padding: 20px 10px;
   flex-wrap: wrap;
   gap: 10px;
 }
