@@ -144,7 +144,6 @@ const sourceFunc = (() => {
 
   sourceBtns.forEach((source) => {
     let clName = source.className.split(" ")[1];
-    console.log(clName)
 
     source.addEventListener("click", () => {
       switch (clName) {
