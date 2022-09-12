@@ -156,6 +156,15 @@ const sourceFunc = (() => {
         case "crypto-tracker-source":
           url = "https://github.com/scb4377/CryptoTracker/tree/gh-pages";
           break;
+        case "CEIS-170":
+          url = "https://github.com/scb4377/CEIS-170/tree/master";
+          break;
+        case "CEIS-209":
+          url = "https://github.com/scb4377/CEIS-209/tree/master";
+          break;
+        case "CEIS-295":
+          url = "https://github.com/scb4377/CEIS-295/tree/master";
+          break;
         // case "marvel-source":
         //   url = "https://github.com/scb4377/marvel/tree/master/client";
         //   break;

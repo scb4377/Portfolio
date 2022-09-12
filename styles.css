@@ -617,6 +617,46 @@ i {
   align-items: center;
 }
 
+/* Coursework Section */
+
+.course-container {
+  position: relative;
+  padding: 100px 0;
+  z-index: 500;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+}
+
+.course-container h1 {
+  font-family: "Roboto";
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 1.8rem;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.course-description {
+  margin: auto;
+  padding: 10px;
+}
+
+.no-img {
+  color: white;
+  height: 250px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 /* Skills section */
 
 .skills-container {
@@ -876,6 +916,9 @@ footer i:hover {
 }
 
 @media (max-width: 1500px) {
+  .course-container {
+    width: 100%;
+  }
   .projects-header {
     padding: 0 20px;
   }
@@ -993,6 +1036,10 @@ footer i:hover {
 
   .projImg {
     height: auto;
+  }
+
+  .no-img {
+    max-width: 100%;
   }
 
   .contact-container {
