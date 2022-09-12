@@ -136,7 +136,6 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   list-style-type: none;
   justify-content: space-evenly;
-  width: 300px;
   height: 100%;
 }
 
@@ -149,6 +148,7 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  
 }
 
 .main-menu-list li a {
@@ -164,6 +164,8 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px 0;
+  min-width: 100px;
 }
 
 .main-menu-list li:hover {
@@ -622,7 +624,6 @@ i {
 .course-container {
   position: relative;
   padding: 100px 0;
-  z-index: 500;
   color: white;
   display: flex;
   flex-direction: column;
@@ -655,6 +656,20 @@ i {
   width: 500px;
   margin: auto;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.additional-link {
+  color: white;
+}
+
+.additional-link a {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s all ease-in-out;
+}
+
+.additional-link a:hover {
+  color:#7e94ad;
 }
 
 /* Skills section */
