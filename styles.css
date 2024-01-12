@@ -566,6 +566,11 @@ body::-webkit-scrollbar-thumb {
   transition: all 0.3s ease-in-out;
 }
 
+.proj2 {
+  object-fit:scale-down;
+  background-color: transparent;
+}
+
 .project-links {
   padding-top: 10px;
   margin: auto;
@@ -765,6 +770,19 @@ i {
   object-position: center;
   overflow: hidden;
   margin: auto;
+}
+
+.java-container {
+  height: 85px;
+  position:relative;
+  object-fit:cover;
+  object-position: center;
+  margin: auto;
+}
+
+.java {
+  height: 100%;
+  width: 100%;
 }
 
 .mongo {

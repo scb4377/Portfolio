@@ -148,34 +148,34 @@ const sourceFunc = (() => {
     source.addEventListener("click", () => {
       switch (clName) {
         case "bug-source":
-          url = "https://github.com/scb4377/project-manager/tree/master";
+          url = "https://github.com/sblevins-dev/bugTracker/tree/master";
           break;
         case "snowboard-source":
-          url = "https://github.com/scb4377/snowboard-app/tree/master";
+          url = "https://github.com/sblevins-dev/snowboard-app/tree/master";
           break;
         case "crypto-tracker-source":
-          url = "https://github.com/scb4377/CryptoTracker/tree/gh-pages";
+          url = "https://github.com/sblevins-dev/CryptoTracker/tree/master";
           break;
         case "CEIS-170":
-          url = "https://github.com/scb4377/CEIS-170/tree/master";
+          url = "https://github.com/sblevins-dev/CEIS-170/tree/master";
           break;
         case "CEIS-209":
-          url = "https://github.com/scb4377/CEIS-209/tree/master";
+          url = "https://github.com/sblevins-dev/CEIS-209";
           break;
         case "CEIS-295":
-          url = "https://github.com/scb4377/CEIS-295/tree/master";
+          url = "https://github.com/sblevins-dev/CEIS-295";
           break;
         // case "marvel-source":
-        //   url = "https://github.com/scb4377/marvel/tree/master/client";
+        //   url = "https://github.com/sblevins-dev/marvel/tree/master/client";
         //   break;
         // case "music-visualiser-source":
-        //   url = "https://github.com/scb4377/MusicVisualizer";
+        //   url = "https://github.com/sblevins-dev/MusicVisualizer";
         //   break;
         // case "loan-calculator-source":
-        //   url = "https://github.com/scb4377/Loan-Calculator";
+        //   url = "https://github.com/sblevins-dev/Loan-Calculator";
         //   break;
         // case "real-estate-source":
-        //   url = "https://github.com/scb4377/Real-Estate-Mockup/tree/master";
+        //   url = "https://github.com/sblevins-dev/Real-Estate-Mockup/tree/master";
         //   break;
       }
       window.open(url, "_blank");
@@ -186,7 +186,7 @@ const sourceFunc = (() => {
 //github link
 github.forEach((git) =>
   git.addEventListener("click", () => {
-    window.open("https://github.com/scb4377", "_blank");
+    window.open("https://github.com/sblevins-dev", "_blank");
   })
 );
 
