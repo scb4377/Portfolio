@@ -629,6 +629,16 @@ i {
   align-items: center;
 }
 
+.data-link {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s all ease-in-out;
+}
+
+.data-link:hover {
+  color:#7e94ad;
+}
+
 /* Coursework Section */
 
 .course-container {

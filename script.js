@@ -119,6 +119,9 @@ const demoFunc = (() => {
         case "crypto-tracker-demo":
           url = "https://scb4377.github.io/CryptoTracker/";
           break;
+        case "pb-demo":
+          url = "https://sblevins-dev.github.io/PowerballApp/";
+          break;
         // case "marvel-demo":
         //   url = "https://scb4377.github.io/marvel/";
         //   break;
@@ -148,16 +151,16 @@ const sourceFunc = (() => {
     source.addEventListener("click", () => {
       switch (clName) {
         case "bug-source":
-          url = "https://github.com/sblevins-dev/bugTracker/tree/master";
+          url = "https://github.com/sblevins-dev/bugTracker";
           break;
         case "snowboard-source":
-          url = "https://github.com/sblevins-dev/snowboard-app/tree/master";
+          url = "https://github.com/sblevins-dev/snowboard-app";
           break;
         case "crypto-tracker-source":
-          url = "https://github.com/sblevins-dev/CryptoTracker/tree/master";
+          url = "https://github.com/sblevins-dev/CryptoTracker";
           break;
         case "CEIS-170":
-          url = "https://github.com/sblevins-dev/CEIS-170/tree/master";
+          url = "https://github.com/sblevins-dev/CEIS-170";
           break;
         case "CEIS-209":
           url = "https://github.com/sblevins-dev/CEIS-209";
@@ -165,6 +168,11 @@ const sourceFunc = (() => {
         case "CEIS-295":
           url = "https://github.com/sblevins-dev/CEIS-295";
           break;
+        case "pb-source":
+          url = "https://github.com/sblevins-dev/PowerballApp";
+          break;
+        case "bank-source":
+          url = "https://github.com/sblevins-dev/BankingSystem";
         // case "marvel-source":
         //   url = "https://github.com/sblevins-dev/marvel/tree/master/client";
         //   break;
