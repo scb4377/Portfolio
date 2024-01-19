@@ -31,9 +31,9 @@ document.documentElement.style.setProperty("--vh", `${vh}px`);
 
 let headerHeight = header.offsetHeight;
 
-window.addEventListener('click', () => {
-  console.log('click')
-})
+window.addEventListener("click", () => {
+  console.log("click");
+});
 
 // Scroll effects
 window.addEventListener("scroll", () => {
@@ -102,94 +102,89 @@ hamburger.addEventListener("click", () => {
 });
 
 // function for demo buttons
-const demoFunc = (() => {
+const demoFunc = (e, clName) => {
   let url;
 
-  demoBtns.forEach((demo) => {
-    let clName = demo.className.split(" ")[1];
+  switch (clName) {
+    case "bug-demo":
+      url = "https://project-manager-bug-tracker.herokuapp.com/";
+      break;
+    case "snowboard-demo":
+      url = "https://snowboards-sk.herokuapp.com/";
+      break;
+    case "crypto-tracker-demo":
+      url = "https://scb4377.github.io/CryptoTracker/";
+      break;
+    case "pb-demo":
+      url = "https://sblevins-dev.github.io/PowerballApp/";
+      break;
+  }
 
-    demo.addEventListener("click", () => {
-      switch (clName) {
-        case "bug-demo":
-          url = "https://project-manager-bug-tracker.herokuapp.com/";
-          break;
-        case "snowboard-demo":
-          url = "https://snowboards-sk.herokuapp.com/";
-          break;
-        case "crypto-tracker-demo":
-          url = "https://scb4377.github.io/CryptoTracker/";
-          break;
-        case "pb-demo":
-          url = "https://sblevins-dev.github.io/PowerballApp/";
-          break;
-        // case "marvel-demo":
-        //   url = "https://scb4377.github.io/marvel/";
-        //   break;
-        // case "music-visualiser-demo":
-        //   url = "https://scb4377.github.io/MusicVisualizer/";
-        //   break;
-        // case "loan-calculator-demo":
-        //   url = "https://scb4377.github.io/Loan-Calculator/";
-        //   break;
-        // case "real-estate-demo":
-        //   url = "https://scb4377.github.io/Real-Estate-Mockup/";
-        //   break;
-      }
+  return url;
+};
 
-      window.open(url, "_blank");
-    });
+demoBtns.forEach((demo) => {
+  let clName = demo.className.split(" ")[1];
+  let url;
+
+  demo.addEventListener("click", (e) => {
+    url = demoFunc(e, clName)
+
+    window.open(url, "_blank");
   });
-})();
+});
 
 // function for source buttons
-const sourceFunc = (() => {
+let url;
+
+const sourceFunc = (e, clName) => {
   let url;
 
-  sourceBtns.forEach((source) => {
-    let clName = source.className.split(" ")[1];
+  switch (clName) {
+    case "bug-source":
+      url = "https://github.com/sblevins-dev/bugTracker";
+      break;
+    case "snowboard-source":
+      url = "https://github.com/sblevins-dev/snowboard-app";
+      break;
+    case "crypto-tracker-source":
+      url = "https://github.com/sblevins-dev/CryptoTracker";
+      break;
+    case "CEIS-170":
+      url = "https://github.com/sblevins-dev/CEIS-170";
+      break;
+    case "CEIS-209":
+      url = "https://github.com/sblevins-dev/CEIS-209";
+      break;
+    case "CEIS-295":
+      url = "https://github.com/sblevins-dev/CEIS-295";
+      break;
+    case "pb-source":
+      url = "https://github.com/sblevins-dev/PowerballApp";
+      break;
+    case "bank-source":
+      url = "https://github.com/sblevins-dev/BankingSystem";
+      break;
+    default:
+      url = "https://github.com/sblevins-dev/43";
+      console.log(clName);
+      break;
+  }
 
-    source.addEventListener("click", () => {
-      switch (clName) {
-        case "bug-source":
-          url = "https://github.com/sblevins-dev/bugTracker";
-          break;
-        case "snowboard-source":
-          url = "https://github.com/sblevins-dev/snowboard-app";
-          break;
-        case "crypto-tracker-source":
-          url = "https://github.com/sblevins-dev/CryptoTracker";
-          break;
-        case "CEIS-170":
-          url = "https://github.com/sblevins-dev/CEIS-170";
-          break;
-        case "CEIS-209":
-          url = "https://github.com/sblevins-dev/CEIS-209";
-          break;
-        case "CEIS-295":
-          url = "https://github.com/sblevins-dev/CEIS-295";
-          break;
-        case "pb-source":
-          url = "https://github.com/sblevins-dev/PowerballApp";
-          break;
-        case "bank-source":
-          url = "https://github.com/sblevins-dev/BankingSystem";
-        // case "marvel-source":
-        //   url = "https://github.com/sblevins-dev/marvel/tree/master/client";
-        //   break;
-        // case "music-visualiser-source":
-        //   url = "https://github.com/sblevins-dev/MusicVisualizer";
-        //   break;
-        // case "loan-calculator-source":
-        //   url = "https://github.com/sblevins-dev/Loan-Calculator";
-        //   break;
-        // case "real-estate-source":
-        //   url = "https://github.com/sblevins-dev/Real-Estate-Mockup/tree/master";
-        //   break;
-      }
-      window.open(url, "_blank");
-    });
+  return url;
+};
+
+sourceBtns.forEach((source) => {
+  let clName = source.className.split(" ")[1];
+
+  let url;
+
+  source.addEventListener("click", (e) => {
+    url = sourceFunc(e, clName);
+
+    window.open(url, "_blank");
   });
-})();
+});
 
 //github link
 github.forEach((git) =>
@@ -277,7 +272,7 @@ function submitForm(e) {
 function sendEmail(templateParams) {
   let contact = document.querySelector(".contact-container");
   let successMess = document.querySelector(".success-wrapper");
-  let errorMess = document.querySelector(".error-wrapper")
+  let errorMess = document.querySelector(".error-wrapper");
 
   //emailJS
   emailjs.send("service_kxar6ow", "template_m2vhmlq", templateParams).then(
@@ -290,8 +285,8 @@ function sendEmail(templateParams) {
       contactForm.reset();
     },
     function (error) {
-      contact.style.visibility = "hidden"
-      errorMess.style.visibility = "visible"
+      contact.style.visibility = "hidden";
+      errorMess.style.visibility = "visible";
       console.log("FAILED...", error);
     }
   );
