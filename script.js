@@ -21,6 +21,10 @@ const musicVideo = document.querySelector(".musicVideo");
 // const mVid = document.querySelector(".mVid");
 const height = window.innerHeight;
 const width = window.innerWidth;
+
+const panel = document.querySelector(".panel");
+const panelBtn = document.querySelector(".panel-btn");
+
 // const about = document.querySelector(".about-wrapper");
 
 // Set boundries of music visualizer video
@@ -39,11 +43,15 @@ window.addEventListener("click", () => {
 window.addEventListener("scroll", () => {
   let scroll = window.pageYOffset;
   let titleSpeed = title.dataset.speed;
+  let newFeatSpeed = title.dataset.speed;
   // let shadowSpeed = shadow.dataset.speed;
 
   if (!navigator.userAgent.toLowerCase().match(/mobile/i)) {
     //title fade and lower on scroll
     title.style.transform = `translateY(${scroll * titleSpeed}px)`;
+    title.style.opacity = -scroll / (headerHeight / 2) + 1;
+
+    title.style.transform = `translateY(${scroll * newFeatSpeed}px)`;
     title.style.opacity = -scroll / (headerHeight / 2) + 1;
 
     // about fade and lower
@@ -113,7 +121,7 @@ const demoFunc = (e, clName) => {
       url = "https://snowboards-sk.herokuapp.com/";
       break;
     case "crypto-tracker-demo":
-      url = "https://scb4377.github.io/CryptoTracker/";
+      url = "https://sblevins-dev.github.io/CryptoTracker/";
       break;
     case "pb-demo":
       url = "https://sblevins-dev.github.io/PowerballApp/";
@@ -291,3 +299,26 @@ function sendEmail(templateParams) {
     }
   );
 }
+
+let page = 0;
+
+const panelArr = document.querySelectorAll(".panel-page");
+
+function changePage() {
+  panelArr[page].style.visibility = "hidden"
+  panelArr[page].style.display = "none";
+  page++;
+
+  if (page >= panelArr.length) page = 0;
+
+  panelArr[page].style.visibility = "visible"
+  panelArr[page].style.display = "flex";
+}
+
+
+
+(function loadSideScroller() {
+  panelBtn.addEventListener("click", changePage);
+})()
+
+
