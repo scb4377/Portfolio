@@ -57,21 +57,41 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background-color: #16161696;
-  border-bottom: 10px solid rgba(21, 21, 21);
+  /* background-color: #16161696; */
+  /* background: linear-gradient(45deg, #050022, #041216); */
+  
 }
 
 .bgImg-test {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  background: url(./images/rocks.jpg) fixed center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* .bgImg-test {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-position: center;
+  /* background-position: center;
   background-size: cover;
   background: url(./images/firstImg.jpg) fixed center;
-  object-fit: cover;
+  background: rgb(1,0,22);
+  background: 
+  linear-gradient(45deg, rgba(1,0,22,1) 1%,
+     rgb(0, 193, 231) 26%, rgba(55,63,66,1) 100%);
+  object-fit: cover; 
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
   overflow: hidden;
   z-index: -5;
-}
+} */
+
 
 .test {
   position: absolute;
@@ -79,7 +99,7 @@ body::-webkit-scrollbar-thumb {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: #161616bc;
+  background-color: #1616163f;
   /* backdrop-filter: blur(0px) saturate(100%); */
   z-index: 500;
 }
@@ -106,18 +126,17 @@ body::-webkit-scrollbar-thumb {
 
 .logo {
   height: 100%;
-  width: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 .logo span {
-  font-family: "Herr Von Muellerhoff", cursive;
   font-weight: 500;
   letter-spacing: 2px;
-  font-size: 1.5rem;
-  padding-top: 10px;
+  font-size: .9rem;
+  padding-left: 20px;
 }
 
 .main-menu {
