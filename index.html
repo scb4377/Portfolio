@@ -1,104 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:title" content="Stephen Blevins" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="favicon.ico" />
-    <meta property="og:description" content="Stephen Blevins' Portfolio" />
-    <meta property="og:url" content="https://stephen-blevins.dev" />
 
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Stephen Blevins" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="favicon.ico" />
+  <meta property="og:description" content="Stephen Blevins' Portfolio" />
+  <meta property="og:url" content="https://stephen-blevins.dev" />
 
-    <!--My style sheet-->
-    <link rel="stylesheet" href="./styles.css" />
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
 
-    <!--Google fonts-->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
+  <!--My style sheet-->
+  <link rel="stylesheet" href="./styles.css" />
 
-    <!-- google signature-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&display=swap"
-      rel="stylesheet"
-    />
+  <!--Google fonts-->
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
 
-    <title>SB Dev</title>
+  <!-- google signature-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&display=swap" rel="stylesheet" />
 
-    <!-- emailJS include script-->
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
-    ></script>
+  <title>SB Dev</title>
 
-    <script type="text/javascript">
-      (function () {
-        emailjs.init("user_PYN9wVCB5BDEBhkE1e46u");
-      })();
-    </script>
+  <!-- emailJS include script-->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
-    <script
-      src="https://kit.fontawesome.com/8cbf183917.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body id="homeLink">
-    <!-- Navigation with BG Img-->
-    <header>
-      <div class="code"></div>
-      <nav class="nav">
-        <div class="logo">
-          <span>SB</span>
-        </div>
-        <div class="main-menu">
-          <ul class="main-menu-list">
-            <li class=""><a href="#homeLink">Home</a></li>
-            <li class=""><a href="#projectsLink">Projects</a></li>
-            <li class=""><a href="#courses">Courses</a></li>
-            <li class=""><a href="#contact">contact</a></li>
-          </ul>
-        </div>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("user_PYN9wVCB5BDEBhkE1e46u");
+    })();
+  </script>
 
-        <div class="hamburger">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-        </div>
-        <div class="menu">
-          <ul class="linksWrapper">
-            <li class="link1 links"><a href="#homeLink">Home</a></li>
-            <li class="link2 links"><a href="#projectsLink">Projects</a></li>
-            <li class="link3 links"><a href="#courses">Courses</a></li>
-            <li class="link4 links"><a href="#contact">contact</a></li>
-          </ul>
-        </div>
-      </nav>
-    </header>
+  <script src="https://kit.fontawesome.com/8cbf183917.js" crossorigin="anonymous"></script>
+</head>
 
-    <!-- Name with shadow translate -->
-    <div class="firt-section bgImg">
-      <div class="bgImg-test"></div>
-      <div class="translate title" data-speed="0.1">
-        <h1>Stephen Blevins</h1>
-        <p>Software Engineer</p>
-
-        <a href="#contact"><button class="contact-me">Contact</button></a>
+<body id="homeLink">
+  <!-- Navigation with BG Img-->
+  <header>
+    <div class="code"></div>
+    <nav class="nav">
+      <div class="logo">
+        <span>SB Dev</span>
       </div>
-      <!-- <div class="about-wrapper" data-speed="0.1">
+      <div class="main-menu">
+        <ul class="main-menu-list">
+          <li class="home-link"><a href="#homeLink">Home</a></li>
+          <li class="project-link"><a href="#homeLink">Projects</a></li>
+          <!-- <li class=""><a href="#courses">Courses</a></li> -->
+          <li class=""><a href="#contact">contact</a></li>
+        </ul>
+      </div>
+
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <div class="menu">
+        <ul class="linksWrapper">
+          <li class="link1 links home-link"><a href="#homeLink">Home</a></li>
+          <li class="link2 links project-link"><a href="#homeLink">Projects</a></li>
+          <!-- <li class="link3 links"><a href="#courses">Courses</a></li> -->
+          <li class="link4 links"><a href="#contact">contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Name with shadow translate -->
+  <div class="firt-section bgImg">
+    <div class="bgImg-test"></div>
+    <div class="mobile">
+      <div class="translate title" data-speed="0.1">
+      <h1>Stephen Blevins</h1>
+      <p>Software Engineer and Developer</p>
+
+      <a href="#contact"><button class="contact-me">Contact</button></a>
+    </div>
+    <div class="new-feature translate" data-speed="0.1" id="new-feature">
+      <button class="panel-btn">></button>
+      <div class="panel">
+        <div class="about-me panel-page" style="visibility: visible; display: block;">
+          <h1>About Me</h1>
+          <p>
+            &emsp;  &emsp;  Highly motivated Bachelor of Science Graduate seeking to further
+            develop programming skills as a software developer and leveraging
+            10 years of experience in sales and customer service. 3+ years of
+            personal software development experience. Knowledge and use of
+            Front-End/Back-End technologies, libraries, and frameworks to develop
+            Full Stack Applications. Skilled in MERN, HTML, CSS, JavaScript, Java,
+            and have additional knowledge of other languages and can easily navigate
+            modern technologies.
+          </p>
+        </div>
+
+        <!-- Bug Tracker -->
+        <div class="projects-panel panel-page" style="visibility: hidden; display: flex;">
+          <h1>Projects</h1>
+          <h3>Zappa Bug Tracker</h3>
+          <div class="panel-page-details">
+
+            <p>
+              Application that allows a team to create, read, update, and
+              delete bug reports. A user must be authenticated to view and
+              report issues within the application.
+
+
+            </p>
+            <div class="technologies">
+              <h4>Technologies</h4>
+              <span>
+                MongoDB Express React Node
+              </span>
+            </div>
+
+
+
+            <span class="link-span">
+              <span class="demo bug-demo">
+                <i class="fas fa-external-link-alt fa-lg"></i>
+                Live
+              </span>
+              <span class="source bug-source">
+                <i class="fa fa-github fa-lg"></i>
+                GitHub
+              </span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Ozark Bank-->
+        <div class="projects-panel panel-page" style="visibility: hidden; display: flex;">
+          <h1>Projects</h1>
+          <h3>Ozark Bank</h3>
+          <div class="panel-page-details">
+
+            <p>
+              GUI Application built with Java. Logging in pulls the user's
+              account information from a MySQL database. Banking system that
+              allows a user to make deposits and withdrawals on their
+              account.
+            </p>
+            <div class="technologies">
+              <h4>Technologies</h4>
+              Java MySQL
+            </div>
+            <span class="link-span">
+              <span class="source bank-source">
+                <i class="fa fa-github fa-lg"></i>
+                GitHub
+              </span>
+            </span>
+          </div>
+
+        </div>
+
+        <!-- Powerball App-->
+        <div class="projects-panel panel-page" style="visibility: hidden; display: flex;">
+          <h1>Projects</h1>
+          <h3>Powerball App</h3>
+          <div class="panel-page-details">
+            <p>
+              <span>
+                Powerball past winning combinations pulled from <a class="data-link" href="https://data.gov/"
+                  target="_blank">Data.gov</a>. Application calculates the
+                most occurring
+                PowerBall combinations. User can create a combination that has
+                never landed.
+              </span>
+            </p>
+            <div class="technologies">
+              <h4>Technologies</h4>
+              React
+            </div>
+            <span class="link-span">
+              <span class="demo pb-demo">
+                <i class="fas fa-external-link-alt fa-lg"></i>
+                Live
+              </span>
+
+              <span class="source pb-source">
+                <i class="fa fa-github fa-lg"></i>
+                GitHub
+              </span>
+            </span>
+          </div>
+
+        </div>
+
+        <!-- Crypto Tracker -->
+        <div class="projects-panel panel-page" style="visibility: hidden; display: flex;">
+          <h1>Projects</h1>
+          <h3>Crypto Tracker</h3>
+          <div class="panel-page-details">
+            <p>
+              Crypto-currency tracker using React and Coin-Gecko API. Coins
+              that you are interested in can be added to your session
+              watchlist.
+            </p>
+            <div class="technologies">
+              <h4>Technologies</h4>
+              React Express Node
+            </div>
+            <span class="link-span">
+              <span class="demo crypto-tracker-demo">
+                <i class="fas fa-external-link-alt fa-lg"></i>
+                Live
+              </span>
+
+              <span class="source crypto-tracker-source">
+                <i class="fa fa-github fa-lg"></i>
+                GitHub
+              </span>
+            </span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    </div>
+    
+    <!-- <div class="about-wrapper" data-speed="0.1">
         <h2>About</h2>
         <p>
           Self-taught developer pursuing a degree in Computer Science. My
@@ -107,372 +238,67 @@
           educational paths. Open to new languages and technologies.
         </p>
       </div> -->
-      <!-- if phone sideways-->
-      <div class="footer-sidebar">
-        <i class="fa fa-github fa-lg" aria-hidden="true"></i>
-        <i class="fa fa-linkedin fa-lg" aria-hidden="true"></i>
-      </div>
-      <div class="test"></div>
-      <!-- <div class="shadow translate" data-speed="0.5"></div> -->
-    </div>
+    <!-- if phone sideways-->
 
-    <!-- Second section -->
-    <a id="projectsLink"></a>
-    <div>
-      <div class="content">
-        <section id="projects">
-          <div class="fixed-img"></div>
-          <h1 class="projects-header">Projects</h1>
-          <!-- Bug Tracker -->
-          <div class="projectContainer" data-speed="0.1">
-            <!-- <div class="projName">Bug Tracker</div> -->
-            <div class="desc-container">
-              <div class="description">
-                <!-- <i class="fas fa-external-link-alt fa-lg"></i> -->
-                <p class="content">
-                  Application that allows a team to create, read, update, and
-                  delete bug reports. A user must be authenticated to view and
-                  report issues within the application.
-                </p>
-                <div class="technologies">
-                  <div class="tech">MongoDB</div>
-                  <div class="tech">Express</div>
-                  <div class="tech">React</div>
-                  <div class="tech">Node</div>
-                </div>
-                <span class="project-links">
-                  <p class="demo bug-demo">
-                    <i class="fas fa-external-link-alt fa-lg"></i>
-                    <span>Live</span>
-                  </p>
-                  <p class="source bug-source">
-                    <i class="fa fa-github fa-lg"></i>
-                    <span>Source</span>
-                  </p>
-                </span>
-              </div>
-            </div>
 
-            <div class="projects">
-              <img
-                class="proj1 projVid"
-                src="./images/bug.png"
-                height="200"
-                alt="Bug Tracker Application"
-              />
-            </div>
-          </div>
 
-          <!-- Ozark Bank -->
-          <div class="projectContainer" data-speed="0.1">
-            <!-- <div class="projName">Bug Tracker</div> -->
-            <div class="desc-container">
-              <div class="description">
-                <!-- <i class="fas fa-external-link-alt fa-lg"></i> -->
-                <p class="content">
-                  GUI Application built with Java. Logging in pulls the user's
-                  account information from a MySQL database. Banking system that
-                  allows a user to make deposits and withdrawals on their
-                  account.
-                </p>
-                <div class="technologies">
-                  <div class="tech">Java</div>
-                  <div class="tech">MySQL</div>
-                </div>
-                <span class="project-links">
-                  <p class="source bank-source">
-                    <i class="fa fa-github fa-lg"></i>
-                    <span>Source</span>
-                  </p>
-                </span>
-              </div>
-            </div>
+  </div>
 
-            <div class="projects">
-              <img
-                class="proj2 projVid"
-                src="./images/bank.png"
-                height="200"
-                alt="Bank Application"
-              />
-            </div>
-          </div>
+  <div class="footer-sidebar">
+    <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+    <i class="fa fa-linkedin fa-lg" aria-hidden="true"></i>
+  </div>
+  <div class="test"></div>
+  <!-- <div class="shadow translate" data-speed="0.5"></div> -->
+  </div>
 
-          <!-- Powerball App -->
-          <div class="projectContainer" data-speed="0.1">
-            <!-- <div class="projName">Powerball</div> -->
-            <div class="desc-container">
-              <div class="description">
-                <p class="content">
-                  Powerball past winning combinations pulled from
-                  <a class="data-link" href="https://data.gov/" target="_blank">Data.gov</a>. Application calculates the most occurring
-                  PowerBall combinations. User can create a combination that has
-                  never landed.
-                </p>
-                <div class="technologies">
-                  <div class="tech">React</div>
-                </div>
-                <span class="project-links">
-                  <p class="demo pb-demo">
-                    <i class="fas fa-external-link-alt fa-lg"></i>
-                    <span>Live</span>
-                  </p>
+  <!-- Second section -->
+  <a id="projectsLink"></a>
+  <div class="second-section">
+    <div class="content">
 
-                  <p class="source pb-source">
-                    <i class="fa fa-github fa-lg"></i>
-                    <span>Source</span>
-                  </p>
-                </span>
-              </div>
-            </div>
-            <div class="projects">
-              <img
-                class="proj3 projVid pb"
-                src="./images/pb.png"
-                height="200"
-                alt="Powerball App"
-              />
-            </div>
-          </div>
-
-          <!-- Snowbard App -->
-          <!-- <div class="projectContainer" data-speed="0.1">
-
-            <div class="desc-container">
-              <div class="description">
-                <p class="content">
-                  Simple e-commerce website built with MERN. A user can register
-                  and login to their profile to view previous orders.
-                </p>
-                <div class="technologies">
-                  <div class="tech">MongoDB</div>
-                  <div class="tech">Express</div>
-                  <div class="tech">React</div>
-                  <div class="tech">Node</div>
-                </div>
-                <span class="project-links">
-                  <p class="demo snowboard-demo">
-                    <i class="fas fa-external-link-alt fa-lg"></i>
-                    <span>Demo</span>
-                  </p>
-                  <p class="source snowboard-source">
-                    <i class="fa fa-github fa-lg"></i>
-                    <span>Source</span>
-                  </p>
-                </span>
-              </div>
-            </div>
-            <div class="projects">
-              <img
-                class="proj2 projVid"
-                src="./images/snowboard.png"
-                height="200"
-                alt=""
-              />
-            </div>
-          </div> -->
-
-          <!-- Crypto Tracker -->
-          <div class="projectContainer" data-speed="0.1">
-            <!-- <div class="projName">Crypto Tracker</div> -->
-            <div class="desc-container">
-              <div class="description">
-                <p class="content">
-                  Crypto-currency tracker using React and Coin-Gecko API. Coins
-                  that you are interested in can be added to your session
-                  watchlist.
-                </p>
-                <div class="technologies">
-                  <div class="tech">Express</div>
-                  <div class="tech">React</div>
-                  <div class="tech">Node</div>
-                </div>
-                <span class="project-links">
-                  <p class="demo crypto-tracker-demo">
-                    <i class="fas fa-external-link-alt fa-lg"></i>
-                    <span>Live</span>
-                  </p>
-
-                  <p class="source crypto-tracker-source">
-                    <i class="fa fa-github fa-lg"></i>
-                    <span>Source</span>
-                  </p>
-                </span>
-              </div>
-            </div>
-            <div class="projects">
-              <img
-                class="proj4 projVid"
-                src="./images/cryptoTracker.png"
-                height="200"
-                alt="Crypt-currency Tracker"
-              />
-            </div>
-          </div>
-
-          <!-- Marvel Api -->
-          <!-- <div class="projectContainer" data-speed="0.1">
-            <div class="projName">Marvel API App</div>
-            <div class="desc-container">
-              <div class="description">
-                <p class="content">
-                  Using Marvel's free API, a user can search for comic book
-                  characters and view them from Marvel's database.
-                </p>
-                <div class="technologies">
-                  <div class="tech">React</div>
-                  <div class="tech">Node</div>
-                </div>
-              </div>
-            </div>
-            <div class="projects">
-              <img
-                class="proj2 projVid"
-                src="./images/marvel.png"
-                height="200"
-                alt=""
-              />
-              <div class="buttons">
-                <button class="demo marvel-demo">Demo</button>
-                <button class="source marvel-source">Source</button>
-              </div>
-            </div>
-          </div> -->
-
-          <!-- Music Visualizer -->
-          <!-- <div class="projectContainer" data-speed="0.1">
-            <div class="projName">Music Visualiser</div>
-            <div class="desc-container">
-              <div class="description">
-                <p class="content">
-                  I have always had a passion for music. This application uses
-                  the Web Audio Api to visualize music. Click Demo to view a few
-                  songs.
-                </p>
-                <div class="technologies">
-                  <div class="tech">HTML</div>
-                  <div class="tech">CSS</div>
-                  <div class="tech">Javascript</div>
-                </div>
-              </div>
-            </div>
-            <div class="projects mVid">
-              <video class="proj1 projVid musicVideo" muted loop>
-                <source src="./video/muiscVisualiser.mp4" type="video/mp4" />
-              </video>
-              <div class="buttons">
-                <button class="demo music-visualiser-demo">Demo</button>
-                <button class="source music-visualiser-source">Source</button>
-              </div>
-            </div>
-          </div> -->
-
-          <!-- Loan Calc -->
-          <!-- <div class="projectContainer" data-speed="0.1">
-             <div class="projName">Loan Calculator</div>
-            <div class="desc-container">
-              <div class="description">
-                <p class="content">
-                  Simple loan Calculator using an ammoritization schedule.
-                  Calculate a loan based on price, interest rate, and loan term.
-                  The calculator will show your monthly payment before property
-                  taxes and home insurance.
-                </p>
-                <div class="technologies">
-                  <div class="tech">HTML</div>
-                  <div class="tech">CSS</div>
-                  <div class="tech">Javascript</div>
-                </div>
-              </div>
-            </div>
-            <div class="projects">
-              <img
-                class="proj4 projVid"
-                src="./images/loanCalculator.png"
-                height="200"
-                alt=""
-              />
-              <div class="buttons">
-                <button class="demo loan-calculator-demo">Demo</button>
-                <button class="source loan-calculator-source">Source</button>
-              </div>
-            </div>
-          </div> -->
-
-          <!-- Zillow Mockup -->
-          <!-- <div class="projectContainer" data-speed="0.1">
-            <div class="projName">Zillow mockup</div>
-            
-            <div class="desc-container">
-              <div class="description">
-                <p class="content">
-                  Using HTML, CSS, and vanilla Javascript, I created a mockup of
-                  the most well known real estate website, Zillow.
-                </p>
-                <div class="technologies">
-                  <div class="tech">HTML</div>
-                  <div class="tech">CSS</div>
-                  <div class="tech">Javascript</div>
-                </div>
-              </div>
-            </div>
-            <div class="projects">
-              <img
-                class="proj5 projVid"
-                src="./images/realestate.png"
-                height="200"
-                alt=""
-              />
-              <div class="buttons">
-                <button class="demo real-estate-demo">Demo</button>
-                <button class="source real-estate-source">Source</button>
-              </div>
-            </div>
-          </div> -->
-        </section>
-
-        <h1 class="skills-header">Skills</h1>
-        <div class="skills-container">
-          <div>
-            <h1>HTML</h1>
-            <i class="fab fa-html5 fa-5x"></i>
-          </div>
-          <div>
-            <h1>CSS</h1>
-            <i class="fab fa-css3-alt fa-5x"></i>
-          </div>
-          <div>
-            <h1>JAVA</h1>
-            <div class="mongo-container">
-              <img class="java" src="./images/java.png" />
-            </div>
-          </div>
-          <div>
-            <h1>JAVASCRIPT</h1>
-            <i class="fab fa-js-square fa-5x"></i>
-          </div>
-          <div>
-            <h1>REACT</h1>
-            <i class="fab fa-react fa-5x"></i>
-          </div>
-          <div>
-            <h1>NODE</h1>
-            <i class="fab fa-node-js fa-5x"></i>
-          </div>
-          <div>
-            <h1>MongoDB</h1>
-            <div class="mongo-container">
-              <img class="mongo" src="./images/mongo.png" />
-            </div>
+      <h1 class="skills-header">Skills</h1>
+      <div class="skills-container">
+        <div>
+          <h1>HTML</h1>
+          <i class="fab fa-html5 fa-3x"></i>
+        </div>
+        <div>
+          <h1>CSS</h1>
+          <i class="fab fa-css3-alt fa-3x"></i>
+        </div>
+        <div>
+          <h1>JAVASCRIPT</h1>
+          <i class="fab fa-js-square fa-3x"></i>
+        </div>
+        <div>
+          <h1>REACT</h1>
+          <i class="fab fa-react fa-3x"></i>
+        </div>
+        <div>
+          <h1>NODE</h1>
+          <i class="fab fa-node-js fa-3x"></i>
+        </div>
+        <div class="icon-container">
+          <h1>MongoDB</h1>
+          <div class="mongo-container">
+            <img class="mongo" src="./images/mongo.png" />
           </div>
         </div>
+        <div class="icon-container">
+          <h1>JAVA</h1>
+          <div class="mongo-container">
+            <img class="java" src="./images/java.png" />
+          </div>
+        </div>
+      </div>
 
-        <div id="courses" class="course-container">
-          <h1>Coursework</h1>
+      <div id="courses" class="course-container">
+        <!--<h1>Coursework</h1>
 
-          <!--CEIS-170-->
+          <--CEIS-170--
           <div class="projectContainer" data-speed="0.1">
-            <!-- <div class="projName">Crypto Tracker</div> -->
+            <-- <div class="projName">Crypto Tracker</div> --
             <div class="desc-container">
               <div class="course-description">
                 <p class="course-content">
@@ -499,9 +325,9 @@
             </div>
           </div>
 
-          <!--CEIS-209-->
+          <-CEIS-209--
           <div class="projectContainer" data-speed="0.1">
-            <!-- <div class="projName">Crypto Tracker</div> -->
+            <- <div class="projName">Crypto Tracker</div> --
             <div class="desc-container">
               <div class="course-description">
                 <p class="course-content">
@@ -532,9 +358,9 @@
             </div>
           </div>
 
-          <!--CEIS-295-->
+          <--CEIS-295--
           <div class="projectContainer" data-speed="0.1">
-            <!-- <div class="projName">Crypto Tracker</div> -->
+            <-- <div class="projName">Crypto Tracker</div> --
             <div class="desc-container">
               <div class="course-description">
                 <p class="course-content">
@@ -556,81 +382,60 @@
             <div class="projects">
               <h1 class="no-img">CEIS-295 Data Structures and Algorithms</h1>
             </div>
-          </div>
-          <div class="additional-link">
-            <p>
-              Additional Links to PowerPoint Presentations for other classes:
-              <a href="https://scblevins27.wixsite.com/website" target="_blank"
-                >Stephen Blevins Wix site</a
-              >
-            </p>
-          </div>
+          </div> -->
+        <div class="additional-link">
+          <p>
+            Additional Links to PowerPoint Presentations for other classes:
+            <a href="https://scblevins27.wixsite.com/website" target="_blank">Stephen Blevins Wix site</a>
+          </p>
         </div>
+      </div>
 
-        <div id="contact">
-          <div class="contact-container">
-            <h1>Contact</h1>
-            <!--Onsubmit prevents refresh-->
-            <form class="contact-form" action="" method="post">
-              <label for="fname" class="fname">First Name</label>
-              <span class="error verify-fname"></span>
-              <input
-                type="text"
-                id="fname"
-                name="firstname"
-                placeholder="Your name.."
-              />
+      <div id="contact">
+        <div class="contact-container">
+          <h1>Contact</h1>
+          <!--Onsubmit prevents refresh-->
+          <form class="contact-form" action="" method="post">
+            <label for="fname" class="fname">First Name</label>
+            <span class="error verify-fname"></span>
+            <input type="text" id="fname" name="firstname" placeholder="Your name.." />
 
-              <label for="lname" class="lname">Last Name</label>
-              <span class="error verify-lname"></span>
-              <input
-                type="text"
-                id="lname"
-                name="lastname"
-                placeholder="Your last name.."
-              />
+            <label for="lname" class="lname">Last Name</label>
+            <span class="error verify-lname"></span>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name.." />
 
-              <label for="email" class="email">Email Address</label>
-              <span class="error verify-email"></span>
-              <input
-                type="text"
-                id="email"
-                name="email"
-                placeholder="Your email.."
-              />
+            <label for="email" class="email">Email Address</label>
+            <span class="error verify-email"></span>
+            <input type="text" id="email" name="email" placeholder="Your email.." />
 
-              <label for="message" class="message">Message</label>
-              <span class="error verify-message"></span>
-              <textarea
-                name="message"
-                id="message"
-                height="200px"
-                class="textarea"
-                placeholder="Write something.."
-              ></textarea>
+            <label for="message" class="message">Message</label>
+            <span class="error verify-message"></span>
+            <textarea name="message" id="message" height="200px" class="textarea"
+              placeholder="Write something.."></textarea>
 
-              <button class="submit">Submit</button>
-            </form>
-          </div>
-          <div class="success-wrapper">
-            <h1>Success</h1>
-            <p>
-              Email received. Stephen will reach out to you as soon as possible!
-            </p>
-          </div>
-          <div class="error-wrapper">
-            <h1>Error</h1>
-            <p>Oops...Something went wrong!</p>
-          </div>
+            <button class="submit">Submit</button>
+          </form>
+        </div>
+        <div class="success-wrapper">
+          <h1>Success</h1>
+          <p>
+            Email received. Stephen will reach out to you as soon as possible!
+          </p>
+        </div>
+        <div class="error-wrapper">
+          <h1>Error</h1>
+          <p>Oops...Something went wrong!</p>
         </div>
       </div>
     </div>
-    <footer class="footer">
-      <i class="fa fa-github fa-lg" aria-hidden="true"></i>
-      <i class="fa fa-linkedin fa-lg" aria-hidden="true"></i>
-    </footer>
+  </div>
+  <footer class="footer">
+    <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+    <i class="fa fa-linkedin fa-lg" aria-hidden="true"></i>
+  </footer>
 
-    <!--My script file-->
-    <script src="./script.js"></script>
-  </body>
+  <!--My script file-->
+  <script src="./script.js"></script>
+</body>
+
 </html>
