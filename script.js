@@ -282,11 +282,11 @@ function sendEmail(templateParams) {
   let errorMess = document.querySelector(".error-wrapper");
 
   //emailJS
-  emailjs.send("service_kxar6ow", "template_m2vhmlq", templateParams).then(
+  emailjs.send(MY_SERVICE, MY_TEMPLATE, templateParams).then(
     function (response) {
       contact.style.visibility = "hidden";
       successMess.style.visibility = "visible";
-      console.log("SUCCESS!", response.status, response.text);
+      //console.log("SUCCESS!", response.status, response.text);
 
       //Clear form on submit
       contactForm.reset();
@@ -294,7 +294,7 @@ function sendEmail(templateParams) {
     function (error) {
       contact.style.visibility = "hidden";
       errorMess.style.visibility = "visible";
-      console.log("FAILED...", error);
+      //console.log("FAILED...", error);
     }
   );
 }
