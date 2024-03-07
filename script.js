@@ -282,7 +282,7 @@ function sendEmail(templateParams) {
   let errorMess = document.querySelector(".error-wrapper");
 
   //emailJS
-  emailjs.send(MY_SERVICE, MY_TEMPLATE, templateParams).then(
+  emailjs.send("service_kxar6ow", "template_m2vhmlq", templateParams).then(
     function (response) {
       contact.style.visibility = "hidden";
       successMess.style.visibility = "visible";
