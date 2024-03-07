@@ -25,6 +25,9 @@ const width = window.innerWidth;
 const panel = document.querySelector(".panel");
 const panelBtn = document.querySelector(".panel-btn");
 
+const projectLink = document.querySelector(".project-link");
+const homeLink = document.querySelector(".home-link");
+
 // const about = document.querySelector(".about-wrapper");
 
 // Set boundries of music visualizer video
@@ -34,10 +37,6 @@ const panelBtn = document.querySelector(".panel-btn");
 document.documentElement.style.setProperty("--vh", `${vh}px`);
 
 let headerHeight = header.offsetHeight;
-
-window.addEventListener("click", () => {
-  console.log("click");
-});
 
 // Scroll effects
 window.addEventListener("scroll", () => {
@@ -320,5 +319,30 @@ function changePage() {
 (function loadSideScroller() {
   panelBtn.addEventListener("click", changePage);
 })()
+
+function goToProjects() {
+  panelArr[page].style.visibility = "hidden";
+  panelArr[page].style.display = "none";
+
+  page = 1;
+
+  panelArr[1].style.visibility = "visible";
+  panelArr[1].style.display = "flex";
+}
+
+function goToHome() {
+  panelArr[page].style.visibility = "hidden";
+  panelArr[page].style.display = "none";
+
+  page = 0;
+
+  panelArr[page].style.visibility = "visible";
+  panelArr[page].style.display = "flex";
+}
+
+projectLink.addEventListener("click", goToProjects);
+homeLink.addEventListener("click", goToHome);
+
+
 
 
