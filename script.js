@@ -26,6 +26,8 @@ const panel = document.querySelector(".panel");
 const leftBtn = document.querySelector(".left-btn");
 const rightBtn = document.querySelector(".right-btn");
 
+const secondSection = document.querySelector(".second-section");
+
 const projectLinks = document.querySelectorAll(".project-link");
 const homeLink = document.querySelector(".home-link");
 
@@ -39,44 +41,8 @@ document.documentElement.style.setProperty("--vh", `${vh}px`);
 
 let headerHeight = header.offsetHeight;
 
-// Scroll effects
-window.addEventListener("scroll", () => {
-  let scroll = window.pageYOffset;
-  let titleSpeed = title.dataset.speed;
-  let newFeatSpeed = title.dataset.speed;
-  // let shadowSpeed = shadow.dataset.speed;
+console.log(secondSection.getBoundingClientRect())
 
-  if (!navigator.userAgent.toLowerCase().match(/mobile/i)) {
-    //title fade and lower on scroll
-    title.style.transform = `translateY(${scroll * titleSpeed}px)`;
-    title.style.opacity = -scroll / (headerHeight / 2) + 1;
-
-    title.style.transform = `translateY(${scroll * newFeatSpeed}px)`;
-    title.style.opacity = -scroll / (headerHeight / 2) + 1;
-
-    // about fade and lower
-    // about.style.transform = `translateY(${scroll * titleSpeed}px)`;
-    // about.style.opacity = -scroll / (headerHeight / 2) + 1;
-
-    //shadow increase height on scroll
-    // shadow.style.height = `${scroll * shadowSpeed + 100}px`;
-  }
-
-  // if (
-  //   bounding.bottom >= scroll &&
-  //   bounding.top - scroll <= height &&
-  //   musicVideo.paused
-  // ) {
-  //   musicVideo.play();
-  // } else if (
-  //   (bounding.bottom <= scroll &&
-  //     bounding.bottom - scroll <= height &&
-  //     !musicVideo.paused) ||
-  //   (bounding.top >= scroll + height && !musicVideo.paused)
-  // ) {
-  //   musicVideo.pause();
-  // }
-});
 
 // for mobile navigation
 hamburger.addEventListener("click", () => {

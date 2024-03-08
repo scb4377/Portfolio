@@ -25,7 +25,21 @@ body {
   --fourth-color: #8e8f8b;
   --fifth-color: #d4ebf6;
   background-color: rgb(255, 255, 255);
-  position: relative;
+  
+}
+
+.pages {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+#homeLink, #skillsLink, #contact {
+  scroll-snap-align: start;
+}
+
+#skillsLink {
+  scroll-margin-top: 50px;
 }
 
 /* New Scrollbar */
@@ -59,7 +73,6 @@ body::-webkit-scrollbar-thumb {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  
 }
 
 .bgImg-test {
@@ -81,6 +94,7 @@ body::-webkit-scrollbar-thumb {
   justify-content: space-evenly;
   flex-wrap: wrap;
   column-gap: 20px;
+  padding-top: 50px;
 }
 
 
@@ -106,8 +120,8 @@ body::-webkit-scrollbar-thumb {
 
 .new-feature {
   position: relative;
-  height: 100%;
   min-height: 400px;
+  max-height: min-content;
   width: 500px;
   border-radius: 10px;
   background-color: rgba(21, 21, 21, 0.84);
@@ -320,8 +334,10 @@ body::-webkit-scrollbar-thumb {
 
 .second-section {
   background: url("./images/building.jpg") fixed center;
+  position: relative;
   background-size: cover;
   background-position: center;
+  scroll-snap-align: center;
 }
 
 .content {
@@ -543,10 +559,11 @@ body::-webkit-scrollbar-thumb {
 /* Main Quote */
 
 .title {
+  height: 400px;
   z-index: 1000;
   text-align: left;
   transition: 0.3s linear;
-  height: 400px;
+  max-height: 400px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 50px;
   color: rgb(34, 34, 34);
@@ -967,6 +984,7 @@ i {
   z-index: 0;
   background-color: #16161696;
   backdrop-filter: blur(5px) saturate(100%);
+  
 }
 
 .skills-header {
@@ -1231,6 +1249,12 @@ footer i:hover {
   color: rgb(0, 119, 255);
 }
 
+@media (max-width: 875) {
+  .title {
+    height: min-content;
+  }
+}
+
 @media (max-width: 1500px) {
   .course-container {
     width: 100%;
@@ -1278,6 +1302,10 @@ footer i:hover {
 
   .hamburger {
     opacity: 1;
+  }
+
+  .title {
+    max-height: 100vh;
   }
 
   /* .bgImg {
