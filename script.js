@@ -29,7 +29,7 @@ const rightBtn = document.querySelector(".right-btn");
 const secondSection = document.querySelector(".second-section");
 
 const projectLinks = document.querySelectorAll(".project-link");
-const homeLink = document.querySelector(".home-link");
+const homeLinks = document.querySelectorAll(".home-link");
 
 // const about = document.querySelector(".about-wrapper");
 
@@ -43,23 +43,23 @@ let headerHeight = header.offsetHeight;
 
 console.log(secondSection.getBoundingClientRect())
 
+const clickOffMenu = (e) => {
+  if (menu.classList.contains("active"))
+  {
+    menu.classList.toggle("active");
+  }
+  else {
+    console.log(e.target.classList)
+  }
 
-// for mobile navigation
-hamburger.addEventListener("click", () => {
-  //toggle active for hamburger animation
-  menu.classList.toggle("active");
+  NavLinkAnim();
 
-  //create animation ease in of links
-  navLinks.forEach((link, index) => {
-    if (link.style.animation) {
-      link.style.animation = "";
-    } else {
-      link.style.animation = `navLinkFade 0.5s ease forwards ${
-        index / 7 + 0.5
-      }s`;
-    }
-  });
+  RotateHamburger();
+}
 
+document.querySelectorAll(".section").forEach(section => section.addEventListener("click", clickOffMenu))
+
+const RotateHamburger = () => {
   //hamburger animation
   hamLines.forEach(() => {
     if (menu.classList.contains("active")) {
@@ -73,6 +73,30 @@ hamburger.addEventListener("click", () => {
       hamLines[2].style.transform = "";
     }
   });
+}
+
+const NavLinkAnim = () => {
+  //create animation ease in of links
+  navLinks.forEach((link, index) => {
+    if (link.style.animation) {
+      link.style.animation = "";
+    } else {
+      link.style.animation = `navLinkFade 0.5s ease forwards ${
+        index / 7 + 0.5
+      }s`;
+    }
+  });
+}
+
+
+// for mobile navigation
+hamburger.addEventListener("click", () => {
+  //toggle active for hamburger animation
+  menu.classList.toggle("active");
+
+  NavLinkAnim();
+
+  RotateHamburger();
 });
 
 // function for demo buttons
@@ -296,12 +320,9 @@ function changePage(e) {
 (function loadSideScroller() {
   leftBtn.addEventListener("click", changePage);
   rightBtn.addEventListener("click", changePage);
+  projectLinks.forEach(link => link.addEventListener("click", goToProjects));
 
-  for (let i = 0; i < projectLinks.length; i++) {
-    projectLinks[i].addEventListener("click", goToProjects);
-  }
-
-  homeLink.addEventListener("click", goToHome);
+  homeLinks.forEach(link => link.addEventListener("click", goToHome));
 })()
 
 function goToProjects() {
