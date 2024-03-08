@@ -54,7 +54,7 @@
       <div class="main-menu">
         <ul class="main-menu-list">
           <li class="home-link"><a href="#homeLink">Home</a></li>
-          <li class="project-link"><a href="#homeLink">Projects</a></li>
+          <li class="project-link"><a href="#projectLink">Projects</a></li>
           <!-- <li class=""><a href="#courses">Courses</a></li> -->
           <li class=""><a href="#contact">contact</a></li>
         </ul>
@@ -68,7 +68,7 @@
       <div class="menu">
         <ul class="linksWrapper">
           <li class="link1 links home-link"><a href="#homeLink">Home</a></li>
-          <li class="link2 links project-link"><a href="#homeLink">Projects</a></li>
+          <li class="link2 links project-link"><a href="#projectLink">Projects</a></li>
           <!-- <li class="link3 links"><a href="#courses">Courses</a></li> -->
           <li class="link4 links"><a href="#contact">contact</a></li>
         </ul>
@@ -87,8 +87,9 @@
       <a href="#contact"><button class="contact-me">Contact</button></a>
     </div>
     <div class="new-feature translate" data-speed="0.1" id="new-feature">
-      <button class="panel-btn">></button>
-      <div class="panel">
+      <button class="left-btn">&lt;</button>
+      <button class="right-btn">&gt;</button>
+      <div class="panel" id="projectLink">
         <div class="about-me panel-page" style="visibility: visible; display: block;">
           <h1>About Me</h1>
           <p>
@@ -104,7 +105,7 @@
         </div>
 
         <!-- Bug Tracker -->
-        <div class="projects-panel panel-page" style="visibility: hidden; display: flex;">
+        <div class="projects-panel panel-page" style="visibility: hidden; display: none;">
           <h1>Projects</h1>
           <h3>Zappa Bug Tracker</h3>
           <div class="panel-page-details">
@@ -118,9 +119,12 @@
             </p>
             <div class="technologies">
               <h4>Technologies</h4>
-              <span>
-                MongoDB Express React Node
-              </span>
+              <ul class="list">
+                <li>MongoDB</li>
+                <li>Express</li>
+                <li>ReactJS</li>
+                <li>NodeJS</li>
+              </ul>
             </div>
 
 
@@ -139,7 +143,7 @@
         </div>
 
         <!-- Ozark Bank-->
-        <div class="projects-panel panel-page" style="visibility: hidden; display: flex;">
+        <div class="projects-panel panel-page" style="visibility: hidden; display: none;">
           <h1>Projects</h1>
           <h3>Ozark Bank</h3>
           <div class="panel-page-details">
@@ -152,7 +156,10 @@
             </p>
             <div class="technologies">
               <h4>Technologies</h4>
-              Java MySQL
+              <ul class="list">
+                <li>Java</li>
+                <li>SQL</li>
+              </ul>
             </div>
             <span class="link-span">
               <span class="source bank-source">
@@ -165,7 +172,7 @@
         </div>
 
         <!-- Powerball App-->
-        <div class="projects-panel panel-page" style="visibility: hidden; display: flex;">
+        <div class="projects-panel panel-page" style="visibility: hidden; display: none;">
           <h1>Projects</h1>
           <h3>Powerball App</h3>
           <div class="panel-page-details">
@@ -180,7 +187,9 @@
             </p>
             <div class="technologies">
               <h4>Technologies</h4>
-              React
+              <ul class="list">
+                <li>ReactJS</li>
+              </ul>
             </div>
             <span class="link-span">
               <span class="demo pb-demo">
@@ -198,7 +207,7 @@
         </div>
 
         <!-- Crypto Tracker -->
-        <div class="projects-panel panel-page" style="visibility: hidden; display: flex;">
+        <div class="projects-panel panel-page" style="visibility: hidden; display: none;">
           <h1>Projects</h1>
           <h3>Crypto Tracker</h3>
           <div class="panel-page-details">
@@ -209,7 +218,11 @@
             </p>
             <div class="technologies">
               <h4>Technologies</h4>
-              React Express Node
+              <ul class="list">
+                <li>ReactJS</li>
+                <li>Express</li>
+                <li>NodeJS</li>
+              </ul>
             </div>
             <span class="link-span">
               <span class="demo crypto-tracker-demo">
@@ -228,20 +241,6 @@
       </div>
     </div>
     </div>
-    
-    <!-- <div class="about-wrapper" data-speed="0.1">
-        <h2>About</h2>
-        <p>
-          Self-taught developer pursuing a degree in Computer Science. My
-          favorite language so far is JavaScript. Exposure to many other
-          languages, tools, and frameworks through college coursework and other
-          educational paths. Open to new languages and technologies.
-        </p>
-      </div> -->
-    <!-- if phone sideways-->
-
-
-
   </div>
 
   <div class="footer-sidebar">
@@ -294,95 +293,6 @@
       </div>
 
       <div id="courses" class="course-container">
-        <!--<h1>Coursework</h1>
-
-          <--CEIS-170--
-          <div class="projectContainer" data-speed="0.1">
-            <-- <div class="projName">Crypto Tracker</div> --
-            <div class="desc-container">
-              <div class="course-description">
-                <p class="course-content">
-                  Each week using C++, I created different console applications
-                  including, Calorie Burning Calculator, Which int is smallest,
-                  sales application, dice game, password verfication, inventory
-                  application, and a group project. The group project we chose,
-                  was a financial calculator that showed an Ammoritization
-                  schedule for a loan.
-                </p>
-                <div class="technologies">
-                  <div class="tech">C++</div>
-                </div>
-                <span class="project-links">
-                  <p class="source CEIS-170">
-                    <i class="fa fa-github fa-lg"></i>
-                    <span>Source</span>
-                  </p>
-                </span>
-              </div>
-            </div>
-            <div class="projects">
-              <h1 class="no-img">CEIS-170 Programming w/Lab</h1>
-            </div>
-          </div>
-
-          <-CEIS-209--
-          <div class="projectContainer" data-speed="0.1">
-            <- <div class="projName">Crypto Tracker</div> --
-            <div class="desc-container">
-              <div class="course-description">
-                <p class="course-content">
-                  CEIS-209: Object Oriented Programming w/Lab
-                </p>
-                <p class="course-content">
-                  Payroll System created with C# and .Net library.
-                </p>
-                <div class="technologies">
-                  <div class="tech">C#</div>
-                  <div class="tech">.Net</div>
-                </div>
-                <span class="project-links">
-                  <p class="source CEIS-209">
-                    <i class="fa fa-github fa-lg"></i>
-                    <span>Source</span>
-                  </p>
-                </span>
-              </div>
-            </div>
-            <div class="projects">
-              <img
-                class="proj3 projVid"
-                src="./images/OOP.png"
-                height="200"
-                alt=""
-              />
-            </div>
-          </div>
-
-          <--CEIS-295--
-          <div class="projectContainer" data-speed="0.1">
-            <-- <div class="projName">Crypto Tracker</div> --
-            <div class="desc-container">
-              <div class="course-description">
-                <p class="course-content">
-                  Evaluating the differences between ArrayLists, LinkedLists,
-                  Search algorithms, Sorting algorithms, Binary Search Trees,
-                  and the speeds at which each one processes at.
-                </p>
-                <div class="technologies">
-                  <div class="tech">Python</div>
-                </div>
-                <span class="project-links">
-                  <p class="source CEIS-295">
-                    <i class="fa fa-github fa-lg"></i>
-                    <span>Source</span>
-                  </p>
-                </span>
-              </div>
-            </div>
-            <div class="projects">
-              <h1 class="no-img">CEIS-295 Data Structures and Algorithms</h1>
-            </div>
-          </div> -->
         <div class="additional-link">
           <p>
             Additional Links to PowerPoint Presentations for other classes:

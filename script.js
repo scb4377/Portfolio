@@ -23,9 +23,10 @@ const height = window.innerHeight;
 const width = window.innerWidth;
 
 const panel = document.querySelector(".panel");
-const panelBtn = document.querySelector(".panel-btn");
+const leftBtn = document.querySelector(".left-btn");
+const rightBtn = document.querySelector(".right-btn");
 
-const projectLink = document.querySelector(".project-link");
+const projectLinks = document.querySelectorAll(".project-link");
 const homeLink = document.querySelector(".home-link");
 
 // const about = document.querySelector(".about-wrapper");
@@ -303,12 +304,22 @@ let page = 0;
 
 const panelArr = document.querySelectorAll(".panel-page");
 
-function changePage() {
+function changePage(e) {
   panelArr[page].style.visibility = "hidden"
-  panelArr[page].style.display = "none";
-  page++;
+  panelArr[page].style.display = "none"
+  console.log(page)
+
+  if (e.target.className == "left-btn") {
+    page--;
+  }
+  else {
+    page++;
+  }
 
   if (page >= panelArr.length) page = 0;
+  else if (page < 0) page = panelArr.length - 1;
+
+  console.log(page);
 
   panelArr[page].style.visibility = "visible"
   panelArr[page].style.display = "flex";
@@ -317,7 +328,14 @@ function changePage() {
 
 
 (function loadSideScroller() {
-  panelBtn.addEventListener("click", changePage);
+  leftBtn.addEventListener("click", changePage);
+  rightBtn.addEventListener("click", changePage);
+
+  for (let i = 0; i < projectLinks.length; i++) {
+    projectLinks[i].addEventListener("click", goToProjects);
+  }
+
+  homeLink.addEventListener("click", goToHome);
 })()
 
 function goToProjects() {
@@ -340,8 +358,10 @@ function goToHome() {
   panelArr[page].style.display = "flex";
 }
 
-projectLink.addEventListener("click", goToProjects);
-homeLink.addEventListener("click", goToHome);
+
+
+
+
 
 
 
