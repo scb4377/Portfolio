@@ -28,19 +28,15 @@ body {
   
 }
 
-.pages {
+/* .pages {
   height: 100vh;
   overflow-y: scroll;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
 }
 
-#homeLink, #skillsLink, #contact {
+#homeLink, #contact {
   scroll-snap-align: start;
-}
-
-#skillsLink {
-  scroll-margin-top: 50px;
-}
+} */
 
 /* New Scrollbar */
 
@@ -338,7 +334,6 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   background-size: cover;
   background-position: center;
-  scroll-snap-align: center;
 }
 
 .content {
