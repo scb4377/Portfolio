@@ -41,7 +41,7 @@ document.documentElement.style.setProperty("--vh", `${vh}px`);
 
 let headerHeight = header.offsetHeight;
 
-console.log(secondSection.getBoundingClientRect())
+// console.log(secondSection.getBoundingClientRect())
 
 const clickOffMenu = (e) => {
   if (menu.classList.contains("active"))
@@ -290,60 +290,60 @@ function sendEmail(templateParams) {
   );
 }
 
-let page = 0;
+// let page = 0;
 
-const panelArr = document.querySelectorAll(".panel-page");
+// const panelArr = document.querySelectorAll(".panel-page");
 
-function changePage(e) {
-  panelArr[page].style.visibility = "hidden"
-  panelArr[page].style.display = "none"
-  console.log(page)
+// function changePage(e) {
+//   panelArr[page].style.visibility = "hidden"
+//   panelArr[page].style.display = "none"
+//   console.log(page)
 
-  if (e.target.className == "left-btn") {
-    page--;
-  }
-  else {
-    page++;
-  }
+//   if (e.target.className == "left-btn") {
+//     page--;
+//   }
+//   else {
+//     page++;
+//   }
 
-  if (page >= panelArr.length) page = 0;
-  else if (page < 0) page = panelArr.length - 1;
+//   if (page >= panelArr.length) page = 0;
+//   else if (page < 0) page = panelArr.length - 1;
 
-  console.log(page);
+//   console.log(page);
 
-  panelArr[page].style.visibility = "visible"
-  panelArr[page].style.display = "flex";
-}
+//   panelArr[page].style.visibility = "visible"
+//   panelArr[page].style.display = "flex";
+// }
 
 
 
-(function loadSideScroller() {
-  leftBtn.addEventListener("click", changePage);
-  rightBtn.addEventListener("click", changePage);
-  projectLinks.forEach(link => link.addEventListener("click", goToProjects));
+// (function loadSideScroller() {
+//   leftBtn.addEventListener("click", changePage);
+//   rightBtn.addEventListener("click", changePage);
+//   projectLinks.forEach(link => link.addEventListener("click", goToProjects));
 
-  homeLinks.forEach(link => link.addEventListener("click", goToHome));
-})()
+//   homeLinks.forEach(link => link.addEventListener("click", goToHome));
+// })()
 
-function goToProjects() {
-  panelArr[page].style.visibility = "hidden";
-  panelArr[page].style.display = "none";
+// function goToProjects() {
+//   panelArr[page].style.visibility = "hidden";
+//   panelArr[page].style.display = "none";
 
-  page = 1;
+//   page = 1;
 
-  panelArr[1].style.visibility = "visible";
-  panelArr[1].style.display = "flex";
-}
+//   panelArr[1].style.visibility = "visible";
+//   panelArr[1].style.display = "flex";
+// }
 
-function goToHome() {
-  panelArr[page].style.visibility = "hidden";
-  panelArr[page].style.display = "none";
+// function goToHome() {
+//   panelArr[page].style.visibility = "hidden";
+//   panelArr[page].style.display = "none";
 
-  page = 0;
+//   page = 0;
 
-  panelArr[page].style.visibility = "visible";
-  panelArr[page].style.display = "flex";
-}
+//   panelArr[page].style.visibility = "visible";
+//   panelArr[page].style.display = "flex";
+// }
 
 
 
