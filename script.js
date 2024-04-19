@@ -31,6 +31,22 @@ const secondSection = document.querySelector(".second-section");
 const projectLinks = document.querySelectorAll(".project-link");
 const homeLinks = document.querySelectorAll(".home-link");
 
+const detailBtns = document.querySelectorAll(".details-btn");
+
+// Project card function on click to see details
+detailBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    let detailParent = btn.parentElement;
+    let card = detailParent.parentElement;
+
+    card.firstElementChild.style.height = "0%";
+
+    btn.style.visibility = "hidden";
+
+    detailParent.children[2].style.visibility = "visible"
+  })
+})
+
 // const about = document.querySelector(".about-wrapper");
 
 // Set boundries of music visualizer video
