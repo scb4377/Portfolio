@@ -3,10 +3,11 @@ import zIndex from '@mui/material/styles/zIndex'
 import React from 'react'
 
 const SkillSection = styled(Box)({
-    padding: '100px 50px',
+    padding: '100px 10px',
     display: 'flex',
     flexWrap: 'wrap',
-    justifyContent: 'center',
+    width: '100%',
+    justifyContent: "center",
     gap: 50,
     color: 'white',
     position: 'relative',
@@ -14,6 +15,7 @@ const SkillSection = styled(Box)({
         content: '""',
         position: 'absolute',
         top: 0,
+        left: 0,
         width: '100%',
         height: '100%',
         backgroundColor: '#16161696',

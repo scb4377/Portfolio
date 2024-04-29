@@ -15,7 +15,7 @@ const ProjectCard = ({ data }) => {
             onClick={() => handleCardClick(data)}
             sx={{
                 maxWidth: '400px',
-                width: '400px',
+                width: {xs: '100%', md: '400px'},
                 bgcolor: 'rgba(0, 0, 0, 0.5)',
                 color: 'white',
                 backdropFilter: "blur(5px) saturate(100%)",

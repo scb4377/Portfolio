@@ -15,11 +15,12 @@ const HomePage = () => {
                 display: 'flex',
                 alignItems: 'center',
                 flexWrap: 'wrap',
-                justifyContent: 'space-between',
-                minHeight: '100vh'
+                gap: 2,
+                justifyContent: { sm: 'center', lg: 'space-between'},
+                minHeight: '100vh',
             }}
         >
-            <Box sx={{ height: '100%' }}>
+            <Box sx={{ height: '100%', maxHeight: '100vh' }}>
                 <Typography variant='h3'
                     sx={{
                         textDecoration: '1px underline rgb(0, 119, 255)',
@@ -52,6 +53,8 @@ const HomePage = () => {
                     borderRadius: '2px',
                     padding: '30px',
                     backdropFilter: "blur(5px) saturate(100%)",
+                    display: { xs: 'none', sm: 'flex'},
+                    flexDirection: 'column'
                 }}>
                 <Typography variant='h6'
                     sx={{

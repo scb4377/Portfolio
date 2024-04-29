@@ -1,10 +1,21 @@
 import { Box, Button, TextField, Typography } from '@mui/material'
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { MyContext } from './MyContext'
 
 const Contact = () => {
 
   const { sectionRefs } = useContext(MyContext);
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  })
+
+  const handleFormData = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  }
 
   return (
     <Box color={'white'}
@@ -15,7 +26,7 @@ const Contact = () => {
         alignItems: 'center',
         justifyContent: 'center',
         flexDirection: 'column',
-        paddingY: 5
+        paddingY: 5,
       }}
     >
       <Typography variant="h4"
@@ -33,14 +44,14 @@ const Contact = () => {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          width: '400px',
+          width: { xs: '100%', sm: '400px'},
           gap: 4,
-          paddingY: '50px'
+          padding: '50px 10px'
         }}
       >
-        <TextField id="outlined-basic" label="NAME" variant="filled" sx={{ bgcolor: 'white' }} fullWidth={true} />
-        <TextField id="outlined-basic" label="EMAIL ADDRESS" variant="filled" sx={{ bgcolor: 'white' }} fullWidth={true} />
-        <TextField id="outlined-basic" label="MESSAGE" multiline variant="filled" sx={{ bgcolor: 'white' }} fullWidth={true} />
+        <TextField id="name" name="name" onChange={handleFormData} type="text" label="NAME" variant="filled" sx={{ bgcolor: 'white' }} fullWidth={true} />
+        <TextField id="email" name="email" onChange={handleFormData} type="email" label="EMAIL ADDRESS" variant="filled" sx={{ bgcolor: 'white' }} fullWidth={true} />
+        <TextField id="message" name="message" onChange={handleFormData} type="text" label="MESSAGE" multiline variant="filled" sx={{ bgcolor: 'white' }} fullWidth={true} />
         <Button variant='contained'
           sx={{
             bgcolor: '#272727',
