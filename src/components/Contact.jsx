@@ -1,10 +1,13 @@
-import { Box, Button, TextField, Typography } from '@mui/material'
-import React, { useContext, useState } from 'react'
+import { Box, Button, FormControl, TextField, Typography } from '@mui/material'
+import React, { useContext, useRef, useState } from 'react'
 import { MyContext } from './MyContext'
+import emailjs from "@emailjs/browser"
 
 const Contact = () => {
 
   const { sectionRefs } = useContext(MyContext);
+
+  const form = useRef();
 
   const [formData, setFormData] = useState({
     name: '',
@@ -15,6 +18,23 @@ const Contact = () => {
   const handleFormData = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(process.env.REACT_APP_EMAILJS_USER, process.env.REACT_APP_EMAILJS_SERVICE)
+
+    emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE, process.env.REACT_APP_EMAILJS_TEMPLATE, form.current, {
+      publicKey: process.env.REACT_APP_EMAILJS_USER
+    })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error)
+        }
+      )
   }
 
   return (
@@ -40,27 +60,35 @@ const Contact = () => {
       </Typography>
       <Box
         sx={{
+          width: { xs: '100%', sm: '400px' },
+          padding: '50px 10px'
+        }}
+      >
+        <form onSubmit={handleSubmit} 
+          ref={form}
+        style={{
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          width: { xs: '100%', sm: '400px'},
-          gap: 4,
-          padding: '50px 10px'
-        }}
-      >
-        <TextField id="name" name="name" onChange={handleFormData} type="text" label="NAME" variant="filled" sx={{ bgcolor: 'white' }} fullWidth={true} />
-        <TextField id="email" name="email" onChange={handleFormData} type="email" label="EMAIL ADDRESS" variant="filled" sx={{ bgcolor: 'white' }} fullWidth={true} />
-        <TextField id="message" name="message" onChange={handleFormData} type="text" label="MESSAGE" multiline variant="filled" sx={{ bgcolor: 'white' }} fullWidth={true} />
-        <Button variant='contained'
-          sx={{
-            bgcolor: '#272727',
-            '&:hover': {
-              bgcolor: 'white',
-              color: 'rgb(0, 119, 255)'
-            }
-          }}
-        >SUBMIT</Button>
+          gap: 20,
+          width: "100%"
+        }}>
+          <TextField id="name" name="name" onChange={handleFormData} type="text" label="NAME" variant="filled" sx={{ bgcolor: 'white' }} fullWidth={true} />
+          <TextField id="email" name="email" onChange={handleFormData} type="email" label="EMAIL ADDRESS" variant="filled" sx={{ bgcolor: 'white' }} fullWidth={true} />
+          <TextField id="message" name="message" onChange={handleFormData} type="text" label="MESSAGE" multiline variant="filled" sx={{ bgcolor: 'white' }} fullWidth={true} />
+          <Button variant='contained'
+            type="submit"
+            sx={{
+              bgcolor: '#272727',
+              '&:hover': {
+                bgcolor: 'white',
+                color: 'rgb(0, 119, 255)'
+              }
+            }}
+          >SUBMIT</Button>
+        </form>
+
       </Box>
     </Box>
   )
