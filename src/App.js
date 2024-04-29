@@ -4,6 +4,8 @@ import Home from './components/Home';
 import SecondSection from './components/SecondSection';
 import { useRef } from 'react';
 import { MyContext } from './components/MyContext';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import NavigationBar from './components/NavigationBar';
 
 function App() {
 
@@ -22,10 +24,13 @@ function App() {
   return (
     <Box className="App">
       <MyContext.Provider value={{ sectionRefs, scrollTo }}>
-        <Home />
-        <SecondSection />
+        <BrowserRouter>
+        <NavigationBar />
+          <Routes>
+            <Route path="/" exact element={<Home />} />
+          </Routes>
+        </BrowserRouter>
       </MyContext.Provider>
-
     </Box>
   );
 }

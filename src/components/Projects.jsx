@@ -2,6 +2,7 @@ import { Box, Container, Typography } from "@mui/material"
 import ProjectCard from "./ProjectCard"
 import { useContext } from "react"
 import { MyContext } from "./MyContext"
+import data from "./ProjectData"
 
 
 const Projects = () => {
@@ -36,10 +37,9 @@ const Projects = () => {
                     paddingY: 5
                 }}
             >
-                <ProjectCard />
-                <ProjectCard />
-                <ProjectCard />
-                <ProjectCard />
+                {data.map(p => (
+                    <ProjectCard key={p.projectTitle} data={p} />
+                ))}
             </Box>
         </Box>
     )

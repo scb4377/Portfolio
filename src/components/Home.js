@@ -2,6 +2,8 @@ import { Box } from '@mui/material'
 import NavigationBar from "./NavigationBar"
 import HomePage from './HomePage.jsx'
 import hero from '../images/hero.jpg'
+import SecondSection from './SecondSection.js'
+import { Route, Routes } from 'react-router-dom'
 
 const Home = () => {
 
@@ -24,9 +26,9 @@ const Home = () => {
                     top: 0,
                     left: 0,
                 }}>
-
-                <NavigationBar />
+                
                 <HomePage />
+                <SecondSection />
             </Box>
         </Box>
     )
