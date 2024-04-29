@@ -44,7 +44,7 @@ const Skills = () => {
         >
             <Typography variant="h4" color={'white'}
                 sx={{
-                    textDecoration: '1px underline lightblue',
+                    textDecoration: '1px underline rgb(0, 119, 255)',
                     textUnderlineOffset: '12px',
                     paddingBottom: '35px'
                 }}

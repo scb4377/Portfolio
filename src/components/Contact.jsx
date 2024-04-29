@@ -1,10 +1,16 @@
 import { Box, Button, TextField, Typography } from '@mui/material'
-import React from 'react'
+import React, { useContext } from 'react'
+import { MyContext } from './MyContext'
 
 const Contact = () => {
+
+  const { sectionRefs } = useContext(MyContext);
+
   return (
     <Box color={'white'}
+      ref={sectionRefs[2]}
       sx={{
+        id: 'contact',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -14,7 +20,7 @@ const Contact = () => {
     >
       <Typography variant="h4"
         sx={{
-          textDecoration: '1px underline lightblue',
+          textDecoration: '1px underline rgb(0, 119, 255)',
           textUnderlineOffset: '12px',
           paddingBottom: '35px',
         }}
@@ -32,10 +38,18 @@ const Contact = () => {
           paddingY: '50px'
         }}
       >
-        <TextField id="outlined-basic" label="NAME" variant="filled" sx={{ bgcolor: 'white'}} fullWidth={true} />
-        <TextField id="outlined-basic" label="EMAIL ADDRESS" variant="filled" sx={{ bgcolor: 'white'}} fullWidth={true} />
-        <TextField id="outlined-basic" label="MESSAGE" multiline variant="filled" sx={{ bgcolor: 'white'}} fullWidth={true} />
-        <Button variant='contained'>SUBMIT</Button>
+        <TextField id="outlined-basic" label="NAME" variant="filled" sx={{ bgcolor: 'white' }} fullWidth={true} />
+        <TextField id="outlined-basic" label="EMAIL ADDRESS" variant="filled" sx={{ bgcolor: 'white' }} fullWidth={true} />
+        <TextField id="outlined-basic" label="MESSAGE" multiline variant="filled" sx={{ bgcolor: 'white' }} fullWidth={true} />
+        <Button variant='contained'
+          sx={{
+            bgcolor: '#272727',
+            '&:hover': {
+              bgcolor: 'white',
+              color: 'rgb(0, 119, 255)'
+            }
+          }}
+        >SUBMIT</Button>
       </Box>
     </Box>
   )

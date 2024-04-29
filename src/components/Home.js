@@ -1,10 +1,10 @@
 import { Box } from '@mui/material'
-import React from 'react'
 import NavigationBar from "./NavigationBar"
 import HomePage from './HomePage.jsx'
 import hero from '../images/hero.jpg'
 
 const Home = () => {
+
     return (
         <Box
             sx={{

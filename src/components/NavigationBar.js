@@ -1,9 +1,20 @@
-import { AppBar, Box, Button, Container, Menu, MenuItem, Toolbar, Typography } from '@mui/material'
-import React from 'react'
+import { AppBar, Box, Button, Container, Menu, MenuItem, Toolbar, Typography, styled } from '@mui/material'
+import { useContext } from 'react'
+import { MyContext } from './MyContext'
+
 
 const pages = ["HOME", "PROJECTS", "CONTACT"]
+const NavButton = styled(Button)({
+    color: 'white',
+    '&:hover': {
+        color: 'rgb(0, 119, 255)'
+    }
+})
 
 const NavigationBar = () => {
+
+    const { sectionRefs, scrollTo } = useContext(MyContext);
+
     return (
         <AppBar position='fixed'
             sx={{
@@ -23,14 +34,9 @@ const NavigationBar = () => {
                             STEPHEN BLEVINS
                         </Typography>
                         <Box>
-                            {pages.map(page => (
-                                <Button
-                                    key={page}
-                                    sx={{ color: 'white' }}
-                                >
-                                    {page}
-                                </Button>
-                            ))}
+                            <NavButton onClick={() => scrollTo(0)}>HOME</NavButton>
+                            <NavButton onClick={() => scrollTo(1)}>PROJECTS</NavButton>
+                            <NavButton onClick={() => scrollTo(2)}>CONTACT</NavButton>
                         </Box>
 
                     </Box>

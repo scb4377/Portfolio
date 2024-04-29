@@ -1,22 +1,26 @@
 import { Box, Button, Container, Typography } from '@mui/material'
 import hero from "../images/hero.jpg"
+import { useContext } from 'react';
+import { MyContext } from './MyContext';
 
 const HomePage = () => {
+    const { sectionRefs } = useContext(MyContext);
     return (
         <Container
+            ref={sectionRefs[0]}
             sx={{
-                color: 'white', 
-                display: 'flex', 
+                color: 'white',
+                display: 'flex',
                 alignItems: 'center',
                 flexWrap: 'wrap',
-                justifyContent: 'space-between', 
+                justifyContent: 'space-between',
                 minHeight: '100vh'
             }}
         >
             <Box sx={{ height: '100%' }}>
                 <Typography variant='h3'
                     sx={{
-                        textDecoration: '1px underline lightblue',
+                        textDecoration: '1px underline rgb(0, 119, 255)',
                         textUnderlineOffset: '12px',
                         paddingBottom: '15px'
                     }}>
@@ -25,7 +29,16 @@ const HomePage = () => {
                 <Typography variant='h6'>
                     SOFTWARE ENGINEER AND WEB DEVELOPER
                 </Typography>
-                <Button variant='contained' sx={{ marginY: 2}}>
+                <Button variant='contained'
+                    sx={{
+                        marginY: 2,
+                        bgcolor: '#272727',
+                        '&:hover': {
+                            bgcolor: '#ffffff',
+                            color: 'rgb(0, 119, 255)'
+                        }
+                    }}
+                >
                     CONTACT
                 </Button>
             </Box>
@@ -39,8 +52,8 @@ const HomePage = () => {
                 }}>
                 <Typography variant='h6'
                     sx={{
-                        textDecoration: '1px underline lightblue',
-                        textUnderlineOffset: '12px',
+                        textDecoration: '1px underline rgb(0, 119, 255)',
+                        textUnderlineOffset: '5px',
                         paddingBottom: '15px'
                     }}>
                     ABOUT

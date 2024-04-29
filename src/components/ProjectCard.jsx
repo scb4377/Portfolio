@@ -25,8 +25,8 @@ const ProjectCard = () => {
                     </Typography>
                     <Typography variant="body2"
                         sx={{
-                            textDecoration: '1px underline lightblue',
-                            textUnderlineOffset: '12px',
+                            textDecoration: '1px underline rgb(0, 119, 255)',
+                            textUnderlineOffset: '5px',
                             paddingBottom: '15px'
                         }}
                     >
