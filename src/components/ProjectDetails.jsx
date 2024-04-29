@@ -16,7 +16,6 @@ const TechnologiesSection = styled(Box)({
 
 const SectionItem = styled(Box)({
     display: 'flex',
-    alignItems: 'center',
     justifyContent: 'space-between',
     gap: 15,
     zIndex: '1'
@@ -61,7 +60,7 @@ const ProjectDetails = () => {
                 <Container
                     sx={{
                         color: 'white',
-                        paddingY: '100px',
+                        paddingTop: '100px',
                     }}>
                     <Box
                         sx={{
@@ -89,6 +88,7 @@ const ProjectDetails = () => {
 
                         <Box sx={{
                             display: 'flex',
+                            flexDirection: {xs: 'column', md: 'row'},
                             alignItems: 'center',
                             gap: 10
                         }}>
@@ -109,8 +109,8 @@ const ProjectDetails = () => {
                                 <TechnologiesSection>
                                     {card.technologies.map(tech => (
                                         <SectionItem key={tech}>
-                                            <SvgIcon viewBox="0 0 128 128">
-                                            </SvgIcon>
+                                            {/* <SvgIcon viewBox="0 0 128 128">
+                                            </SvgIcon> */}
                                             <Typography variant='subtitle1'>
                                                 {tech}
                                             </Typography>
@@ -159,7 +159,7 @@ const ProjectDetails = () => {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        paddingY: '200px'
+                        paddingY: { xs: 5, md: '200px'}
                     }}>
                         <Image src={card.image} />
                     </Box>

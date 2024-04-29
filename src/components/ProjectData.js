@@ -36,7 +36,7 @@ const ProjectData =
         {
             "id": 3,
             "projectTitle": "Powerball Statistics",
-            "details": "Powerball past winning combinations pulled from <a class='data-link' style='text-decoration: underline;' href='https://data.gov/' target='_blank'>Data.gov</a>. Application calculates the most occurring PowerBall combinations. User can create a combination that has never landed.",
+            "details": "Powerball past winning combinations pulled from Data.gov. Application calculates the most occurring PowerBall combinations. User can create a combination that has never landed.",
             "image": pb,
             "technologies": [
                 "REACT",
