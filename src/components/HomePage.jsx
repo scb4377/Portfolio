@@ -5,8 +5,12 @@ const HomePage = () => {
     return (
         <Container
             sx={{
-                color: 'white', display: 'flex', alignItems: 'center',
-                justifyContent: 'space-between', minHeight: '100vh'
+                color: 'white', 
+                display: 'flex', 
+                alignItems: 'center',
+                flexWrap: 'wrap',
+                justifyContent: 'space-between', 
+                minHeight: '100vh'
             }}
         >
             <Box sx={{ height: '100%' }}>
@@ -21,7 +25,7 @@ const HomePage = () => {
                 <Typography variant='h6'>
                     SOFTWARE ENGINEER AND WEB DEVELOPER
                 </Typography>
-                <Button>
+                <Button variant='contained' sx={{ marginY: 2}}>
                     CONTACT
                 </Button>
             </Box>
