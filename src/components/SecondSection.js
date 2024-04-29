@@ -2,6 +2,7 @@ import { Box, Container } from '@mui/material'
 import building from '../images/building.jpg'
 import Projects from './Projects'
 import Contact from './Contact'
+import Skills from './Skills'
 
 const SecondSection = () => {
   return (
@@ -17,14 +18,13 @@ const SecondSection = () => {
       <Box
         sx={{
           bgcolor: 'rgba(0, 0, 0, 0.5)',
-          position: 'absolute',
           height: '100%',
           width: '100%',
           top: 0,
           left: 0,
-          overflowY: 'hidden'
         }}>
           <Projects />
+          <Skills />
           <Contact />
         </Box>
     </Box>
