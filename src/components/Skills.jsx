@@ -14,11 +14,10 @@ const SkillSection = styled(Box)({
         content: '""',
         position: 'absolute',
         top: 0,
-        left: '-50%',
-        width: '200%',
+        width: '100%',
         height: '100%',
-        transform: 'skewY(3deg)',
-        backgroundColor: 'rgba(20, 20, 20, 0.5)',
+        backgroundColor: '#16161696',
+        backdropFilter: "blur(5px) saturate(100%)",
         zIndex: '0'
     }
 })
@@ -39,7 +38,8 @@ const Skills = () => {
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
-                overflow: 'hidden'
+                paddingY: '50px',
+                overflow: 'hidden',
             }}
         >
             <Typography variant="h4" color={'white'}

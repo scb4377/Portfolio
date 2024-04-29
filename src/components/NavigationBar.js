@@ -5,7 +5,12 @@ const pages = ["HOME", "PROJECTS", "CONTACT"]
 
 const NavigationBar = () => {
     return (
-        <AppBar position='fixed' sx={{ bgcolor: 'rgba(0, 0, 0, 0.5)'}}>
+        <AppBar position='fixed'
+            sx={{
+                bgcolor: 'rgba(0, 0, 0, 0.7)',
+                backdropFilter: "blur(5px) saturate(100%)"
+            }}
+        >
             <Container maxWidth='xl'>
                 <Toolbar disableGutters>
                     <Box

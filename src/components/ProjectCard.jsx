@@ -3,7 +3,15 @@ import bug from "../images/bug.png"
 
 const ProjectCard = () => {
     return (
-        <Card sx={{ maxWidth: '400px', width: '400px', bgcolor: 'rgba(0, 0, 0, 0.5)', color: 'white' }}>
+        <Card
+            sx={{
+                maxWidth: '400px',
+                width: '400px',
+                bgcolor: 'rgba(0, 0, 0, 0.5)',
+                color: 'white',
+                backdropFilter: "blur(5px) saturate(100%)",
+            }}
+        >
             <CardActionArea>
                 <CardMedia
                     component="img"
@@ -16,9 +24,11 @@ const ProjectCard = () => {
                         Bug Tracker
                     </Typography>
                     <Typography variant="body2"
-                        sx={{ textDecoration: '1px underline lightblue',
-                        textUnderlineOffset: '12px',
-                        paddingBottom: '15px' }}
+                        sx={{
+                            textDecoration: '1px underline lightblue',
+                            textUnderlineOffset: '12px',
+                            paddingBottom: '15px'
+                        }}
                     >
                         Show More
                     </Typography>

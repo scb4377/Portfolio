@@ -30,7 +30,8 @@ const HomePage = () => {
                     maxWidth: '500px',
                     backgroundColor: 'rgba(0, 0, 0, 0.5)',
                     borderRadius: '2px',
-                    padding: '30px'
+                    padding: '30px',
+                    backdropFilter: "blur(5px) saturate(100%)",
                 }}>
                 <Typography variant='h6'
                     sx={{
