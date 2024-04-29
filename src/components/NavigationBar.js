@@ -1,6 +1,7 @@
 import { AppBar, Box, Button, Container, Menu, MenuItem, Toolbar, Typography, styled } from '@mui/material'
 import { useContext } from 'react'
 import { MyContext } from './MyContext'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 
 const pages = ["HOME", "PROJECTS", "CONTACT"]
@@ -14,6 +15,19 @@ const NavButton = styled(Button)({
 const NavigationBar = () => {
 
     const { sectionRefs, scrollTo } = useContext(MyContext);
+
+    const navigate = useNavigate()
+    const location = useLocation();
+    const currentPath = location.pathname;
+
+    const handleNavClick = (index) => {
+        if (currentPath !== "/") {
+            navigate("/")
+        }
+        setTimeout(() => {
+            scrollTo(index)
+        }, 500);
+    }
 
     return (
         <AppBar position='fixed'
@@ -34,9 +48,9 @@ const NavigationBar = () => {
                             STEPHEN BLEVINS
                         </Typography>
                         <Box>
-                            <NavButton onClick={() => scrollTo(0)}>HOME</NavButton>
-                            <NavButton onClick={() => scrollTo(1)}>PROJECTS</NavButton>
-                            <NavButton onClick={() => scrollTo(2)}>CONTACT</NavButton>
+                            <NavButton onClick={() => handleNavClick(0)}>HOME</NavButton>
+                            <NavButton onClick={() => handleNavClick(1)}>PROJECTS</NavButton>
+                            <NavButton onClick={() => handleNavClick(2)}>CONTACT</NavButton>
                         </Box>
 
                     </Box>

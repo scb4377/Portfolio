@@ -1,11 +1,11 @@
 import { Box } from '@mui/material';
 import './App.css';
 import Home from './components/Home';
-import SecondSection from './components/SecondSection';
 import { useRef } from 'react';
 import { MyContext } from './components/MyContext';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavigationBar from './components/NavigationBar';
+import ProjectDetails from './components/ProjectDetails';
 
 function App() {
 
@@ -28,6 +28,7 @@ function App() {
         <NavigationBar />
           <Routes>
             <Route path="/" exact element={<Home />} />
+            <Route path="/details/:cardId" element={<ProjectDetails />} />
           </Routes>
         </BrowserRouter>
       </MyContext.Provider>
