@@ -4,7 +4,9 @@ import { useContext } from 'react';
 import { MyContext } from './MyContext';
 
 const HomePage = () => {
-    const { sectionRefs } = useContext(MyContext);
+
+    const { sectionRefs, scrollTo } = useContext(MyContext);
+    
     return (
         <Container
             ref={sectionRefs[0]}
@@ -30,6 +32,7 @@ const HomePage = () => {
                     SOFTWARE ENGINEER AND WEB DEVELOPER
                 </Typography>
                 <Button variant='contained'
+                onClick={() => scrollTo(2)}
                     sx={{
                         marginY: 2,
                         bgcolor: '#272727',

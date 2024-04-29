@@ -22,11 +22,13 @@ const NavigationBar = () => {
 
     const handleNavClick = (index) => {
         if (currentPath !== "/") {
-            navigate("/")
-        }
-        setTimeout(() => {
+            navigate("/");
+            setTimeout(() => {
+                scrollTo(index)
+            }, 500);
+        } else {
             scrollTo(index)
-        }, 500);
+        }
     }
 
     return (
