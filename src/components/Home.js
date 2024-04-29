@@ -28,7 +28,6 @@ const Home = () => {
                 <NavigationBar />
                 <HomePage />
             </Box>
-
         </Box>
     )
 }
