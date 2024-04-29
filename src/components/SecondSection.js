@@ -8,25 +8,34 @@ const SecondSection = () => {
   return (
     <Box
       sx={{
-        backgroundImage: `url(${building})`,
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
         position: 'relative',
         minHeight: '100vh',
       }}
     >
       <Box
         sx={{
-          bgcolor: 'rgba(0, 0, 0, 0.5)',
+          background: `url(${building}) fixed center`,
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          height: '100%',
+          width: '100%'
+        }} />
+      <Box
+        sx={{
+          bgcolor: '#16161696',
+          backdropFilter: 'blur(5px) saturate(100%)',
           height: '100%',
           width: '100%',
           top: 0,
           left: 0,
         }}>
-          <Projects />
-          <Skills />
-          <Contact />
-        </Box>
+        <Projects />
+        <Skills />
+        <Contact />
+      </Box>
     </Box>
   )
 }

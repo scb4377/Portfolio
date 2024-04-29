@@ -38,7 +38,8 @@ const Skills = () => {
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
-                paddingY: '50px',
+                paddingTop: '100px',
+                paddingBottom: '50px',
                 overflow: 'hidden',
             }}
         >
