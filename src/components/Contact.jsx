@@ -22,7 +22,6 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(process.env.REACT_APP_EMAILJS_USER, process.env.REACT_APP_EMAILJS_SERVICE)
 
     emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE, process.env.REACT_APP_EMAILJS_TEMPLATE, form.current, {
       publicKey: process.env.REACT_APP_EMAILJS_USER
