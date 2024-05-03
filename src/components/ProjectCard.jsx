@@ -24,9 +24,10 @@ const ProjectCard = ({ data }) => {
             <CardActionArea>
                 <CardMedia
                     component="img"
-                    alt="Building"
+                    alt={data.projectTitle}
                     height="200"
                     image={data.image}
+                    sx={{objectPosition: 'top', objectFit: 'cover'}}
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component={'div'}>
