@@ -7,7 +7,7 @@ const ProjectData =
     [
         {
             "id": 1,
-            "projectTitle": "Bug Tracker",
+            "projectTitle": "Project Manager",
             "details": "MERN CRUD application for project management issues. Application uses authentication and is connected to a backend server and database.",
             "image": bug,
             "technologies": [
@@ -19,7 +19,7 @@ const ProjectData =
 
             ],
             "demoLink": "https://project-manager-bug-tracker.herokuapp.com/",
-            "sourceLink": "https://github.com/sblevins-dev/bugTracker"
+            "sourceLink": "https://github.com/sblevins-dev/project-manager"
         },
         {
             "id": 2,
