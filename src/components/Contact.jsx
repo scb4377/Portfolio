@@ -2,6 +2,8 @@ import { Box, Button, FormControl, TextField, Typography } from '@mui/material'
 import React, { useContext, useRef, useState } from 'react'
 import { MyContext } from './MyContext'
 import emailjs from "@emailjs/browser"
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const Contact = () => {
 
@@ -63,16 +65,16 @@ const Contact = () => {
           padding: '50px 10px'
         }}
       >
-        <form onSubmit={handleSubmit} 
+        <form onSubmit={handleSubmit}
           ref={form}
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          gap: 20,
-          width: "100%"
-        }}>
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: 20,
+            width: "100%"
+          }}>
           <TextField id="name" name="name" onChange={handleFormData} type="text" label="NAME" variant="filled" sx={{ bgcolor: 'white' }} fullWidth={true} />
           <TextField id="email" name="email" onChange={handleFormData} type="email" label="EMAIL ADDRESS" variant="filled" sx={{ bgcolor: 'white' }} fullWidth={true} />
           <TextField id="message" name="message" onChange={handleFormData} type="text" label="MESSAGE" multiline variant="filled" sx={{ bgcolor: 'white' }} fullWidth={true} />
@@ -89,6 +91,33 @@ const Contact = () => {
         </form>
 
       </Box>
+      
+      <Box display={'flex'} gap={2} alignItems={'center'}>
+        <a href='https://github.com/sblevins-dev' target="_blank">
+          <GitHubIcon fontSize='large'
+            sx={{
+              color: 'white',
+              cursor: 'pointer',
+              transition: 'all 0.3s ease-in-out',
+              '&:hover': {
+                color: 'rgb(0, 119, 255)'
+              }
+            }} />
+        </a>
+        <a href="https://www.linkedin.com/in/sblevins-dev/" target='_blank'>
+          <LinkedInIcon fontSize='large'
+            sx={{
+              color: 'white',
+              cursor: 'pointer',
+              transition: 'all 0.3s ease-in-out',
+              '&:hover': {
+                color: 'rgb(0, 119, 255)'
+              }
+            }} />
+        </a>
+      </Box>
+      <Typography variant={"subtitle2"} mt={2}>Built by Stephen Blevins</Typography>
+
     </Box>
   )
 }

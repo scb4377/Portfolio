@@ -1,7 +1,8 @@
 import { Box, Button, Container, Typography } from '@mui/material'
-import hero from "../images/hero.jpg"
 import { useContext } from 'react';
 import { MyContext } from './MyContext';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const HomePage = () => {
 
@@ -45,6 +46,32 @@ const HomePage = () => {
                 >
                     CONTACT
                 </Button>
+                <Box display={'flex'} alignItems={'center'} gap={3}>
+                    <a href='https://github.com/sblevins-dev' target="_blank">
+                        <GitHubIcon fontSize='large'
+                            sx={{
+                                color: 'white',
+                                cursor: 'pointer',
+                                transition: 'all 0.3s ease-in-out',
+                                '&:hover': {
+                                    color: 'rgb(0, 119, 255)'
+                                }
+                            }} />
+                    </a>
+                    <a href="https://www.linkedin.com/in/sblevins-dev/" target='_blank'>
+                        <LinkedInIcon fontSize='large'
+                            sx={{
+                                color: 'white',
+                                cursor: 'pointer',
+                                transition: 'all 0.3s ease-in-out',
+                                '&:hover': {
+                                    color: 'rgb(0, 119, 255)'
+                                }
+                            }} />
+                    </a>
+
+                </Box>
+
             </Box>
             <Box
                 sx={{
