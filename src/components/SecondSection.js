@@ -6,10 +6,11 @@ import Skills from './Skills'
 import { useContext } from 'react'
 import { MyContext } from './MyContext'
 import Success from './Success'
+import Failure from './Failure'
 
 const SecondSection = () => {
 
-  const { success } = useContext(MyContext);
+  const { success, error } = useContext(MyContext);
 
   return (
     <Box
@@ -40,7 +41,7 @@ const SecondSection = () => {
         }}>
         <Projects />
         <Skills />
-        {success ? <Success /> : <Contact />}
+        {success ? <Success /> : error ? <Failure /> : <Contact />}
       </Box>
     </Box>
   )

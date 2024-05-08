@@ -2,12 +2,12 @@ import { Box, Button, FormControl, TextField, Typography } from '@mui/material'
 import React, { useContext, useRef, useState } from 'react'
 import { MyContext } from './MyContext'
 import emailjs from "@emailjs/browser"
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+
+import Footer from './Footer';
 
 const Contact = () => {
 
-  const { sectionRefs, setSuccess } = useContext(MyContext);
+  const { sectionRefs, setSuccess, setError } = useContext(MyContext);
 
   const form = useRef();
 
@@ -33,6 +33,7 @@ const Contact = () => {
           setSuccess(true);
         },
         (error) => {
+          setError(true);
           console.log('FAILED...', error)
         }
       )
@@ -91,33 +92,7 @@ const Contact = () => {
         </form>
 
       </Box>
-      
-      <Box display={'flex'} gap={2} alignItems={'center'}>
-        <a href='https://github.com/sblevins-dev' target="_blank">
-          <GitHubIcon fontSize='large'
-            sx={{
-              color: 'white',
-              cursor: 'pointer',
-              transition: 'all 0.3s ease-in-out',
-              '&:hover': {
-                color: 'rgb(0, 119, 255)'
-              }
-            }} />
-        </a>
-        <a href="https://www.linkedin.com/in/sblevins-dev/" target='_blank'>
-          <LinkedInIcon fontSize='large'
-            sx={{
-              color: 'white',
-              cursor: 'pointer',
-              transition: 'all 0.3s ease-in-out',
-              '&:hover': {
-                color: 'rgb(0, 119, 255)'
-              }
-            }} />
-        </a>
-      </Box>
-      <Typography variant={"subtitle2"} mt={2}>Built by Stephen Blevins</Typography>
-
+      <Footer />
     </Box>
   )
 }

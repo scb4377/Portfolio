@@ -16,6 +16,7 @@ function App() {
   ]
 
   const [ success, setSuccess ] = useState(false);
+  const [ error, setError ] = useState(false);
 
   const scrollTo = (index) => {
     if (sectionRefs[index].current) {
@@ -25,7 +26,7 @@ function App() {
 
   return (
     <Box className="App">
-      <MyContext.Provider value={{ sectionRefs, scrollTo, success, setSuccess }}>
+      <MyContext.Provider value={{ sectionRefs, scrollTo, success, setSuccess, error, setError }}>
         <BrowserRouter>
         <NavigationBar />
           <Routes>
