@@ -1,16 +1,11 @@
-import { Box, Container } from '@mui/material'
+import { Box } from '@mui/material'
 import building from '../images/building.jpg'
 import Projects from './Projects'
 import Contact from './Contact'
 import Skills from './Skills'
-import { useContext } from 'react'
-import { MyContext } from './MyContext'
-import Success from './Success'
-import Failure from './Failure'
+import Footer from './Footer'
 
 const SecondSection = () => {
-
-  const { success, error } = useContext(MyContext);
 
   return (
     <Box
@@ -41,7 +36,8 @@ const SecondSection = () => {
         }}>
         <Projects />
         <Skills />
-        {success ? <Success /> : error ? <Failure /> : <Contact />}
+        <Contact />
+        <Footer />
       </Box>
     </Box>
   )

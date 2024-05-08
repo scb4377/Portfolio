@@ -1,13 +1,14 @@
-import { Box, Button, FormControl, TextField, Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import React, { useContext, useRef, useState } from 'react'
 import { MyContext } from './MyContext'
 import emailjs from "@emailjs/browser"
-
-import Footer from './Footer';
+import ContactForm from './ContactForm'
+import Success from './Success'
+import Failure from './Failure'
 
 const Contact = () => {
 
-  const { sectionRefs, setSuccess, setError } = useContext(MyContext);
+  const { sectionRefs, success, setSuccess, error, setError } = useContext(MyContext);
 
   const form = useRef();
 
@@ -60,39 +61,10 @@ const Contact = () => {
       >
         CONTACT
       </Typography>
-      <Box
-        sx={{
-          width: { xs: '100%', sm: '400px' },
-          padding: '50px 10px'
-        }}
-      >
-        <form onSubmit={handleSubmit}
-          ref={form}
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: 20,
-            width: "100%"
-          }}>
-          <TextField id="name" name="name" required onChange={handleFormData} type="text" label="NAME" variant="filled" sx={{ bgcolor: 'white' }} fullWidth={true} />
-          <TextField id="email" name="email" required onChange={handleFormData} type="email" label="EMAIL ADDRESS" variant="filled" sx={{ bgcolor: 'white' }} fullWidth={true} />
-          <TextField id="message" name="message" required onChange={handleFormData} type="text" label="MESSAGE" multiline variant="filled" sx={{ bgcolor: 'white' }} fullWidth={true} />
-          <Button variant='contained'
-            type="submit"
-            sx={{
-              bgcolor: '#272727',
-              '&:hover': {
-                bgcolor: 'white',
-                color: 'rgb(0, 119, 255)'
-              }
-            }}
-          >SUBMIT</Button>
-        </form>
-
-      </Box>
-      <Footer />
+      {success ?
+        <Success />
+        : error ? <Failure />
+          : <ContactForm handleFormData={handleFormData} handleSubmit={handleSubmit} form={form} />}
     </Box>
   )
 }

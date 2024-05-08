@@ -4,7 +4,10 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const Footer = () => {
   return (
-    <>
+    <Box
+        pb={3}
+        sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', color: 'white'}}
+    >
         <Box display={'flex'} gap={2} alignItems={'center'}>
         <a href='https://github.com/sblevins-dev' target="_blank">
           <GitHubIcon fontSize='large'
@@ -30,7 +33,7 @@ const Footer = () => {
         </a>
       </Box>
       <Typography variant={"subtitle2"} mt={2}>Built by Stephen Blevins</Typography>
-    </>
+    </Box>
   )
 }
 
