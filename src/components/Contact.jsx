@@ -7,7 +7,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const Contact = () => {
 
-  const { sectionRefs } = useContext(MyContext);
+  const { sectionRefs, setSuccess } = useContext(MyContext);
 
   const form = useRef();
 
@@ -30,7 +30,7 @@ const Contact = () => {
     })
       .then(
         () => {
-          console.log('SUCCESS!');
+          setSuccess(true);
         },
         (error) => {
           console.log('FAILED...', error)
@@ -75,9 +75,9 @@ const Contact = () => {
             gap: 20,
             width: "100%"
           }}>
-          <TextField id="name" name="name" onChange={handleFormData} type="text" label="NAME" variant="filled" sx={{ bgcolor: 'white' }} fullWidth={true} />
-          <TextField id="email" name="email" onChange={handleFormData} type="email" label="EMAIL ADDRESS" variant="filled" sx={{ bgcolor: 'white' }} fullWidth={true} />
-          <TextField id="message" name="message" onChange={handleFormData} type="text" label="MESSAGE" multiline variant="filled" sx={{ bgcolor: 'white' }} fullWidth={true} />
+          <TextField id="name" name="name" required onChange={handleFormData} type="text" label="NAME" variant="filled" sx={{ bgcolor: 'white' }} fullWidth={true} />
+          <TextField id="email" name="email" required onChange={handleFormData} type="email" label="EMAIL ADDRESS" variant="filled" sx={{ bgcolor: 'white' }} fullWidth={true} />
+          <TextField id="message" name="message" required onChange={handleFormData} type="text" label="MESSAGE" multiline variant="filled" sx={{ bgcolor: 'white' }} fullWidth={true} />
           <Button variant='contained'
             type="submit"
             sx={{

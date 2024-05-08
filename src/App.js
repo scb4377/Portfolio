@@ -1,7 +1,7 @@
 import { Box } from '@mui/material';
 import './App.css';
 import Home from './components/Home';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { MyContext } from './components/MyContext';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavigationBar from './components/NavigationBar';
@@ -15,6 +15,8 @@ function App() {
     useRef(null)
   ]
 
+  const [ success, setSuccess ] = useState(false);
+
   const scrollTo = (index) => {
     if (sectionRefs[index].current) {
       sectionRefs[index].current.scrollIntoView({ behavior: 'smooth' })
@@ -23,7 +25,7 @@ function App() {
 
   return (
     <Box className="App">
-      <MyContext.Provider value={{ sectionRefs, scrollTo }}>
+      <MyContext.Provider value={{ sectionRefs, scrollTo, success, setSuccess }}>
         <BrowserRouter>
         <NavigationBar />
           <Routes>

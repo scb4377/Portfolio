@@ -3,8 +3,14 @@ import building from '../images/building.jpg'
 import Projects from './Projects'
 import Contact from './Contact'
 import Skills from './Skills'
+import { useContext } from 'react'
+import { MyContext } from './MyContext'
+import Success from './Success'
 
 const SecondSection = () => {
+
+  const { success } = useContext(MyContext);
+
   return (
     <Box
       sx={{
@@ -34,7 +40,7 @@ const SecondSection = () => {
         }}>
         <Projects />
         <Skills />
-        <Contact />
+        {success ? <Success /> : <Contact />}
       </Box>
     </Box>
   )
