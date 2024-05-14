@@ -1,7 +1,7 @@
 import bug from "../images/bug/bugHome.png"
 import bank from "../images/bank.png"
 import pb from "../images/pb.png"
-import crypto from "../images/crypto.png"
+import crypto from "../images/crypto2.png"
 
 const ProjectData =
     [
@@ -21,18 +21,18 @@ const ProjectData =
             "demoLink": "https://project-manager-bug-tracker.herokuapp.com/",
             "sourceLink": "https://github.com/sblevins-dev/project-manager"
         },
-        {
-            "id": 2,
-            "projectTitle": "Bank GUI",
-            "details": "Upon logging in, users' account information is retrieved from a MySQL database, ensuring personalized access. Intuitive interface allows users to make deposits and withdrawals seamlessly, providing real-time updates to account balances. Enjoy hassle-free banking with robust database integration and responsive graphical user interface (GUI) design. ",
-            "image": bank,
-            "technologies": [
-                "JAVA",
-                "SQL"
-            ],
-            "demoLink": null,
-            "sourceLink": "https://github.com/sblevins-dev/BankingSystem"
-        },
+        // {
+        //     "id": 2,
+        //     "projectTitle": "Bank GUI",
+        //     "details": "Upon logging in, users' account information is retrieved from a MySQL database, ensuring personalized access. Intuitive interface allows users to make deposits and withdrawals seamlessly, providing real-time updates to account balances. Enjoy hassle-free banking with robust database integration and responsive graphical user interface (GUI) design. ",
+        //     "image": bank,
+        //     "technologies": [
+        //         "JAVA",
+        //         "SQL"
+        //     ],
+        //     "demoLink": null,
+        //     "sourceLink": "https://github.com/sblevins-dev/BankingSystem"
+        // },
         {
             "id": 3,
             "projectTitle": "Powerball Statistics",
@@ -46,7 +46,7 @@ const ProjectData =
         },
         {
             "id": 4,
-            "projectTitle": "Stock Viewer",
+            "projectTitle": "Crypto Coin Viewer",
             "details": "Track crypto-currencies effortlessly with this React-based application integrated with the CoinGecko API. Easily manage your favorite coins by adding them to your session-based watchlist. Stay informed about crypto market trends. Take control of your crypto investments with our intuitive Crypto-Currency Watchlist Tracker and make informed decisions on the go.",
             "image": crypto,
             "technologies": [
