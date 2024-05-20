@@ -2,9 +2,22 @@ import bug from "../images/bug/bugHome.png"
 import bank from "../images/bank.png"
 import pb from "../images/pb.png"
 import crypto from "../images/crypto2.png"
+import suite from "../images/suite.png"
 
 const ProjectData =
     [
+        {
+            "id": 5,
+            "projectTitle": "Hotel Booking",
+            "details": "Built using React for the frontend and Java Spring for the backend, leverages the Booking.com API to deliver a seamless user experience. Users can search for hotels, view detailed listings, check real-time availability, and compare competitive rates, all through an intuitive and responsive interface. The integration with Booking.com ensures access to a vast database of accommodations, offering users a comprehensive selection tailored to their preferences and needs.",
+            "image": suite,
+            "technologies": [
+                "REACT",
+                "JAVA",
+            ],
+            "demoLink": "https://github.com/sblevins-dev/suite-spot-client",
+            "sourceLink": "https://sblevins-dev.github.io/suite-spot-client/"
+        },
         {
             "id": 1,
             "projectTitle": "Project Manager",
@@ -56,7 +69,8 @@ const ProjectData =
             ],
             "demoLink": "https://sblevins-dev.github.io/CryptoTracker/",
             "sourceLink": "https://github.com/sblevins-dev/CryptoTracker"
-        }
+        },
+        
     ]
 
 export default ProjectData
