@@ -15,8 +15,8 @@ const ProjectData =
                 "REACT",
                 "JAVA",
             ],
-            "demoLink": "https://github.com/sblevins-dev/suite-spot-client",
-            "sourceLink": "https://sblevins-dev.github.io/suite-spot-client/"
+            "sourceLink": "https://github.com/sblevins-dev/suite-spot-client",
+            "demoLink": "https://sblevins-dev.github.io/suite-spot-client/"
         },
         {
             "id": 1,
