@@ -3,6 +3,7 @@ import bank from "../images/bank.png"
 import pb from "../images/pb.png"
 import crypto from "../images/crypto2.png"
 import suite from "../images/suite.png"
+import openai from "../images/openai.png"
 
 const ProjectData =
     [
@@ -17,6 +18,21 @@ const ProjectData =
             ],
             "sourceLink": "https://github.com/sblevins-dev/suite-spot-client",
             "demoLink": "https://sblevins-dev.github.io/suite-spot-client/"
+        },
+        {
+            "id": 6,
+            "projectTitle": "OpenAI Clone",
+            "image": openai,
+            "details": "The MERN app leverages cutting-edge AI capabilities by integrating OpenAI's DALL-E 3 for image generation and ChatGPT for conversational interactions. By seamlessly combining MongoDB, Express.js, React, and Node.js, the application harnesses the power of DALL-E 3 to generate images based on textual descriptions and employs ChatGPT for natural language processing and dialogue generation. This integration enables users to interact with the system through conversational AI, facilitating dynamic and immersive experiences within the application.",
+            "technologies": [
+                "MONGODB",
+                "EXPRESS",
+                "REACT",
+                "NODE",
+                "AWS"
+            ],
+            "demoLink": "https://openaiclone.stephen-blevins.dev/",
+            "sourceLink": "https://github.com/sblevins-dev/dalle_frontend"
         },
         {
             "id": 1,
