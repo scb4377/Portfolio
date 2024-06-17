@@ -8,16 +8,20 @@ import openai from "../images/openai.png"
 const ProjectData =
     [
         {
-            "id": 5,
-            "projectTitle": "Hotel Booking",
-            "details": "Built using React for the frontend and Java Spring for the backend, leverages the Booking.com API to deliver a seamless user experience. Users can search for hotels, view detailed listings, check real-time availability, and compare competitive rates, all through an intuitive and responsive interface. The integration with Booking.com ensures access to a vast database of accommodations, offering users a comprehensive selection tailored to their preferences and needs.",
-            "image": suite,
+            "id": 1,
+            "projectTitle": "Project Manager",
+            "details": "MERN (MongoDB, Express.js, React.js, Node.js) stack application. This comprehensive solution offers CRUD capabilities for managing projects and issues efficiently. It features user authentication for secure access control and is seamlessly integrated with a backend server and MongoDB database. Enhance collaboration and productivity with real-time issue tracking and modern project management tools.",
+            "image": bug,
             "technologies": [
+                "MONGO",
+                "EXPRESS",
                 "REACT",
-                "JAVA",
+                "NODE",
+                "MUI",
+
             ],
-            "sourceLink": "https://github.com/sblevins-dev/suite-spot-client",
-            "demoLink": "https://sblevins-dev.github.io/suite-spot-client/"
+            "demoLink": "https://project-manager-bug-tracker.herokuapp.com/",
+            "sourceLink": "https://github.com/sblevins-dev/project-manager"
         },
         {
             "id": 6,
@@ -34,21 +38,18 @@ const ProjectData =
             "demoLink": "https://openaiclone.stephen-blevins.dev/",
             "sourceLink": "https://github.com/sblevins-dev/dalle_frontend"
         },
-        {
-            "id": 1,
-            "projectTitle": "Project Manager",
-            "details": "MERN (MongoDB, Express.js, React.js, Node.js) stack application. This comprehensive solution offers CRUD capabilities for managing projects and issues efficiently. It features user authentication for secure access control and is seamlessly integrated with a backend server and MongoDB database. Enhance collaboration and productivity with real-time issue tracking and modern project management tools.",
-            "image": bug,
-            "technologies": [
-                "MONGO",
-                "EXPRESS",
-                "REACT",
-                "NODE",
-                "MUI",
 
+        {
+            "id": 5,
+            "projectTitle": "Hotel Booking",
+            "details": "Built using React for the frontend and Java Spring for the backend, leverages the Booking.com API to deliver a seamless user experience. Users can search for hotels, view detailed listings, check real-time availability, and compare competitive rates, all through an intuitive and responsive interface. The integration with Booking.com ensures access to a vast database of accommodations, offering users a comprehensive selection tailored to their preferences and needs.",
+            "image": suite,
+            "technologies": [
+                "REACT",
+                "JAVA",
             ],
-            "demoLink": "https://project-manager-bug-tracker.herokuapp.com/",
-            "sourceLink": "https://github.com/sblevins-dev/project-manager"
+            "sourceLink": "https://github.com/sblevins-dev/suite-spot-client",
+            "demoLink": "https://sblevins-dev.github.io/suite-spot-client/"
         },
         // {
         //     "id": 2,
@@ -86,7 +87,7 @@ const ProjectData =
             "demoLink": "https://sblevins-dev.github.io/CryptoTracker/",
             "sourceLink": "https://github.com/sblevins-dev/CryptoTracker"
         },
-        
+
     ]
 
 export default ProjectData
