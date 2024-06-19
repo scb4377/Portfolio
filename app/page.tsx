@@ -21,7 +21,6 @@ export default function Home() {
       <div
         className="max-w-7xl w-full"
       >
-        <h1>Hello, Portfolio</h1>
         <FloatingNav
           navItems={navItems}
         />

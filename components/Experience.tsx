@@ -11,7 +11,9 @@ const Experience = () => {
             My {" "}
             <span className="text-purple">work experience</span>
         </h1>
-        <div className='w-full my-20 grid lg:grid-cols-4 grid-cols-1 gap-10'>
+        <div 
+        className='w-full my-20 grid  grid-cols-1 gap-10'
+        >
             {workExperience.map((card) => (
                 <Button
                     key={card.id}
