@@ -5,7 +5,7 @@ import { socialMedia } from '@/data'
 
 const Footer = () => {
   return (
-    <footer className='w-full mb-100 pb-10 md:mb-5' id="contact">
+    <footer className='w-full mb-100 py-10 md:mb-5' id="contact">
       
 
         <div className='flex flex-col items-center'>
@@ -15,7 +15,7 @@ const Footer = () => {
             <p className='text-white-200 md:mt-10 my-5 text-center'>
                 Reach out to me today and let&apos;s discuss how I can help you achieve your goals.
             </p>
-            <a href="mailto:contact@">
+            <a href="mailto:scbdev2021@gmail.com">
                 <MagicButton 
                     title="Let's get in touch"
                     icon={<FaLocationArrow />}

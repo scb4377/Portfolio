@@ -90,9 +90,10 @@ const Card = ({
       style={{
         //   add these two
         //   you can generate the color from here https://cssgradient.io/
-        background: "rgb(4,7,29)",
+        // background: "rgb(4,7,29)",
+        background: "#0C161F",
         backgroundColor:
-          "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+          "linear-gradient(90deg, rgba(12, 22, 31, 1) 0%, rgba(12,14,35,1) 100%)",
       }}
     >
       {/* change to h-10 w-10 , add opacity-30  */}

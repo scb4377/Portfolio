@@ -50,7 +50,7 @@ export const BentoGridItem = ({
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText('email');
+    navigator.clipboard.writeText('scbdev2021@gmail.com');
 
     setCopied(true);
   }
@@ -62,9 +62,10 @@ export const BentoGridItem = ({
         className
       )}
       style={{
-        background: "rgb(4,7,29)",
+        // background: "rgb(4,7,29)",
+        background: "#0C161F",
         backgroundColor:
-          "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+          "linear-gradient(90deg, rgba(12, 22, 31, 1) 0%, rgba(12,14,35,1) 100%)",
       }}
     >
       <div
@@ -124,19 +125,19 @@ export const BentoGridItem = ({
                 className="flex flex-col gap-3 lg:gap-8"
               >
                 {['React.js', 'Next.js', 'TypeScript'].map(item => (
-                  <span key={item} className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]">
+                  <span key={item} className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#1A3044]">
                     {item}
                   </span>
                 ))}
-                <span className="py-4 px-3 rounded-lg text-center bg-[#10132e]" />
+                <span className="py-4 px-3 rounded-lg text-center bg-[#1A3044]" />
               </div>
 
               <div
                 className="flex flex-col gap-3 lg:gap-8"
               >
-                <span className="py-4 px-3 rounded-lg text-center bg-[#10132e]" />
-                {['Vue.js', 'AWS', 'MongoDB'].map(item => (
-                  <span key={item} className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]">
+                <span className="py-4 px-3 rounded-lg text-center bg-[#1A3044]" />
+                {['Java', 'AWS', 'MongoDB'].map(item => (
+                  <span key={item} className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#1A3044]">
                     {item}
                   </span>
                 ))}
@@ -162,7 +163,6 @@ export const BentoGridItem = ({
                 title={copied ? 'Email copied' : 'Copy my email'}
                 icon={<IoCopyOutline />}
                 position="left"
-                otherClasses="!bg-[#161a31]"
                 handleClick={handleCopy}
               />
             </div>
