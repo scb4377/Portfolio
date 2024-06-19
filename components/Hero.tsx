@@ -48,7 +48,7 @@ const Hero = () => {
                     </p>
 
                     <a
-                        href="#about"
+                        href="#projects"
                     >
                         <MagicButton 
                             title="Show my work"
