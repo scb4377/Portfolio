@@ -1,4 +1,4 @@
-import { Box, Button, Container, IconButton, SvgIcon, Typography, styled } from '@mui/material';
+import { Box, Container, IconButton, Typography, styled } from '@mui/material';
 import React from 'react'
 import { useLocation, useNavigate, useParams } from 'react-router-dom'
 import hero from "../images/hero.jpg"

@@ -1,6 +1,5 @@
 import bug from "../images/bug/bugHome.png"
 import pb from "../images/pb.png"
-import crypto from "../images/crypto2.png"
 import suite from "../images/suite.png"
 import guitar from "../images/guitar.png"
 

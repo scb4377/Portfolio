@@ -1,5 +1,5 @@
-import { Card, CardActionArea, CardContent, CardMedia, Typography, styled } from '@mui/material'
-import { Link, useNavigate } from 'react-router-dom'
+import { Card, CardActionArea, CardContent, CardMedia, Typography } from '@mui/material'
+import { useNavigate } from 'react-router-dom'
 
 const ProjectCard = ({ data }) => {
 

@@ -92,7 +92,15 @@ const HomePage = () => {
                     ABOUT
                 </Typography>
                 <Typography variant='body1'>
-                    &emsp; As a dedicated professional with over a decade of experience in customer service and retail management, complemented by a Bachelor of Science in Computer Information Systems specializing in software programming, I offer a strong foundation for software development. Proficient in the MERN stack, Java technologies, and adept in various development tools, I excel in crafting user-friendly software solutions by leveraging my understanding of end-user perspectives. I am eager to transition into a junior software engineering role to further expand my knowledge and skills while actively contributing to innovative projects.
+                    &emsp; As a dedicated professional with over a decade of experience in 
+                    customer service and retail management, complemented by a bachelor of science 
+                    in Computer Information Systems specializing in software programming, I offer a 
+                    strong foundation for software development. Proficient in JavaScript, 
+                    Java, related technologies, and adept in various development tools, I excel in crafting 
+                    user-friendly software solutions by leveraging my understanding of end-user 
+                    perspectives. I am eager to transition into a junior software engineering role to 
+                    further expand my knowledge and skills while actively contributing to innovative 
+                    projects.
                 </Typography>
 
             </Box>
