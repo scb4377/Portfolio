@@ -1,12 +1,22 @@
 import bug from "../images/bug/bugHome.png"
-import bank from "../images/bank.png"
 import pb from "../images/pb.png"
 import crypto from "../images/crypto2.png"
 import suite from "../images/suite.png"
-import openai from "../images/openai.png"
+import guitar from "../images/guitar.png"
 
 const ProjectData =
     [
+        {
+            "id": 2,
+            "projectTitle": "Guitar-Shop",
+            "details": "Guitar Haven is a personal e-commerce project built using the Next.js framework, ensuring a fast and seamless user experience. The site features a dynamic catalog of guitars and accessories, leveraging server-side rendering for optimal performance.",
+            "image": guitar,
+            "technologies": [
+                "Nex.js"
+            ],
+            "demoLink": "https://sblevins-dev.github.io/GuitarShop/",
+            "sourceLink": "https://github.com/sblevins-dev/GuitarShop"
+        },
         {
             "id": 1,
             "projectTitle": "Project Manager",
@@ -24,22 +34,6 @@ const ProjectData =
             "sourceLink": "https://github.com/sblevins-dev/project-manager"
         },
         {
-            "id": 6,
-            "projectTitle": "OpenAI Clone",
-            "image": openai,
-            "details": "The MERN app leverages cutting-edge AI capabilities by integrating OpenAI's DALL-E 3 for image generation and ChatGPT for conversational interactions. By seamlessly combining MongoDB, Express.js, React, and Node.js, the application harnesses the power of DALL-E 3 to generate images based on textual descriptions and employs ChatGPT for natural language processing and dialogue generation. This integration enables users to interact with the system through conversational AI, facilitating dynamic and immersive experiences within the application.",
-            "technologies": [
-                "MONGODB",
-                "EXPRESS",
-                "REACT",
-                "NODE",
-                "AWS"
-            ],
-            "demoLink": "https://openaiclone.stephen-blevins.dev/",
-            "sourceLink": "https://github.com/sblevins-dev/dalle_frontend"
-        },
-
-        {
             "id": 5,
             "projectTitle": "Hotel Booking",
             "details": "Built using React for the frontend and Java Spring for the backend, leverages the Booking.com API to deliver a seamless user experience. Users can search for hotels, view detailed listings, check real-time availability, and compare competitive rates, all through an intuitive and responsive interface. The integration with Booking.com ensures access to a vast database of accommodations, offering users a comprehensive selection tailored to their preferences and needs.",
@@ -51,18 +45,6 @@ const ProjectData =
             "sourceLink": "https://github.com/sblevins-dev/suite-spot-client",
             "demoLink": "https://sblevins-dev.github.io/suite-spot-client/"
         },
-        // {
-        //     "id": 2,
-        //     "projectTitle": "Bank GUI",
-        //     "details": "Upon logging in, users' account information is retrieved from a MySQL database, ensuring personalized access. Intuitive interface allows users to make deposits and withdrawals seamlessly, providing real-time updates to account balances. Enjoy hassle-free banking with robust database integration and responsive graphical user interface (GUI) design. ",
-        //     "image": bank,
-        //     "technologies": [
-        //         "JAVA",
-        //         "SQL"
-        //     ],
-        //     "demoLink": null,
-        //     "sourceLink": "https://github.com/sblevins-dev/BankingSystem"
-        // },
         {
             "id": 3,
             "projectTitle": "Powerball Statistics",
@@ -73,19 +55,6 @@ const ProjectData =
             ],
             "demoLink": "https://sblevins-dev.github.io/PowerballApp/",
             "sourceLink": "https://github.com/sblevins-dev/PowerballApp"
-        },
-        {
-            "id": 4,
-            "projectTitle": "Crypto Coin Viewer",
-            "details": "Track crypto-currencies effortlessly with this React-based application integrated with the CoinGecko API. Easily manage your favorite coins by adding them to your session-based watchlist. Stay informed about crypto market trends. Take control of your crypto investments with our intuitive Crypto-Currency Watchlist Tracker and make informed decisions on the go.",
-            "image": crypto,
-            "technologies": [
-                "EXPRESS",
-                "REACT",
-                "NODE"
-            ],
-            "demoLink": "https://sblevins-dev.github.io/CryptoTracker/",
-            "sourceLink": "https://github.com/sblevins-dev/CryptoTracker"
         },
 
     ]

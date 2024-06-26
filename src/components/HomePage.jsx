@@ -31,7 +31,7 @@ const HomePage = () => {
                     Stephen Blevins
                 </Typography>
                 <Typography variant='h6'>
-                    SOFTWARE ENGINEER AND WEB DEVELOPER
+                    SOFTWARE DEVELOPER
                 </Typography>
                 <Button variant='contained'
                     onClick={() => scrollTo(2)}
@@ -47,7 +47,7 @@ const HomePage = () => {
                     CONTACT
                 </Button>
                 <Box display={'flex'} alignItems={'center'} gap={3}>
-                    <a href='https://github.com/sblevins-dev' target="_blank">
+                    <a href='https://github.com/sblevins-dev' target="_blank" rel="noreferrer">
                         <GitHubIcon fontSize='large'
                             sx={{
                                 color: 'white',
@@ -58,7 +58,7 @@ const HomePage = () => {
                                 }
                             }} />
                     </a>
-                    <a href="https://www.linkedin.com/in/sblevins-dev/" target='_blank'>
+                    <a href="https://www.linkedin.com/in/sblevins-dev/" target='_blank' rel="noreferrer">
                         <LinkedInIcon fontSize='large'
                             sx={{
                                 color: 'white',

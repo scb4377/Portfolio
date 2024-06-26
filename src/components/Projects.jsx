@@ -26,7 +26,7 @@ const Projects = () => {
                     paddingBottom: '15px'
                 }}
             >
-                PROJECTS
+                RECENT PROJECTS
             </Typography>
             <Box
                 sx={{
